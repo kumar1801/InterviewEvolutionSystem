@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1 Feb, 2015 11:18:12 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+  <class catalog="ies" name="Prototypical.Round" table="round">
+    <id name="roundId" type="int">
+      <column name="RoundID"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="roundName" type="string">
+      <column length="10" name="RoundName"/>
+    </property>
+    <property name="roundPreference" type="java.lang.Integer">
+      <column name="RoundPreference"/>
+    </property>
+    <property name="roundDescription" type="string">
+      <column length="100" name="RoundDescription"/>
+    </property>
+    <property name="totalMarks" type="java.lang.Integer">
+      <column name="TotalMarks"/>
+    </property>
+    <property name="passingCriteria" type="java.lang.Integer">
+      <column name="PassingCriteria"/>
+    </property>
+    <property name="date" type="string">
+      <column length="45" name="Date"/>
+    </property>
+    <property name="time" type="string">
+      <column length="20" name="Time"/>
+    </property>
+    <property name="rcmid" type="java.lang.Integer">
+      <column name="RCMID"/>
+    </property>
+    <property name="jobReferenceCode" type="java.lang.Integer">
+      <column name="JobReferenceCode"/>
+    </property>
+  </class>
+</hibernate-mapping>

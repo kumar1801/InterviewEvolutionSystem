@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Feb, 2015 4:15:24 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="Prototypical.Workexperience" table="workexperience" catalog="ies">
+        <composite-id name="id" class="Prototypical.WorkexperienceId">
+            <key-property name="desiredid" type="java.lang.Integer">
+                <column name="desiredid" />
+            </key-property>
+            <key-property name="orgname" type="string">
+                <column name="Orgname" length="45" />
+            </key-property>
+            <key-property name="responsibility" type="string">
+                <column name="Responsibility" length="45" />
+            </key-property>
+            <key-property name="designation" type="string">
+                <column name="Designation" length="45" />
+            </key-property>
+            <key-property name="duration" type="java.lang.Float">
+                <column name="Duration" precision="12" scale="0" />
+            </key-property>
+            <key-property name="salaryDrawn" type="java.lang.Float">
+                <column name="SalaryDrawn" precision="12" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

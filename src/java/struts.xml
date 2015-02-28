@@ -1,0 +1,134 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <include file="example.xml"/>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="home" class="Stroke.JobOpeningAction" method="retriveData">
+            <result name="success">/Home/homepage.jsp</result>
+        </action>
+        <action name="superadmin" class="example.home">
+            <result name="success">/Home/superadmin.jsp</result>
+        </action>
+        <action name="registration" class="Stroke.JobOpeningAction" method="retriveData">
+            <result name="success">/Home/registration.jsp</result> 
+        </action>
+        <action name="user" class="example.Test">
+            <result name="success">/SuperAdmin/users.jsp</result> 
+        </action>
+        <action name="organization" class="example.Test">
+            <result name="success">/SuperAdmin/orgbranch.jsp</result> 
+        </action>
+        <action name="head" class="example.Test">
+            <result name="success">/SuperAdmin/HeadDetails.jsp</result> 
+        </action>
+        <action name="jobopening" class="example.Test">
+            <result name="success">/HRManager/JobOpening.jsp</result> 
+        </action>
+        <action name="round" class="Stroke.RCMAction" method="retriveData" >
+            <result name="success">/HRManager/Round.jsp</result> 
+        </action>
+        <action name="interview" class="Stroke.IntervieweeAction" method="retriveData">
+            <result name="success">/Interviewer/interview.jsp</result> 
+        </action>
+        
+        
+        
+        
+        
+        
+        
+        <action name="registrationsubmit" class="Stroke.IntervieweeAction" method="saveData">
+            <result name="success">/Home/registration.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        <action name="rcmsubmit" class="Stroke.RCMAction" method="saveData">
+            <result name="success">/SuperAdmin/users.jsp</result>
+            <result name="error">/SuperAdmin/users.jsp</result>
+        </action>
+        <action name="save" class="Stroke.JobOpeningAction" method="SaveData">
+            <result name="success">/HRManager/JobOpening.jsp</result> 
+            <result name="error">/example/HelloWorld.jsp</result> 
+        </action>
+        
+        
+        <action name="saveRound" class="Stroke.RoundAction" method="saveRound">
+            <result name="success">/Home/Round.jsp</result> 
+        </action>
+        <action name="headsubmit" class="Stroke.HeadAction" method="saveData">
+            <interceptor-ref name="defaultStack">
+                <param name="maximumSize">2097152</param>
+                <param name="allowedTypes">
+                    text/plain,image/png,image/gif,image/jpeg
+                </param>
+            </interceptor-ref>
+            <result name="success">/SuperAdmin/HeadDetails.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+            <result name="input">/SuperAdmin/HeadDetails.jsp</result>
+        </action>
+        <action name="OrgBrsubmit" class="Stroke.OrganizationAction" method="saveData">
+            <interceptor-ref name="defaultStack">
+                <param name="maximumSize">2097152</param>
+                <param name="allowedTypes">
+                    text/plain,image/png,image/gif,image/jpeg
+                </param>
+            </interceptor-ref>
+            <result name="success">/SuperAdmin/orgbranch.jsp</result>
+            <result name="error">/SuperAdmin/users.jsp</result>
+            <result name="input">/SuperAdmin/orgbranch.jsp</result>
+        </action>
+        <action name="login" class="Stroke.LoginAction" method="signIn">
+            <result name="success">/Home/homepage.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        <action name="adminlogin" class="Stroke.LoginAction" method="execute">
+            <result name="success">/SuperAdmin/super_admin_main.jsp</result>
+            <result name="error">/Home/superadmin.jsp</result>
+        </action>
+        <action name="signout" class="Stroke.LoginAction" method="signOut">
+            <result name="success">/Home/homepage.jsp</result>
+        </action>
+        <action name="view" class="Stroke.RoundAction" method="viewR">
+            <result name="success">/HRManager/Round.jsp</result>
+            <result name="error">/Home/Round.jsp</result>
+        </action>
+        
+        
+        <action name="viewjod" class="Stroke.JobOpeningAction" method="retriveData">
+            <result name="success">/Home/homepage.jsp</result> 
+            <result name="error">/example/HelloWorld.jsp</result> 
+        </action>
+         <action name="resultshow" class="Stroke.ResultAction" method="DisplayIntRnd">
+            <result name="success">/Interviewer/interview.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        <action name="interview" class="Stroke.ResultAction" method="saveResult">
+            <result name="success">/Interviewer/interview.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
+        
+        
+        
+         <action name="schedule" class="Stroke.IntervieweeAction" method="retriveData">
+            <result name="success">/RecruiterAssistant/schedule.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
+        
+        
+        
+        
+        
+        <action name="RegisteredCandidatesRetrive" class="Stroke.IntervieweeAction" method="retriveData">
+            <result name="success">/Interviewer/RegisteredCandidates.jsp</result>
+            <result name="error">/Interviewer/RegisteredCandidates.jsp</result>
+        </action>
+        <action name="branchRetrive" class="Stroke.OrganizationAction" method="retriveData">
+            <result name="success">/Home/Branch.jsp</result> 
+            <result name="error">/Home/homepage.jsp</result> 
+        </action>
+    </package>
+</struts>

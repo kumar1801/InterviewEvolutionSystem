@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 31 Jan, 2015 4:53:40 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+  <class catalog="ies" name="Prototypical.Desiredskills" table="desiredskills">
+    <composite-id class="Prototypical.DesiredskillsId" name="id">
+      <key-property name="jobReferenceCode" type="int">
+        <column name="JobReferenceCode"/>
+      </key-property>
+      <key-property name="desiredSkills" type="string">
+        <column length="45" name="DesiredSkills"/>
+      </key-property>
+    </composite-id>
+    <many-to-one class="Prototypical.Jobopeningdetails" fetch="select" insert="false" name="jobopeningdetails" update="false">
+      <column name="JobReferenceCode" not-null="true"/>
+    </many-to-one>
+  </class>
+</hibernate-mapping>

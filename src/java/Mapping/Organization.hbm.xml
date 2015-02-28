@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1 Feb, 2015 11:53:06 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="Prototypical.Organization" table="organization" catalog="ies">
+        <id name="orgname" type="string">
+            <column name="Orgname" length="50" />
+            <generator class="assigned"></generator>
+        </id>
+        
+        <property name="orgdetails" type="string">
+            <column name="Orgdetails" length="45" />
+        </property>
+        <property name="noofbranches" type="java.lang.Integer">
+            <column name="Noofbranches" />
+        </property>
+        <property name="imagename" type="string">
+            <column name="imagename" length="100" not-null="true" />
+        </property>
+        <property name="orglogo" type="binary">
+            <column name="orglogo" not-null="true" />
+        </property>
+        <set name="branches" table="branch" inverse="false" lazy="true" cascade="all">
+            <key>
+                <column name="Orgname" length="50" />
+            </key>
+            <one-to-many class="Prototypical.Branch" />
+        </set>
+    </class>
+</hibernate-mapping>

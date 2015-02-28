@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1 Feb, 2015 11:53:06 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="Prototypical.Branch" table="branch" catalog="ies">
+        <id name="branchid" type="int">
+            <column name="Branchid" />
+            <generator class="assigned"></generator>
+        </id>
+        <property name="branchtype" type="string">
+            <column name="Branchtype" length="45" />
+        </property>
+        <property name="street" type="string">
+            <column name="Street" length="45" />
+        </property>
+        <property name="city" type="string">
+            <column name="City" length="45" />
+        </property>
+        <property name="state" type="string">
+            <column name="State" length="45" />
+        </property>
+        <property name="pincode" type="string">
+            <column name="Pincode" length="45" />
+        </property>
+        <set cascade="all" fetch="select" inverse="false" lazy="true" name="contact" table="contactno_branch">
+      <key>
+        <column name="Branchid" not-null="true"/>
+      </key>
+      <one-to-many class="Prototypical.Contactbranch"/>
+    </set>
+    </class>
+</hibernate-mapping>

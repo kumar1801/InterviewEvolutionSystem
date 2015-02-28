@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19 Jan, 2015 10:18:44 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class catalog="ies" name="Prototypical.Person" table="person">
+        <id name="personid" type="java.lang.Integer">
+            <column name="personid"/>
+            <generator class="assigned"/>
+        </id>
+        <discriminator column="type" type="string"/>
+        <property name="fname" type="string">
+            <column length="45" name="fname" not-null="false"/>
+        </property>
+        <property name="mname" type="string">
+            <column length="45" name="mname" not-null="false"/>
+        </property>
+        <property name="lname" type="string">
+            <column length="45" name="lname" not-null="false"/>
+        </property>
+        <property name="emailid" type="string">
+            <column length="45" name="emailid" not-null="false"/>
+        </property>
+        <property name="street" type="string">
+            <column length="45" name="street" not-null="false"/>
+        </property>
+        <property name="city" type="string">
+            <column length="45" name="city" not-null="false"/>
+        </property>
+        <property name="state" type="string">
+            <column length="45" name="state" not-null="false"/>
+        </property>
+        <property name="country" type="string">
+            <column length="45" name="country" not-null="false"/>
+        </property>
+        <property name="pincode" type="java.lang.Integer">
+            <column length="45" name="pincode" not-null="false"/>
+        </property>
+        <property name="username" type="string">
+            <column length="45" name="username" not-null="false"/>
+        </property>
+        <property name="password" type="string">
+            <column length="45" name="password" not-null="false"/>
+        </property>
+        <property name="confirmpassword" type="string">
+            <column length="45" name="confirmpassword" not-null="false"/>
+        </property>
+         
+        <set name="workexperience" cascade="all" fetch="select" inverse="true" lazy="true" table="workexperience">
+            <key column="desiredid"/>
+            <one-to-many class="Prototypical.Workexperience"/>
+        </set>
+                
+        <set name="acdemicdetails" cascade="all" fetch="select" inverse="true" lazy="true">
+            <key column="desiredid"/>
+            <one-to-many class="Prototypical.Acdemicdetails"/>
+        </set>
+        
+        
+        <set cascade="all" fetch="select" inverse="true" lazy="true" name="languageknown">
+            <key>
+                <column name="personid" not-null="true"/>
+            </key>
+            <one-to-many class="Prototypical.Languageknown"/>
+        </set>
+    
+        
+        <set cascade="all" inverse="false" name="contact">
+            <key column="personid"/>
+            <one-to-many class="Prototypical.ContactPerson"/>
+        </set>
+        <subclass discriminator-value="Head" name="Prototypical.Head">
+            <join table="head">
+                <key column="HeadID"/>
+                <property column="HeadDetail" name="headDetail"/>
+                <property column="HeadType" name="headType"/>
+                <property name="imagename" type="string">
+                    <column name="imagename" length="100" not-null="true" />
+                </property>
+                <property name="headimg" type="binary">
+                    <column name="headimg" not-null="true" />
+                </property>          
+            </join>
+        </subclass>
+        
+        <subclass discriminator-value="interviewee" name="Prototypical.Interviewee">
+            <join table="interviewee">
+                <key column="desiredid"/>
+                <property column="gender" name="gender"/>
+                <property column="nationality" name="nationality"/>
+                <property column="marritalstatus" name="marritalstatus"/>
+                <property column="hobbies" name="hobbies"/>
+                <property column="dob" name="dob"/>
+                <property column="JRC" name="JRC"/>
+            </join> 
+        </subclass>
+        <subclass discriminator-value="RCM" name="Prototypical.RCM">
+            <join table="rcmd">
+                <key column="RcmID"/>
+                <property name="Department"/>
+                <property name="Designation"/>
+                <property name="RCMRole"/>
+            </join>
+        </subclass>
+    </class>
+    <class catalog="ies" name="Prototypical.ContactPerson" table="contact_person">
+        <id name="personid" type="java.lang.Integer">
+            <column name="personid"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="contactno" type="java.lang.Long">
+            <column length="13" name="contactno"/>
+        </property>
+    </class>
+</hibernate-mapping>

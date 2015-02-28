@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 31 Jan, 2015 4:53:40 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+  <class catalog="ies" name="Prototypical.Jobopeningdetails" table="jobopeningdetails">
+    <id name="jobReferenceCode" type="int">
+      <column name="JobReferenceCode"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="department" type="string">
+      <column length="45" name="Department" not-null="true"/>
+    </property>
+    <property name="gender" type="string">
+      <column length="45" name="Gender" not-null="true"/>
+    </property>
+    <property name="posting" type="string">
+      <column length="45" name="Posting" not-null="true"/>
+    </property>
+    <property name="vacancies" type="string">
+      <column length="45" name="Vacancies" not-null="true"/>
+    </property>
+    <property name="street" type="string">
+      <column length="45" name="Street" not-null="true"/>
+    </property>
+    <property name="city" type="string">
+      <column length="45" name="City" not-null="true"/>
+    </property>
+    <property name="state" type="string">
+      <column length="45" name="State" not-null="true"/>
+    </property>
+    <property name="country" type="string">
+      <column length="45" name="Country" not-null="true"/>
+    </property>
+    <property name="pincode" type="string">
+      <column length="45" name="Pincode" not-null="true"/>
+    </property>
+    <property name="ctc" type="float">
+      <column name="Ctc" not-null="true" precision="12" scale="0"/>
+    </property>
+    <property name="jobType" type="string">
+      <column length="45" name="JobType" not-null="true"/>
+    </property>
+    <set cascade="all" fetch="select" inverse="true" lazy="true" name="requiedqualifications" table="requiedqualification">
+      <key>
+        <column name="JobReferenceCode" not-null="true"/>
+      </key>
+      <one-to-many class="Prototypical.Requiedqualification"/>
+    </set>
+    <set cascade="all" fetch="select" inverse="true" lazy="true" name="desiredskillses" table="desiredskills">
+      <key>
+        <column name="JobReferenceCode" not-null="true"/>
+      </key>
+      <one-to-many class="Prototypical.Desiredskills"/>
+    </set>
+     <set cascade="all" fetch="select" inverse="true" lazy="true" name="requireddocuments" table="requireddocuments">
+      <key>
+        <column name="JobReferenceCode" not-null="true"/>
+      </key>
+      <one-to-many class="Prototypical.Requireddocuments"/>
+    </set>
+  </class>
+</hibernate-mapping>
