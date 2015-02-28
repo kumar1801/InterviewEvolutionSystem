@@ -23,6 +23,8 @@ public class Jobopeningdetails  implements java.io.Serializable {
      private String pincode;
      private float ctc;
      private String jobType;
+     private String imagename;
+     private byte[] image;
      private Set requiedqualifications = new HashSet(0);
      private Set desiredskillses = new HashSet(0);
      private Set requireddocuments = new HashSet(0);
@@ -30,8 +32,7 @@ public class Jobopeningdetails  implements java.io.Serializable {
     public Jobopeningdetails() {
     }
 
-	
-    public Jobopeningdetails(int jobReferenceCode, String department, String gender, String posting, String vacancies, String street, String city, String state, String country, String pincode, float ctc, String jobType) {
+    public Jobopeningdetails(int jobReferenceCode, String department, String gender, String posting, String vacancies, String street, String city, String state, String country, String pincode, float ctc, String jobType, String imagename, byte[] image) {
         this.jobReferenceCode = jobReferenceCode;
         this.department = department;
         this.gender = gender;
@@ -44,24 +45,27 @@ public class Jobopeningdetails  implements java.io.Serializable {
         this.pincode = pincode;
         this.ctc = ctc;
         this.jobType = jobType;
+        this.imagename = imagename;
+        this.image = image;
     }
-    public Jobopeningdetails(int jobReferenceCode, String department, String gender, String posting, String vacancies, String street, String city, String state, String country, String pincode, float ctc, String jobType, Set requiedqualifications, Set desiredskillses, Set requireddocuments) {
-       this.jobReferenceCode = jobReferenceCode;
-       this.department = department;
-       this.gender = gender;
-       this.posting = posting;
-       this.vacancies = vacancies;
-       this.street = street;
-       this.city = city;
-       this.state = state;
-       this.country = country;
-       this.pincode = pincode;
-       this.ctc = ctc;
-       this.jobType = jobType;
-       this.requiedqualifications = requiedqualifications;
-       this.desiredskillses = desiredskillses;
-       this.requireddocuments = requireddocuments;
+
+    public String getImagename() {
+        return imagename;
     }
+
+    public void setImagename(String imagename) {
+        this.imagename = imagename;
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
+    
+    
    
     public int getJobReferenceCode() {
         return this.jobReferenceCode;

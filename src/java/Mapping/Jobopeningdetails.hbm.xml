@@ -37,6 +37,14 @@
     <property name="ctc" type="float">
       <column name="Ctc" not-null="true" precision="12" scale="0"/>
     </property>
+    
+     <property name="imagename" type="string">
+            <column name="Imagename" length="100" not-null="true" />
+        </property>
+        <property name="image" type="binary">
+            <column name="Image" not-null="true" />
+        </property>
+    
     <property name="jobType" type="string">
       <column length="45" name="JobType" not-null="true"/>
     </property>

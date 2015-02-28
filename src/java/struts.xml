@@ -30,6 +30,9 @@
         <action name="round" class="Stroke.RCMAction" method="retriveData" >
             <result name="success">/HRManager/Round.jsp</result> 
         </action>
+        <action name="rounds" class="Stroke.RCMAction" method="retriveData" >
+            <result name="success">/RecruiterAssistant/Rounds.jsp</result> 
+        </action>
         <action name="interview" class="Stroke.IntervieweeAction" method="retriveData">
             <result name="success">/Interviewer/interview.jsp</result> 
         </action>
@@ -49,14 +52,24 @@
             <result name="error">/SuperAdmin/users.jsp</result>
         </action>
         <action name="save" class="Stroke.JobOpeningAction" method="SaveData">
+            <interceptor-ref name="defaultStack">
+                <param name="maximumSize">2097152</param>
+                <param name="allowedTypes">
+                    text/plain,image/png,image/gif,image/jpeg
+                </param>
+            </interceptor-ref>
             <result name="success">/HRManager/JobOpening.jsp</result> 
             <result name="error">/example/HelloWorld.jsp</result> 
+            <result name="input">/HRManager/JobOpening.jsp</result> 
         </action>
         
         
         <action name="saveRound" class="Stroke.RoundAction" method="saveRound">
-            <result name="success">/Home/Round.jsp</result> 
+            <result name="success">/Home/Rounds.jsp</result> 
         </action>
+        
+        
+        
         <action name="headsubmit" class="Stroke.HeadAction" method="saveData">
             <interceptor-ref name="defaultStack">
                 <param name="maximumSize">2097152</param>
@@ -117,8 +130,8 @@
             <result name="error">/Home/homepage.jsp</result>
         </action>
         
-        
-        
+         
+         
         
         
         
