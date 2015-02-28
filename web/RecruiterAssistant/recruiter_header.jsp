@@ -131,7 +131,7 @@
                         </li>
                        
                         <li>
-                            <a href="RecruiterAssistant/rounds.jsp">
+                            <a href="rounds">
                                 <i class=" glyphicon glyphicon-registration-mark"></i> <span>Rounds</span>
                             </a>
                         </li>
