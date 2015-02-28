@@ -21,15 +21,14 @@
             <li class="active">Job Opening</li>
         </ol>
     </section>
-    <form name="jobopening" action="save" method="post" id="signinform">
+    <form name="jobopening" action="save" method="post" id="signinform" enctype="multipart/form-data">
         <section class="content">
             <div class="row">
                 <div class="col-lg-12">
                     <p>
                     <div class="btn btn-success btn-file">
-                        <i class="fa fa-paperclip"></i> <strong>Import File</strong>
-                        <input type="file" name="attachment"/>
-                        <s:file name="attachment"/>
+                        <i class="fa fa-paperclip"></i> 
+                        <s:file name="userImage" label="ImportFile" /> 
                     </div>
                     
                 </div>

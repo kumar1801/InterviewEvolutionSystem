@@ -54,12 +54,12 @@
                     </div>
                     <header class="panel-heading">Fill Details  </header>
                     <div class="panel-body">
-                        <form class="form-horizontal adminex-form" name="registration" action="registrationsubmit" method="post" id="registrationform">
+                        <form class="form-horizontal adminex-form" name="registration" action="registrationsubmit.action" method="post" id="registrationform">
                             <div class="form-group">
                                 <label class="col-lg-2 col-sm-2 control-label">Job Reference Code</label>
                                 <div class="col-lg-10">
 
-                                    <s:select name="JRC" list="%{listjod}" listKey="jobReferenceCode" listValue="jobReferenceCode" cssClass="form-control"/>
+                                    <s:select name="jrc" list="%{listjod}" listKey="jobReferenceCode" listValue="jobReferenceCode" cssClass="form-control"/>
                                 </div>
                             </div>
                             <div>
@@ -72,7 +72,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">User-Name</label>
                                     <div class="col-sm-10">
-                                        <s:textfield type="text" name="username" cssClass="form-control"/>
+                                        <s:textfield name="username" cssClass="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -228,10 +228,10 @@
                                     <label for="inputSuccess" class="col-sm-2 control-label col-lg-2">Acdemic Details</label>
                                 </div>
 
-                                <table id="AcdemicDetails" class="table  table-hover general-table">
+                                <table class="table  table-hover general-table">
                                     <thead>
                                         <tr>
-                                            
+                                            <th>#</th>
                                             <th>Degree-Type</th>
                                             <th>Institution-Name</th>
                                             <th>Year of Passing</th>
@@ -239,28 +239,66 @@
 
                                         </tr>
                                     </thead>
-                                    <tbody>       
-                                        <TD><INPUT type="text" name="degreetype"/></TD>
-                                        <TD><INPUT type="text" name="institutionname" /></TD>
-                                        <TD><INPUT type="text" name="yearofpassing" /></TD>
-                                        <TD><INPUT type="text" name="percentageobtained" /></TD>
+                                    <tbody>
+
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    1
+                                                </a>
+                                            </td>
+                                            <td class="hidden-phone">BE</td>
+                                            <td>VIER </td>
+                                            <td>march-2015</td>
+                                            <td>50% Complete (success)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    2
+                                                </a>
+                                            </td>
+                                            <td class="hidden-phone">BE</td>
+                                            <td>VIER </td>
+                                            <td>march-2015</td>
+                                            <td>55% Complete (success)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    3
+                                                </a>
+                                            </td>
+                                            <td class="hidden-phone">BE</td>
+                                            <td>VIER </td>
+                                            <td>march-2015</td>
+                                            <td>70% Complete (success)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    4
+                                                </a>
+                                            </td>
+                                            <td class="hidden-phone">BE</td>
+                                            <td>VIER </td>
+                                            <td>march-2015</td>
+                                            <td>55% Complete (success)</td>
+                                        </tr>
+
                                     </tbody>
                                 </table>
-                                    <div class="form-group">
-                                        <div class="col-sm-2"><input type="button" onclick="addRow1('AcdemicDetails')" align="center" class="btn btn-primary" value="Add Row"/>
-                                </div>
-                                        </div>
+
 
                                 <!--experience start><-->
                                 <div class="form-group">
-                                    <div class="row">
                                     <label for="inputSuccess" class="col-sm-2 control-label col-lg-2">Work Experience</label>
-                                    </div>
                                 </div>
 
-                                <table id="WorkExperienceTable" class="table  table-hover general-table">
+                                <table class="table  table-hover general-table">
                                     <thead>
                                         <tr>
+                                            <th>#</th>
                                             <th>Organization Name</th>
                                             <th>Responsibility</th>
                                             <th>Designation</th>
@@ -269,16 +307,58 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <TD><INPUT type="text" name="orgname"/></TD>
-                                        <TD><INPUT type="text" name="responsibility" /></TD>
-                                        <TD><INPUT type="text" name="designation" /></TD>
-                                        <TD><INPUT type="text" name="duration" /></TD>
-                                        <TD><INPUT type="text" name="salaryDrawn" /></TD>
+
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    1
+                                                </a>
+                                            </td>
+                                            <td class="hidden-phone">BE</td>
+                                            <td>VIER </td>
+                                            <td>march-2015</td>
+                                            <td>50% Complete (success)</td>
+                                            <td>50% Complete (success)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    2
+                                                </a>
+                                            </td>
+                                            <td class="hidden-phone">BE</td>
+                                            <td>VIER </td>
+                                            <td>march-2015</td>
+                                            <td>55% Complete (success)</td>
+                                            <td>50% Complete (success)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    3
+                                                </a>
+                                            </td>
+                                            <td class="hidden-phone">BE</td>
+                                            <td>VIER </td>
+                                            <td>march-2015</td>
+                                            <td>70% Complete (success)</td>
+                                            <td>50% Complete (success)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    4
+                                                </a>
+                                            </td>
+                                            <td class="hidden-phone">BE</td>
+                                            <td>VIER </td>
+                                            <td>march-2015</td>
+                                            <td>55% Complete (success)</td>
+                                            <td>50% Complete (success)</td>
+                                        </tr>
+
                                     </tbody>
                                 </table>
-                                <div class="form-group">
-                                 <div class="col-sm-2"><input type="button" onclick="addRow('WorkExperienceTable')" align="center" class="btn btn-primary" value="Add Row"/>
-                                 </div></div>
                                 <p>
 
                                     <s:submit type="submit" data-filter=".bootstrap" value="SUBMIT" cssClass="btn btn-primary btn-btnbig active"/></p>
@@ -296,7 +376,7 @@
             </div>
         </section>
 
-<s:property value="#session.username"/>
+<s:property value="#map.username"/>
 
 
 
@@ -304,58 +384,57 @@
 
         <!--/#about-us-->
 
-         <section id="contact">
-        <div class="container">
-            <div class="box last">
-                <div class="row">
-                    <!--/.col-sm-6-->
-                    <div class="col-sm-6">
-                        <h1>Our Address</h1>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <address>
-                                    <strong>Junagadh,Gujarat,India</strong><br>
-                                    F-302 Surbhi Appartment<br/>
-                                    Behind dipanjali society<br/>
-                                    <abbr title="Phone">P:</abbr> 9409430960
-                                </address>
-                            </div>
-                            <div class="col-md-6">
-                                <address>
-                                    <strong>Vadodara,Gujarat,India</strong><br>
-                                    A-8 Vrajdham Soc;<br>
-                                    Ajwa Road<br>
-                                    <abbr title="Phone">P:</abbr> 8000858511
-                                </address>
-                            </div>
-                        </div>
-                    </div>
-                        
+        <section id="contact">
+            <div class="container">
+                <div class="box last" style="margin-top:-20px;">
+                    <div class="row">
+                        <!--/.col-sm-6-->
                         <div class="col-sm-6">
-                        <h1>Connect with us</h1>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="social">
-                                    <li><a href="<%=application.getContextPath()%>/www.facebook.com"><i class="icon-facebook icon-social"></i> Facebook</a></li>
-                                    <li><a href="<%=application.getContextPath()%>/www.google.com"><i class="icon-google-plus icon-social"></i> Google Plus</a></li>
-                                    <li><a href="<%=application.getContextPath()%>/www.pinterest.com"><i class="icon-pinterest icon-social"></i> Pinterest</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="social">
-                                    <li><a href="<%=application.getContextPath()%>/www.linkedin.com"><i class="icon-linkedin icon-social"></i> Linkedin</a></li>
-                                    <li><a href="<%=application.getContextPath()%>/www.twitter.com"><i class="icon-twitter icon-social"></i> Twitter</a></li>
-                                    <li><a href="<%=application.getContextPath()%>/www.youtube.com"><i class="icon-youtube icon-social"></i> Youtube</a></li>
-                                </ul>
+                            <h1>Our Address</h1>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <address>
+                                        <strong>Twitter, Inc.</strong><br>
+                                        795 Folsom Ave, Suite 600<br>
+                                        San Francisco, CA 94107<br>
+                                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                                    </address>
+                                </div>
+                                <div class="col-md-6">
+                                    <address>
+                                        <strong>Twitter, Inc.</strong><br>
+                                        795 Folsom Ave, Suite 600<br>
+                                        San Francisco, CA 94107<br>
+                                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                                    </address>
+                                </div>
                             </div>
                         </div>
+
+                        <div class="col-sm-6">
+                            <h1>Connect with us</h1>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="social">
+                                        <li><a href="#"><i class="icon-facebook icon-social"></i> Facebook</a></li>
+                                        <li><a href="#"><i class="icon-google-plus icon-social"></i> Google Plus</a></li>
+                                        <li><a href="#"><i class="icon-pinterest icon-social"></i> Pinterest</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="social">
+                                        <li><a href="#"><i class="icon-linkedin icon-social"></i> Linkedin</a></li>
+                                        <li><a href="#"><i class="icon-twitter icon-social"></i> Twitter</a></li>
+                                        <li><a href="#"><i class="icon-youtube icon-social"></i> Youtube</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                        	</div>
-                        
-                    <!--/.col-sm-6-->
-                </div><!--/.row-->
-            </div><!--/.box-->
-        </div><!--/.container-->
-    </section><!--/#contact-->
+                        <!--/.col-sm-6-->
+                    </div><!--/.row-->
+                </div><!--/.box-->
+            </div><!--/.container-->
+        </section><!--/#contact-->
 
 
         <!-- validation-->
@@ -365,6 +444,15 @@
         <script src="<%=application.getContextPath()%>/visualization/validation/js/formValidation.min.js"></script>
         <script src="<%=application.getContextPath()%>/visualization/validation/js/framework/bootstrap.min.js"></script>
         <!--end validation-->
+
+<!--<script src="<%=application.getContextPath()%>/Home/js/jquery.js"></script>--%>
+        <script src="<%=application.getContextPath()%>/Home/js/bootstrap.min.js"></script>
+        <script src="<%=application.getContextPath()%>/Home/js/jquery.isotope.min.js"></script>
+        <script src="<%=application.getContextPath()%>/Home/js/jquery.prettyPhoto.js"></script>
+        <script src="<%=application.getContextPath()%>/Home/js/main.js"></script>
+        <script src="<%=application.getContextPath()%>/Home/js/accordian.js"></script>
+        
+
 
         <!--pickers plugins-->
         <script src="<%=application.getContextPath()%>/Home/js/bootstrap-datepicker.js"></script>
@@ -389,6 +477,6 @@
                 });
             });
         </script>
-        <%@include file="dynamicscript.jsp"%>
+
     </body>
 </html>

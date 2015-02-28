@@ -12,12 +12,17 @@ import Prototypical.Jobopeningdetails;
 import Prototypical.RequiedqualificationId;
 import Prototypical.DesiredskillsId;
 import Prototypical.RequireddocumentsId;
+import static com.opensymphony.xwork2.Action.INPUT;
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.opensymphony.xwork2.Preparable;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.*;
 import javax.servlet.http.HttpServletRequest;
+import org.apache.commons.io.FileUtils;
 import org.apache.struts2.interceptor.ServletRequestAware;
 
 /**
@@ -39,6 +44,9 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
     RequireddocumentsId rqid;
     Set<Requireddocuments> srq;
     HttpServletRequest request;
+    private File userImage;
+    private String userImageContentType;
+    private String userImageFileName;
 
     public List<Jobopeningdetails> getListjod() {
         return listjod;
@@ -49,7 +57,30 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
     }
    
     
-    
+     public File getUserImage() {
+        return userImage;
+    }
+
+    public void setUserImage(File userImage) {
+        this.userImage = userImage;
+    }
+
+    public String getUserImageContentType() {
+        return userImageContentType;
+    }
+
+    public void setUserImageContentType(String userImageContentType) {
+        this.userImageContentType = userImageContentType;
+    }
+
+    public String getUserImageFileName() {
+        return userImageFileName;
+    }
+
+    public void setUserImageFileName(String userImageFileName) {
+        this.userImageFileName = userImageFileName;
+    }
+
     
     public String getRequiredDocuments() {
         return requiredDocuments;
@@ -117,7 +148,29 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
         jod.setDesiredskillses(std);
         jod.setRequireddocuments(srq);
         
+        try {
 
+            String filePath = request.getSession().getServletContext().getRealPath("/uploadedImages/");
+            System.out.println("Server path:---------------------------------" + filePath);
+          
+            File fileToCreate = new File(filePath, this.userImageFileName);
+            FileUtils.copyFile(this.userImage, fileToCreate);
+            byte[] bFile = new byte[(int) fileToCreate.length()];
+
+            FileInputStream fileInputStream = new FileInputStream(fileToCreate);
+
+            fileInputStream.read(bFile);
+            fileInputStream.close();
+
+            String fname = "uploadedImages/" + userImageFileName;
+            jod.setImagename(fname);
+           jod.setImage(bFile);
+
+        } catch (IOException e) {
+            return INPUT;
+        }
+        
+        
         boolean save = new Procedure.JobOpeningOperation().insData(jod);
         if (save) {
             return SUCCESS;
@@ -140,5 +193,9 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
     public void setServletRequest(HttpServletRequest hsr) {
         this.request=hsr;
     }
+    
+    
+
+   
 
 }
