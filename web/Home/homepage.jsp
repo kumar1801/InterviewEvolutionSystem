@@ -111,7 +111,7 @@
                        <dd><s:property value="jobType" />s</dd>
                        
                       </dl>
-                      If you are intrested then click on<a href="registration">  registration  </a>
+                      If you are intrested then click on<a href="registration?jobcode=<s:property value="jobReferenceCode"/>">  registration  </a>
                       </div>  
                      
                       
