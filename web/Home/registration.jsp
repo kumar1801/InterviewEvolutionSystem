@@ -18,33 +18,7 @@
         <script src="<%=application.getContextPath()%>/Home/js/jquery.js"></script>
     </head><!--/head-->
 
-    <body data-spy="scroll" data-target="#navbar" data-offset="0">
-        <header id="header" role="banner">
-            <div class="container">
-                <div id="navbar" class="navbar navbar-default">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="homepage.jsp"></a>
-                    </div>
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li></li>
-                            <li class="active"><a href="homepage.jsp"><i class="icon-home"></i></a></li>
-                            <li><a href="home">Our Experience</a></li>
-                            <li><a href="branchRetrive">Branch</a></li>
-                            <li><a href="home">Job Opening</a></li>
-                            <li><a href="#registration">Registration</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </header><!--/#header-->
+  <%@include file="menu.jsp"%>
         <section class="panel" id="registration">
             <div class="container">
                 <div class="box"> 
