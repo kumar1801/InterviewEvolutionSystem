@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@include file="dynamicscript.jsp"%>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -206,10 +207,10 @@
                                     <label for="inputSuccess" class="col-sm-2 control-label col-lg-2">Acdemic Details</label>
                                 </div>
 
-                                <table class="table  table-hover general-table">
+                               <table id="AcdemicDetails" class="table  table-hover general-table">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                           
                                             <th>Degree-Type</th>
                                             <th>Institution-Name</th>
                                             <th>Year of Passing</th>
@@ -219,64 +220,25 @@
                                     </thead>
                                     <tbody>
 
-                                        <tr>
-                                            <td>
-                                                <a href="#">
-                                                    1
-                                                </a>
-                                            </td>
-                                            <td class="hidden-phone">BE</td>
-                                            <td>VIER </td>
-                                            <td>march-2015</td>
-                                            <td>50% Complete (success)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="#">
-                                                    2
-                                                </a>
-                                            </td>
-                                            <td class="hidden-phone">BE</td>
-                                            <td>VIER </td>
-                                            <td>march-2015</td>
-                                            <td>55% Complete (success)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="#">
-                                                    3
-                                                </a>
-                                            </td>
-                                            <td class="hidden-phone">BE</td>
-                                            <td>VIER </td>
-                                            <td>march-2015</td>
-                                            <td>70% Complete (success)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="#">
-                                                    4
-                                                </a>
-                                            </td>
-                                            <td class="hidden-phone">BE</td>
-                                            <td>VIER </td>
-                                            <td>march-2015</td>
-                                            <td>55% Complete (success)</td>
-                                        </tr>
+                                        <TD><INPUT type="text" name="degreetype"/></TD>
+                                        <TD><INPUT type="text" name="institutionname" /></TD>
+                                        <TD><INPUT type="text" name="yearofpassing" /></TD>
+                                        <TD><INPUT type="text" name="percentageobtained" /></TD>
 
-                                    </tbody>
+                                    </tbody>    
                                 </table>
-
+                                         <div class="form-group">
+                                        <div class="col-sm-2"><input type="button" onclick="addRow1('AcdemicDetails')" align="center" class="btn btn-primary" value="Add Row"/>
+                                </div></div>
 
                                 <!--experience start><-->
                                 <div class="form-group">
                                     <label for="inputSuccess" class="col-sm-2 control-label col-lg-2">Work Experience</label>
                                 </div>
 
-                                <table class="table  table-hover general-table">
+                               <table id="WorkExperienceTable" class="table  table-hover general-table">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
                                             <th>Organization Name</th>
                                             <th>Responsibility</th>
                                             <th>Designation</th>
@@ -285,58 +247,17 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-
-                                        <tr>
-                                            <td>
-                                                <a href="#">
-                                                    1
-                                                </a>
-                                            </td>
-                                            <td class="hidden-phone">BE</td>
-                                            <td>VIER </td>
-                                            <td>march-2015</td>
-                                            <td>50% Complete (success)</td>
-                                            <td>50% Complete (success)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="#">
-                                                    2
-                                                </a>
-                                            </td>
-                                            <td class="hidden-phone">BE</td>
-                                            <td>VIER </td>
-                                            <td>march-2015</td>
-                                            <td>55% Complete (success)</td>
-                                            <td>50% Complete (success)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="#">
-                                                    3
-                                                </a>
-                                            </td>
-                                            <td class="hidden-phone">BE</td>
-                                            <td>VIER </td>
-                                            <td>march-2015</td>
-                                            <td>70% Complete (success)</td>
-                                            <td>50% Complete (success)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="#">
-                                                    4
-                                                </a>
-                                            </td>
-                                            <td class="hidden-phone">BE</td>
-                                            <td>VIER </td>
-                                            <td>march-2015</td>
-                                            <td>55% Complete (success)</td>
-                                            <td>50% Complete (success)</td>
-                                        </tr>
-
+                                        <TD><INPUT type="text" name="orgname"/></TD>
+                                        <TD><INPUT type="text" name="responsibility" /></TD>
+                                        <TD><INPUT type="text" name="designation" /></TD>
+                                        <TD><INPUT type="text" name="duration" /></TD>
+                                        <TD><INPUT type="text" name="salaryDrawn" /></TD>
+                                        
                                     </tbody>
                                 </table>
+                                 <div class="form-group">
+                                 <div class="col-sm-2"><input type="button" onclick="addRow('WorkExperienceTable')" align="center" class="btn btn-primary" value="Add Row"/>
+                                 </div></div>
                                 <p>
 
                                     <s:submit type="submit" data-filter=".bootstrap" value="SUBMIT" cssClass="btn btn-primary btn-btnbig active"/></p>
