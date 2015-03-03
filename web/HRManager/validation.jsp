@@ -53,6 +53,19 @@
                         }
                     }
                 },
+                
+                ctc: {
+                    row:'.col-lg-12',
+                    validators: {
+                        notEmpty: {
+                            message: 'The CTC is required'
+                        },
+                         regexp: {
+                            regexp:/^[0-9]+$/,
+                            message: 'CTC only consist of Numeric Value'
+                        }
+                    }
+                },
                 vacancies: {
                     row:'.col-lg-12',
                     validators: {

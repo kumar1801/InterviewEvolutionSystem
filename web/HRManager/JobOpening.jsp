@@ -133,6 +133,16 @@
                         <div class="box box-warning">
                             <div class="box-body">
                                 <div id="step1">
+                                   <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <label>CTC:</label>
+                                        <s:textfield name="ctc9+" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                        </div>
+                                    </div>
+                                </div> 
+                                    
+                                    
                                     <div class="form-group ">
                                         <div class="row">
                                             <div class="col-lg-12">

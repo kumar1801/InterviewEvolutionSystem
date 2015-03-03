@@ -106,9 +106,11 @@
                       <dl>
                        <dt></dt>
                        <dt>Vacancies</dt>
-                       <dd><s:property value="vacancies" /></dd>
+                       <dd><s:property value="vacancies"/></dd>
                        <dt>job-type</dt>
-                       <dd><s:property value="jobType" />s</dd>
+                       <dd><s:property value="jobType"/>s</dd>
+                       <dt>CTC</dt>
+                       <dd><s:property value="ctc"/>s</dd>
                        
                       </dl>
                       If you are interested then click on<a href="registration?jobcode=<s:property value="jobReferenceCode"/>">  registration  </a>
