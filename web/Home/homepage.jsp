@@ -166,16 +166,16 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <ul class="social">
-                                    <li><a href="<%=application.getContextPath()%>/www.facebook.com"><i class="icon-facebook icon-social"></i> Facebook</a></li>
-                                    <li><a href="<%=application.getContextPath()%>/www.google.com"><i class="icon-google-plus icon-social"></i> Google Plus</a></li>
-                                    <li><a href="<%=application.getContextPath()%>/www.pinterest.com"><i class="icon-pinterest icon-social"></i> Pinterest</a></li>
+                                    <li><a href="http://www.facebook.com"><i class="icon-facebook icon-social"></i> Facebook</a></li>
+                                    <li><a href="http://www.google.com"><i class="icon-google-plus icon-social"></i> Google Plus</a></li>
+                                    <li><a href="http://www.pinterest.com"><i class="icon-pinterest icon-social"></i> Pinterest</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
                                 <ul class="social">
-                                    <li><a href="<%=application.getContextPath()%>/www.linkedin.com"><i class="icon-linkedin icon-social"></i> Linkedin</a></li>
-                                    <li><a href="<%=application.getContextPath()%>/www.twitter.com"><i class="icon-twitter icon-social"></i> Twitter</a></li>
-                                    <li><a href="<%=application.getContextPath()%>/www.youtube.com"><i class="icon-youtube icon-social"></i> Youtube</a></li>
+                                    <li><a href="http://www.linkedin.com"><i class="icon-linkedin icon-social"></i> Linkedin</a></li>
+                                    <li><a href="http://www.twitter.com"><i class="icon-twitter icon-social"></i> Twitter</a></li>
+                                    <li><a href="http://www.youtube.com"><i class="icon-youtube icon-social"></i> Youtube</a></li>
                                 </ul>
                             </div>
                         </div>
