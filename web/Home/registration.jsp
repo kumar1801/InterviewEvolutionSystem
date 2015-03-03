@@ -25,7 +25,6 @@
                 <div class="box"> 
                     <div class="headline1">
                         <h5>Registration Form</h5>
-                        <s:property value="#session.username"/>
                     </div>
                     <header class="panel-heading">Fill Details  </header>
                     <div class="panel-body">
