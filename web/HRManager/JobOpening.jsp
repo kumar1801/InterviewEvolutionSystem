@@ -23,16 +23,17 @@
     </section>
     <form name="jobopening" action="save" method="post" id="signinform" enctype="multipart/form-data">
         <section class="content">
+            <div class="form-group">
             <div class="row">
-                <div class="col-lg-12">
-                    <p>
+                <div class="col-xs-6">
                     <div class="btn btn-success btn-file">
                         <i class="fa fa-paperclip"></i> 
-                        <s:file name="userImage" label="ImportFile" /> 
+                        <s:file type="file" name="userImage" label="ImportFile" cssClass="form-control"/> 
                     </div>
                     
                 </div>
             </div>
+           </div>
             <div class="row">
                 <section class="col-lg-6">
                     <div class="box box-primary">

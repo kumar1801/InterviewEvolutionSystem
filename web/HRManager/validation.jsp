@@ -158,6 +158,19 @@
                             message: 'The field only consist of Numeric Value'
                         }
                     }
+                },
+                userImage:{
+                    row:'col-lg-4',
+                    validators:{
+                        file:{
+                            extension: 'doc,txt,pdf',
+                            type:'application/msword ,application/pdf,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document' ,
+                            maxSize:2097152,
+                            message:'The selected File is not valid'
+                        }
+                                
+                    }
+                    
                 }
                 
          
