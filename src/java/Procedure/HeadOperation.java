@@ -17,7 +17,9 @@ import Databaseutil.MyFilterHib;
 import Prototypical.ContactPerson;
 import Prototypical.Head;
 import Prototypical.Person;
+import java.util.List;
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -27,6 +29,18 @@ import org.hibernate.Transaction;
  * @author Devank
  */
 public class HeadOperation {
+    
+    
+     public List<Head> dataretrival(){
+        SessionFactory sf = MyFilterHib.getsessionfactory();
+        Session s;
+        Transaction tx = null;
+        s = sf.openSession();
+        tx = s.beginTransaction();
+        Query q=s.createQuery("from Head");
+        List<Head> listhead=q.list();
+        return listhead;
+    }
 
     public boolean insertDetails(Head head) {
         SessionFactory sf = MyFilterHib.getsessionfactory();

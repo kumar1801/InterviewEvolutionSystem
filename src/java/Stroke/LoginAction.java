@@ -6,9 +6,13 @@
 
 package Stroke;
 
+import Procedure.HeadOperation;
 import Procedure.IntervieweeOperation;
+import Procedure.RCMOperation;
+import Prototypical.Head;
 import Prototypical.Interviewee;
 import Prototypical.Login;
+import Prototypical.RCM;
 import static com.opensymphony.xwork2.Action.ERROR;
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
@@ -27,7 +31,10 @@ import org.apache.struts2.interceptor.SessionAware;
 public class LoginAction extends ActionSupport implements ModelDriven,Preparable,SessionAware {
 
     Login login;
+    List list;
     List<Interviewee> listinterviewee;
+    List<Head> listhead;
+    List<RCM> listrcm;
     public Map map;
     private Map<String, Object> session;
     @Override
@@ -65,7 +72,15 @@ public class LoginAction extends ActionSupport implements ModelDriven,Preparable
         String str="";
         boolean flagn=false,flagp=false;
         IntervieweeOperation io=new IntervieweeOperation();
+        HeadOperation ho=new HeadOperation();
+        RCMOperation ro=new RCMOperation();
         listinterviewee = io.dataretrival();
+        listhead=ho.dataretrival();
+        listrcm=ro.dataretrival();
+        list.add(listhead);
+        list.add(listinterviewee);
+        list.add(listrcm);
+        
         for (Interviewee i : listinterviewee) {
             if(login.getUsername().equals(i.getUsername()))       
             {
@@ -95,7 +110,7 @@ public class LoginAction extends ActionSupport implements ModelDriven,Preparable
                  addActionError("username & password is incorrect");
                  str= ERROR;
         }
-           
+          
         return str;
     }
     public String signOut()
