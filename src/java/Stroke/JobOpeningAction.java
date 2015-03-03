@@ -151,20 +151,16 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
         try {
 
             String filePath = request.getSession().getServletContext().getRealPath("/uploadedImages/");
-            System.out.println("Server path:---------------------------------" + filePath);
-          
             File fileToCreate = new File(filePath, this.userImageFileName);
             FileUtils.copyFile(this.userImage, fileToCreate);
             byte[] bFile = new byte[(int) fileToCreate.length()];
-
-            FileInputStream fileInputStream = new FileInputStream(fileToCreate);
-
-            fileInputStream.read(bFile);
-            fileInputStream.close();
+            try (FileInputStream fileInputStream = new FileInputStream(fileToCreate)) {
+                fileInputStream.read(bFile);
+            }
 
             String fname = "uploadedImages/" + userImageFileName;
             jod.setImagename(fname);
-           jod.setImage(bFile);
+            jod.setImage(bFile);
 
         } catch (IOException e) {
             return INPUT;
@@ -173,6 +169,7 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
         
         boolean save = new Procedure.JobOpeningOperation().insData(jod);
         if (save) {
+            
             return SUCCESS;
         } else {
             return ERROR;
@@ -181,7 +178,7 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
     
     
     public String retriveData(){
-       
+        request.setAttribute("jobcode", jobcode);
         JobOpeningOperation joo = new JobOpeningOperation();
         listjod = joo.dataretrival();
         return SUCCESS;
@@ -194,6 +191,15 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
         this.request=hsr;
     }
     
+    private String jobcode;
+
+    public String getJobcode() {
+        return jobcode;
+    }
+
+    public void setJobcode(String jobcode) {
+        this.jobcode = jobcode;
+    }
     
 
    

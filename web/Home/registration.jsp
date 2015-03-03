@@ -32,8 +32,12 @@
                             <div class="form-group">
                                 <label class="col-lg-2 col-sm-2 control-label">Job Reference Code</label>
                                 <div class="col-lg-10">
-
-                                    <s:select name="jrc" list="%{listjod}" listKey="jobReferenceCode" listValue="jobReferenceCode" cssClass="form-control"/>
+                                    <s:if test="jobcode!=null">
+                                        <s:select name="JRC" list="%{listjod}" listKey="jobReferenceCode" listValue="jobReferenceCode" cssClass="form-control" value="#request.jobcode" disabled="true"/>  
+                                    </s:if>
+                                    <s:else>
+                                     <s:select name="JRC" list="%{listjod}" listKey="jobReferenceCode" listValue="jobReferenceCode" cssClass="form-control"/>
+                                    </s:else>
                                 </div>
                             </div>
                             <div>

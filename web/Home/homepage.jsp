@@ -101,7 +101,7 @@
                     <p class="lead">Currently we have following <a href="viewjod"> job openings</a></p>
                      <s:iterator value="%{listjod}">
                     <div id="wrapper">
-                      <div class="accordionButton">JobReferenceCode:-<s:property value="jobReferenceCode" /></div>
+                      <div class="accordionButton">Job Reference Code:-<s:property value="jobReferenceCode" /></div>
                       <div style="display: none;" class="accordionContent">
                       <dl>
                        <dt></dt>
@@ -111,7 +111,7 @@
                        <dd><s:property value="jobType" />s</dd>
                        
                       </dl>
-                      If you are intrested then click on<a href="registration?jobcode=<s:property value="jobReferenceCode"/>">  registration  </a>
+                      If you are interested then click on<a href="registration?jobcode=<s:property value="jobReferenceCode"/>">  registration  </a>
                       </div>  
                      
                       
