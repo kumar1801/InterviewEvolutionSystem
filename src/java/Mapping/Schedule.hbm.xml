@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 18 Feb, 2015 4:33:01 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+  <class catalog="ies" name="Prototypical.Schedule" table="schedule">
+    <composite-id class="Prototypical.ScheduleId" name="id">
+      <key-property name="scheduleNo" type="int">
+        <column name="ScheduleNo"/>
+      </key-property>
+      <key-property name="roundId" type="int">
+        <column name="RoundID"/>
+      </key-property>
+    </composite-id>
+    <property name="type" type="string">
+      <column length="20" name="Type" not-null="true"/>
+    </property>
+    <property name="date" type="date">
+      <column length="10" name="Date" not-null="true"/>
+    </property>
+    <property name="interviewAssesmentReport" type="string">
+      <column length="50" name="InterviewAssesmentReport" not-null="true"/>
+    </property>
+    <property name="street" type="string">
+      <column length="20" name="Street" not-null="true"/>
+    </property>
+    <property name="city" type="string">
+      <column length="20" name="City" not-null="true"/>
+    </property>
+    <property name="state" type="string">
+      <column length="20" name="State" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

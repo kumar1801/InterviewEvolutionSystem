@@ -113,7 +113,7 @@
                         </li>
 
                         <li> 
-                            <a href="schedule">
+                            <a href="scheduleGo">
                                 <i class="fa fa-sitemap"></i> <span>Schedule Interview</span>
                             </a>
                         </li>

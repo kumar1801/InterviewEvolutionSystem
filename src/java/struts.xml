@@ -126,19 +126,6 @@
             <result name="error">/Home/homepage.jsp</result>
         </action>
         
-        
-        
-        
-         <action name="schedule" class="Stroke.IntervieweeAction" method="retriveData">
-            <result name="success">/RecruiterAssistant/schedule.jsp</result>
-            <result name="error">/Home/homepage.jsp</result>
-        </action>
-        
-         
-         
-        
-        
-        
         <action name="RegisteredCandidatesRetrive" class="Stroke.IntervieweeAction" method="retriveData">
             <result name="success">/Interviewer/RegisteredCandidates.jsp</result>
             <result name="error">/Interviewer/RegisteredCandidates.jsp</result>
@@ -147,5 +134,14 @@
             <result name="success">/Home/Branch.jsp</result> 
             <result name="error">/Home/homepage.jsp</result> 
         </action>
+        <action name="scheduleGo" class="Stroke.ScheduleAction" method="goSchedule">
+            <result name="success">/RecruiterAssistant/schedule.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        <action name="scheduleSet" class="Stroke.ScheduleAction" method="saveSchedule">
+            <result name="success">/RecruiterAssistant/schedule.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
     </package>
 </struts>

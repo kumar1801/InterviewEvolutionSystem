@@ -23,5 +23,6 @@
     <mapping resource="Mapping/Languageknown.hbm.xml"/>
     <mapping resource="Mapping/Acdemicdetails.hbm.xml"/>
     <mapping resource="Mapping/Workexperience.hbm.xml"/>
+    <mapping resource="Mapping/Schedule.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
