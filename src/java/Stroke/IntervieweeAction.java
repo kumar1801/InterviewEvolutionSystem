@@ -9,19 +9,16 @@ package Stroke;
 import Prototypical.Interviewee;
 import Procedure.IntervieweeOperation;
 import Procedure.JobOpeningOperation;
-import Procedure.ResultOperation;
 import Procedure.RoundOperation;
 import Prototypical.ContactPerson;
 import Prototypical.Jobopeningdetails;
 import Prototypical.Languageknown;
 import Prototypical.LanguageknownId;
-import Prototypical.Result;
 import Prototypical.ResultId;
 import Prototypical.Round;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.opensymphony.xwork2.Preparable;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -91,7 +88,7 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
      
         
         StringTokenizer stds = new StringTokenizer(langknown, ",");
-        lkn = new HashSet<Languageknown>();   
+        lkn = new HashSet<>();   
         while (stds.hasMoreTokens()) {
             langid = new LanguageknownId(interviewee.getPersonid(), stds.nextToken().trim());
             languageknown = new Languageknown(langid, interviewee);
