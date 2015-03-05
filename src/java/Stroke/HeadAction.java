@@ -82,11 +82,9 @@ public class HeadAction extends ActionSupport implements ModelDriven, Preparable
                                             File fileToCreate = new File(filePath, this.userImageFileName);
                                             FileUtils.copyFile(this.userImage, fileToCreate);
                                             byte[] bFile = new byte[(int) fileToCreate.length()];
-                
-                                             FileInputStream fileInputStream = new FileInputStream(fileToCreate);
-	     
-                                            fileInputStream.read(bFile);
-                                            fileInputStream.close();
+            try (FileInputStream fileInputStream = new FileInputStream(fileToCreate)) {
+                fileInputStream.read(bFile);
+            }
                         
                                             String fname="uploadedImages/"+userImageFileName;
                                             head.setImagename(fname);
