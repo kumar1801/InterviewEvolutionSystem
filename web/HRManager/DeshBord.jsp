@@ -1,8 +1,3 @@
-<%-- 
-    Document   : DeshBord
-    Created on : 1 Feb, 2015, 12:25:10 PM
-    Author     : Jyotil
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
