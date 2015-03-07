@@ -10,7 +10,7 @@ $(document).ready(function() {
         },
         fields: {
             username: {
-                row:'col-sm-10',
+                row:'.col-sm-10',
                 validators: {
                     notEmpty: {
                         message: 'The username is required'
@@ -45,7 +45,7 @@ $(document).ready(function() {
                 },
             
             contactno: {
-                      row:'.col-sm-10',
+                      row:'.col-sm-8',
                     validators: {
                         notEmpty: {
                             message: 'The Contact Number is required'

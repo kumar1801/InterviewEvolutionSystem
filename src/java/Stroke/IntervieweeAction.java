@@ -14,7 +14,6 @@ import Prototypical.ContactPerson;
 import Prototypical.Jobopeningdetails;
 import Prototypical.Languageknown;
 import Prototypical.LanguageknownId;
-import Prototypical.ResultId;
 import Prototypical.Round;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
@@ -35,6 +34,7 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
    
     Interviewee interviewee;
     List<Round> listround;
+    String str;
    
     @Override
         public Interviewee getModel() {
@@ -77,7 +77,7 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
         st = new StringTokenizer(contactno, ",");
         
         while (st.hasMoreElements()) {
-            String str = st.nextToken().trim();
+            str = st.nextToken().trim();
             a = Long.parseLong(str);
             co.setContactno(a);
             co.setPersonid(interviewee.getPersonid());
@@ -102,6 +102,8 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
         listjod = joo.dataretrival();
         if(save)
         {
+            SMSAction smsa = new SMSAction();
+            smsa.SMSSend("91"+str, "You are Registered in Interview Evolution System.\nUsername: "+interviewee.getUsername()+"\nPassword: "+interviewee.getPassword()+"\nThankyou");
             addActionMessage("SUCCESSFULLY INSERTED");
             return SUCCESS;
         }

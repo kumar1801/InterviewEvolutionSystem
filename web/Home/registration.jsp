@@ -50,7 +50,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">User-Name</label>
                                     <div class="col-sm-10">
-                                        <s:textfield name="username" cssClass="form-control"/>
+                                        <s:textfield type="text" name="username" cssClass="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -62,7 +62,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">Confirm-Password</label>
                                     <div class="col-sm-10">
-                                        <s:password name="confirmpassword" placeholder="" cssClass="form-control" />
+                                        <s:password type="password" name="confirmpassword" placeholder="" cssClass="form-control" />
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -161,7 +161,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">Pin-Code</label>
                                     <div class="col-sm-3">
-                                        <s:textfield placeholder="Enter.." cssClass="form-control" name="pincode"/>
+                                        <s:textfield type="text" placeholder="Enter.." cssClass="form-control" name="pincode"/>
                                     </div>
                                 </div>
                                 <label class="col-sm-2 control-label col-lg-2">Language Known</label>
@@ -258,7 +258,7 @@
                                  <div class="col-sm-2"><input type="button" onclick="addRow('WorkExperienceTable')" align="center" class="btn btn-primary" value="Add Row"/>
                                  </div></div>
                                 <p>
-
+                                   
                                     <s:submit type="submit" data-filter=".bootstrap" value="SUBMIT" cssClass="btn btn-primary btn-btnbig active"/></p>
 
 
@@ -280,59 +280,8 @@
 
 
 
-        <!--/#about-us-->
+<%@include file="contactus.jsp"%>
 
-        <section id="contact">
-            <div class="container">
-                <div class="box last" style="margin-top:-20px;">
-                    <div class="row">
-                        <!--/.col-sm-6-->
-                        <div class="col-sm-6">
-                            <h1>Our Address</h1>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <address>
-                                        <strong>Twitter, Inc.</strong><br>
-                                        795 Folsom Ave, Suite 600<br>
-                                        San Francisco, CA 94107<br>
-                                        <abbr title="Phone">P:</abbr> (123) 456-7890
-                                    </address>
-                                </div>
-                                <div class="col-md-6">
-                                    <address>
-                                        <strong>Twitter, Inc.</strong><br>
-                                        795 Folsom Ave, Suite 600<br>
-                                        San Francisco, CA 94107<br>
-                                        <abbr title="Phone">P:</abbr> (123) 456-7890
-                                    </address>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <h1>Connect with us</h1>
-                               <div class="row">
-                            <div class="col-md-6">
-                                <ul class="social">
-                                    <li><a href="http://www.facebook.com"><i class="icon-facebook icon-social"></i> Facebook</a></li>
-                                    <li><a href="http://www.google.com"><i class="icon-google-plus icon-social"></i> Google Plus</a></li>
-                                    <li><a href="http://www.pinterest.com"><i class="icon-pinterest icon-social"></i> Pinterest</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="social">
-                                    <li><a href="http://www.linkedin.com"><i class="icon-linkedin icon-social"></i> Linkedin</a></li>
-                                    <li><a href="http://www.twitter.com"><i class="icon-twitter icon-social"></i> Twitter</a></li>
-                                    <li><a href="http://www.youtube.com"><i class="icon-youtube icon-social"></i> Youtube</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                       	</div>
-                        <!--/.col-sm-6-->
-                    </div><!--/.row-->
-                </div><!--/.box-->
-            </div><!--/.container-->
-        </section><!--/#contact-->
 
 
         <!-- validation-->

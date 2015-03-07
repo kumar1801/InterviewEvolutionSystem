@@ -40,6 +40,7 @@
                                         <th>Zip-code</th>
                                         <th>UserName</th>
                                         <th>Nationality</th>
+                                        <th>Modification</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -48,9 +49,13 @@
                                             <td><s:property value="personid" /></td>
                                             <td><s:property value="fname" /></td>
                                             <td><s:property value="emailid" /></td>
-                                            <td><s:property value="pincode" />&percnt; </td>                                
+                                            <td><s:property value="pincode" /> </td>                                
                                             <td><s:property value="username" /></td>
                                             <td><s:property value="nationality" /></td>
+                                            <td align="center">
+                                                <button type="button" class="btn btn-twitter"><i class="glyphicon glyphicon-pencil"></i></button>
+                                                <button type="button" class="btn btn-github"><i class="glyphicon glyphicon-remove"></i></button>
+                                            </td>
                                         </tr>                                                                                                          
                                     </s:iterator>   
                                 </tbody>

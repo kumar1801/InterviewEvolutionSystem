@@ -97,7 +97,9 @@
         </action>
         <action name="login" class="Stroke.LoginAction" method="signIn">
             <result name="success">/Home/homepage.jsp</result>
-           
+            <result name="HR">/HRManager/DeshBord.jsp</result>
+            <result name="Recruiter">/RecruiterAssistant/recruiter_main.jsp</result>
+            <result name="Interviewer">/Interviewer/interviewer_main.jsp</result>
             <result name="error">/Home/homepage.jsp</result>
         </action>
         <action name="adminlogin" class="Stroke.LoginAction" method="execute">

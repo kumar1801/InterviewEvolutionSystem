@@ -18,7 +18,7 @@
         <link href="<%=application.getContextPath()%>/visualization/css/font-awesome.min.css" rel="stylesheet">
         <link href="<%=application.getContextPath()%>/Home/css/prettyPhoto.css" rel="stylesheet">
         <link href="<%=application.getContextPath()%>/Home/css/main.css" rel="stylesheet">
-        <link href="<%=application.getContextPath()%>/Home/css/main.css" rel="stylesheet">
+        <link href="<%=application.getContextPath()%>/Home/css/font-awesome.min.css" rel="stylesheet">
         <link href="<%=application.getContextPath()%>/visualization/css/AdminLTE.css" rel="stylesheet" type="text/css" />
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
@@ -35,22 +35,22 @@
     <%@include file="menu.jsp"%>
 
 
-        <section id="Branch">
-            <div class="container wrapper row-offcanvas row-offcanvas-left">
-                <div class="box">
-                    <div class="center gap">
-                        <h2>Branch</h2>
-                        <p class="lead">Organization have Different branch</p>
+    <section id="Branch">
+        <div class="container wrapper row-offcanvas row-offcanvas-left">
+            <div class="box">
+                <div class="center gap">
+                    <h2>Branch</h2>
+                    <p class="lead">Organization have Different branch</p>
 
-                        <%-- Accordation Start --%>
-                        <section class="content">
-                            <div class="row">
-                                <s:iterator value="%{branchdetail}">
-                                    <div class="col-md-12">
-                                        <!-- Primary box -->
-                                        <div class="box box-solid box-primary">
-                                            <div class="box-header">
-                                                <h3 class="box-title" style="color: white"><s:property value="branchid"></s:property></h3>
+                    <%-- Accordation Start --%>
+                    <section class="content">
+                        <div class="row">
+                            <s:iterator value="%{branchdetail}">
+                                <div class="col-md-12">
+                                    <!-- Primary box -->
+                                    <div class="box box-solid box-primary">
+                                        <div class="box-header">
+                                            <h3 class="box-title" style="color: white"><s:property value="branchid"></s:property></h3>
                                                 <div class="box-tools pull-right">
                                                     <button class="btn btn-primary btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
                                                     <button class="btn btn-primary btn-sm" data-widget="remove"><i class="fa fa-times"></i></button>
@@ -58,80 +58,40 @@
                                             </div>
                                             <label title="Branch-ID"></label>
                                             <div class="box-body">
-                                            branchtype:<s:property value="branchtype"></s:property><br/>
-                                            pincode<s:property value="pincode"></s:property>
+                                                <table width='85%' style="font-size: large; margin-top: -28px; margin-bottom: -50px;">
+                                                    <tr>
+                                                        <td>Branch Type:&nbsp;&nbsp;<s:property value="branchtype"></s:property></td>
+                                                        <td>Street:&nbsp;&nbsp;<s:property value="street"></s:property></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Organization Name:&nbsp;&nbsp;<s:property value="orgname"></s:property></td>
+                                                        <td>City:&nbsp;&nbsp;<s:property value="city"></s:property></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Zip-code:&nbsp;&nbsp;<s:property value="pincode"></s:property></td>
+                                                        <td>State:&nbsp;&nbsp;<s:property value="state"></s:property></td>
+                                                    </tr>
+                                                </table>
                                             </div><!-- /.box-body -->
                                         </div><!-- /.box -->
                                     </div><!-- /.col -->
-                                </s:iterator>
-                            </div>
-                        </section>
-                        <%-- Accordation End --%>
+                            </s:iterator>
+                        </div>
+                    </section>
+                    <%-- Accordation End --%>
 
-                    </div><!--/.box-->
-                </div><!--/.container-->
-        </section><!--/#portfolio-->
+                </div><!--/.box-->
+            </div><!--/.container-->
+    </section><!--/#portfolio-->
     <!--/#about-us-->
 
-    <section id="contact">
-        <div class="container">
-            <div class="box last">
-                <div class="row">
-                    <!--/.col-sm-6-->
-                    <div class="col-sm-6">
-                        <h1>Our Address</h1>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <address>
-                                    <strong>Junagadh,Gujarat,India</strong><br>
-                                    F-302 Surbhi Appartment<br/>
-                                    Behind dipanjali society<br/>
-                                    <abbr title="Phone">P:</abbr> 9409430960
-                                </address>
-                            </div>
-                            <div class="col-md-6">
-                                <address>
-                                    <strong>Vadodara,Gujarat,India</strong><br>
-                                    A-8 Vrajdham Soc;<br>
-                                    Ajwa Road<br>
-                                    <abbr title="Phone">P:</abbr> 8000858511
-                                </address>
-                            </div>
-                        </div>
-                    </div>
-                        
-                        <div class="col-sm-6">
-                        <h1>Connect with us</h1>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="social">
-                                    <li><a href="<%=application.getContextPath()%>/www.facebook.com"><i class="icon-facebook icon-social"></i> Facebook</a></li>
-                                    <li><a href="<%=application.getContextPath()%>/www.google.com"><i class="icon-google-plus icon-social"></i> Google Plus</a></li>
-                                    <li><a href="<%=application.getContextPath()%>/www.pinterest.com"><i class="icon-pinterest icon-social"></i> Pinterest</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="social">
-                                    <li><a href="<%=application.getContextPath()%>/www.linkedin.com"><i class="icon-linkedin icon-social"></i> Linkedin</a></li>
-                                    <li><a href="<%=application.getContextPath()%>/www.twitter.com"><i class="icon-twitter icon-social"></i> Twitter</a></li>
-                                    <li><a href="<%=application.getContextPath()%>/www.youtube.com"><i class="icon-youtube icon-social"></i> Youtube</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                       	</div>
-                        
-                    <!--/.col-sm-6-->
-                </div><!--/.row-->
-            </div><!--/.box-->
-        </div><!--/.container-->
-    </section><!--/#contact-->
-
-        <!-- jQuery 2.0.2 -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-        <!-- Bootstrap -->
-        <script src="<%=application.getContextPath()%>/visualization/js/bootstrap.min.js" type="text/javascript"></script>
-        <!-- AdminLTE App -->
-        <script src="<%=application.getContextPath()%>/visualization/js/AdminLTE/app.js" type="text/javascript"></script>
-        <script src="<%=application.getContextPath()%>/Home/js/login.js"></script>
-    </body>
+    <%@include file="contactus.jsp" %>
+    <!-- jQuery 2.0.2 -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="<%=application.getContextPath()%>/visualization/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- AdminLTE App -->
+    <script src="<%=application.getContextPath()%>/visualization/js/AdminLTE/app.js" type="text/javascript"></script>
+    <script src="<%=application.getContextPath()%>/Home/js/login.js"></script>
+</body>
 </html>

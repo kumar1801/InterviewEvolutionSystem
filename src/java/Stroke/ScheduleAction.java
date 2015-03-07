@@ -8,6 +8,7 @@ package Stroke;
 import Procedure.ResultOperation;
 import Procedure.SchedualOperation;
 import Prototypical.*;
+import Procedure.SMSOperation;
 import static com.opensymphony.xwork2.Action.ERROR;
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
@@ -78,6 +79,8 @@ public class ScheduleAction extends ActionSupport implements ModelDriven, Prepar
         SchedualOperation so = new SchedualOperation();
         boolean save = so.insSchedule(schedule);
         if (save) {
+            SMSAction smsa = new SMSAction();
+            smsa.SMSSend("919409430960", "Joile aavi gyo??");
             goSchedule();
             return SUCCESS;
         } else {

@@ -39,6 +39,11 @@ public class ContactPerson  implements java.io.Serializable {
         this.contactno = contactno;
     }
 
+    @Override
+    public String toString() {
+        return "ContactPerson{" + "personid=" + personid + ", contactno=" + contactno + '}';
+    }
+
 
 
 

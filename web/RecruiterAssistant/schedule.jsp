@@ -114,14 +114,9 @@
 
                                 <div class="form-group">
                                     <label>
-                                        <s:checkboxlist name="notification" list="{'SMS','E-MAIL'}" cssClass="flat-red "/>
-
-                                        :</label>
-
-
+                                        <s:checkboxlist name="notification" list="{'SMS','E-MAIL'}" cssClass="flat-red"/>:
+                                    </label>
                                 </div>
-
-
                                 <div class="form-group">
                                     <button class="btn btn-success">Generate</button> <button class="btn btn-danger">Cancel</button>  
                                 </div>

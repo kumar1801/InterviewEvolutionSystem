@@ -6,23 +6,31 @@
 
 package Stroke;
 
+import Databaseutil.MyFilterHib;
 import Procedure.HeadOperation;
 import Procedure.IntervieweeOperation;
 import Procedure.RCMOperation;
 import Prototypical.Head;
 import Prototypical.Interviewee;
 import Prototypical.Login;
+import Prototypical.Person;
 import Prototypical.RCM;
 import static com.opensymphony.xwork2.Action.ERROR;
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.opensymphony.xwork2.Preparable;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import javassist.bytecode.Descriptor;
 import javax.servlet.ServletContext;
 import static org.apache.struts2.ServletActionContext.getServletContext;
 import org.apache.struts2.interceptor.SessionAware;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -31,9 +39,7 @@ import org.apache.struts2.interceptor.SessionAware;
 public class LoginAction extends ActionSupport implements ModelDriven,Preparable,SessionAware {
 
     Login login;
-    List list;
     List<Interviewee> listinterviewee;
-    List<Head> listhead;
     List<RCM> listrcm;
     public Map map;
     private Map<String, Object> session;
@@ -71,21 +77,25 @@ public class LoginAction extends ActionSupport implements ModelDriven,Preparable
     {
         String str="";
         boolean flagn=false,flagp=false;
-        IntervieweeOperation io=new IntervieweeOperation();
-        HeadOperation ho=new HeadOperation();
-        RCMOperation ro=new RCMOperation();
-        listinterviewee = io.dataretrival();
-        listhead=ho.dataretrival();
-        listrcm=ro.dataretrival();
-        list.add(listhead);
-        list.add(listinterviewee);
-        list.add(listrcm);
         
-        for (Interviewee i : listinterviewee) {
-            if(login.getUsername().equals(i.getUsername()))       
+       
+        SessionFactory sf = MyFilterHib.getsessionfactory();
+        Session s;
+        Transaction tx = null;
+        s = sf.openSession();
+        tx = s.beginTransaction();
+        Query q=s.createQuery("from Person where type=:interviewee");
+        Query q2=s.createQuery("from Person where type=:RCM");
+        q.setParameter("interviewee","interviewee");
+        q2.setParameter("RCM","RCM");
+        List<Person> person=q.list();
+        List<Person> pers=q2.list();
+       for(Person p : person)
+       {
+           if(login.getUsername().equals(p.getUsername()))       
             {
                 flagn=true;
-                if( login.getPassword().equals(i.getPassword()))
+                if( login.getPassword().equals(p.getPassword()))
                 {   flagp=true;
                     map.put("username", login.getUsername());
                     map.put("Password", login.getPassword());
@@ -93,13 +103,40 @@ public class LoginAction extends ActionSupport implements ModelDriven,Preparable
                 }
                 
             }
-        }
-        
-        if(flagn && flagp)
-        {
-            str= SUCCESS;
-        }
-        
+       }
+       for(Person p1 : pers)
+       {
+           if(login.getUsername().equals(p1.getUsername()))       
+            {
+                flagn=true;
+                if( login.getPassword().equals(p1.getPassword()))
+                {   
+                    flagp=true;
+                
+                    map.put("username", login.getUsername());
+                    map.put("Password", login.getPassword());
+                    Query q3=s.createQuery("select RCMRole from RCM where personid = "+p1.getPersonid());
+                    List<RCM> rcmrole=q3.list();
+                    Iterator it1=rcmrole.iterator();
+                    String rcmole=it1.next().toString();
+                    if(rcmole.toString().contains("HR"))
+                    {   
+                        return "HR";
+                    }
+                     if(rcmole.toString().contains("Recruiter"))
+                    {   
+                        return "Recruiter";
+                    }
+                      if(rcmole.toString().contains("Interviewer"))
+                    {   
+                        return "Interviewer";
+                    }
+                   
+                    break;
+                }
+                
+            }
+       } 
         if(flagn && !flagp)
         {
                      addActionError("password is incorrect");
@@ -107,10 +144,10 @@ public class LoginAction extends ActionSupport implements ModelDriven,Preparable
         }
         if(!flagn && !flagp)
         {
-                 addActionError("username & password is incorrect");
-                 str= ERROR;
+                    addActionError("username & password is incorrect");
+                    str= ERROR;
         }
-          
+        tx.commit();
         return str;
     }
     public String signOut()
