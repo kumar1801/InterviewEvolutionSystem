@@ -160,7 +160,7 @@
 
                             </table>
 
-                            <a href="view.action">Update</a>
+                            <a href="viewRound">Update</a>
 
                         </div><!-- /.box-body -->
 

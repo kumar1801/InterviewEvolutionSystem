@@ -112,6 +112,10 @@
             <result name="error">/Home/Round.jsp</result>
         </action>
         
+        <action name="viewRound" class="Stroke.RoundAction" method="viewR">
+            <result name="success">/RecruiterAssistant/Rounds.jsp</result>
+            <result name="error">/Home/Round.jsp</result>
+        </action>
         
         <action name="viewjod" class="Stroke.JobOpeningAction" method="retriveData">
             <result name="success">/Home/homepage.jsp</result> 
