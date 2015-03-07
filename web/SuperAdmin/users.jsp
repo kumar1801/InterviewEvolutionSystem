@@ -16,7 +16,7 @@
 
     <!-- Main content -->
     <section class="content">
-        <form action="rcmsubmit.action" method="post" id="signinform">
+        <form action="rcmsubmit" method="post" id="signinform">
             <div class="row">
                 <section class="col-lg-12">
                     <div class="box box-primary">
