@@ -14,6 +14,12 @@
         <action name="superadmin" class="example.home">
             <result name="success">/Home/superadmin.jsp</result>
         </action>
+        <action name="dashbord" class="example.home">
+            <result name="success">/Home/superadmin.jsp</result>
+        </action>
+         <action name="overview" class="example.home">
+            <result name="success">/Home/superadmin.jsp</result>
+        </action>
         <action name="Jobopening" class="Stroke.JobOpeningAction" method="retriveData">
             <result name="success">/Home/jobopening.jsp</result>
         </action>

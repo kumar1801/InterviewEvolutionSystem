@@ -50,7 +50,7 @@
                                             <div class="btn btn-success btn-file">
                                                 <i class="fa fa-paperclip"></i>
                                                
-                                                <s:file name="userImage" label="Upload Image"/>  
+                                                <s:file name="userImage"/>  
                                             </div>
                                         </div>
                                          

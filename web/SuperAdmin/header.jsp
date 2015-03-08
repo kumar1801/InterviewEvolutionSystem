@@ -37,10 +37,15 @@
           <script src="https://oss.maxcdn.com/libs/respond.<%=application.getContextPath()%>/visualization/js/1.3.0/respond.min.js"></script>
         <![endif]-->
     </head>
+    
+   
+    
+    
+    
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="<%=application.getContextPath()%>/SuperAdmin/super_admin_main.jsp" class="logo">
+            <a href="home" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 <img src="<%=application.getContextPath()%>/visualization/img/logo.png">
             </a>
@@ -114,14 +119,14 @@
                     <ul class="sidebar-menu">
 
                         <li class="active">
-                            <a href="<%=application.getContextPath()%>/SuperAdmin/super_admin_main.jsp">
+                            <a href=dashbord">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
 
                         
                         <li>
-                            <a href="<%=application.getContextPath()%>/SuperAdmin/super_admin_main.jsp">
+                            <a href="overview">
                                 <i class="fa fa-user"></i> <span>Overview</span>
                             </a>
                         </li>
