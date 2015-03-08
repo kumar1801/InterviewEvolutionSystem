@@ -31,9 +31,8 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-lg-6">      
-                                        <s:label key="global.headid" class="label"></s:label>
-                                       
-                                        <s:textfield type="text" name="personid" cssClass="form-control my-colorpicker1"/>
+                                        
+                                        <s:textfield key="global.headid" type="text" name="personid" cssClass="form-control my-colorpicker1"/>
                                     </div>
                                 </div>
                             </div>
