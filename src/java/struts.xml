@@ -3,14 +3,19 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+    <constant name="struts.custom.i18n.resources" value="global" />
+    <constant name="struts.devMode" value="false"/>
     <include file="example.xml"/>
     <!-- Configuration for the default package. -->
-    <package name="default" extends="struts-default">
+    <package name="default" extends="struts-default" namespace="/">
         <action name="home" class="Stroke.JobOpeningAction" method="retriveData">
             <result name="success">/Home/homepage.jsp</result>
         </action>
         <action name="superadmin" class="example.home">
             <result name="success">/Home/superadmin.jsp</result>
+        </action>
+        <action name="Jobopening" class="Stroke.JobOpeningAction" method="retriveData">
+            <result name="success">/Home/jobopening.jsp</result>
         </action>
         <action name="registration" class="Stroke.JobOpeningAction" method="retriveData">
             <result name="success">/Home/registration.jsp</result> 
@@ -37,11 +42,9 @@
             <result name="success">/Interviewer/interview.jsp</result> 
         </action>
         
-        
-        
-        
-        
-        
+        <action name="locale" class="example.Test">
+            <result name="success">/SuperAdmin/HeadDetails.jsp</result>
+        </action>
         
         <action name="registrationsubmit" class="Stroke.IntervieweeAction" method="saveData">
             <result name="success">/Home/registration.jsp</result>
@@ -54,12 +57,7 @@
         <action name="save" class="Stroke.JobOpeningAction" method="SaveData">
             <interceptor-ref name="defaultStack">
                 <param name="maximumSize">2097152</param>
-                <param name="allowedExtensions">
-                   
-                    .doc,.txt,.pdf
-               
-
-                </param>
+                <param name="allowedExtensions">.doc,.txt,.pdf</param>
             </interceptor-ref>
             <result name="success">/HRManager/JobOpening.jsp</result> 
             <result name="error">/example/HelloWorld.jsp</result> 
@@ -119,7 +117,7 @@
             <result name="success">/Home/homepage.jsp</result> 
             <result name="error">/example/HelloWorld.jsp</result> 
         </action>
-         <action name="resultshow" class="Stroke.ResultAction" method="DisplayIntRnd">
+        <action name="resultshow" class="Stroke.ResultAction" method="DisplayIntRnd">
             <result name="success">/Interviewer/interview.jsp</result>
             <result name="error">/Home/homepage.jsp</result>
         </action>

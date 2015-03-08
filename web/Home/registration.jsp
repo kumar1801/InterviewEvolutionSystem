@@ -28,7 +28,7 @@
                     </div>
                     <header class="panel-heading">Fill Details  </header>
                     <div class="panel-body">
-                        <form class="form-horizontal adminex-form" name="registration" action="registrationsubmit.action" method="post" id="registrationform">
+                        <form class="form-horizontal adminex-form" name="registration" action="registrationsubmit" method="post" id="registrationform">
                             <div class="form-group">
                                 <label class="col-lg-2 col-sm-2 control-label">Job Reference Code</label>
                                 <div class="col-lg-10">

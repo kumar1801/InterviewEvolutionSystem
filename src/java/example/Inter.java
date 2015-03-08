@@ -6,18 +6,23 @@
 
 package example;
 
+import Procedure.JobOpeningOperation;
+import Prototypical.Jobopeningdetails;
+import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
+import java.util.List;
 
 /**
  *
  * @author Devank
  */
-public class Test extends ActionSupport{
+public class Inter extends ActionSupport {
+    private List<Jobopeningdetails> listjod;
     @Override
     public String execute()
     {
-       
+        JobOpeningOperation joo = new JobOpeningOperation();
+        listjod = joo.dataretrival();
         return SUCCESS;
     } 
-    
 }

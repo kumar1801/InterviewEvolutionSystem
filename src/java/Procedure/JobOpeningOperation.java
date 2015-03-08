@@ -7,7 +7,13 @@ package Procedure;
 
 import Databaseutil.MyFilterHib;
 import Prototypical.Jobopeningdetails;
+import Prototypical.Requiedqualification;
+import Prototypical.RequiedqualificationId;
+import Prototypical.Requireddocuments;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -39,19 +45,35 @@ public class JobOpeningOperation {
             s.close();
         }
     }
-    
-    
-     public List<Jobopeningdetails> dataretrival(){
-        System.out.println("<--44--<");
+
+    public List<Jobopeningdetails> dataretrival() {
         SessionFactory sf = MyFilterHib.getsessionfactory();
         Session s;
         Transaction tx = null;
         s = sf.openSession();
         tx = s.beginTransaction();
-        Query q=s.createQuery("from Jobopeningdetails ");
-        List<Jobopeningdetails> listjod=q.list();
+        Query q = s.createQuery("from Jobopeningdetails ");
+        Set<Requiedqualification> rq;
+        List<Jobopeningdetails> listjod = q.list();
+       /* Iterator it=listjod.iterator();
+         Requiedqualification r = new Requiedqualification();
+        while(it.hasNext())
+        {
+            Jobopeningdetails jod=(Jobopeningdetails) it.next();
+            rq=jod.getRequiedqualifications();
+            Iterator it1=rq.iterator();
+            while(it1.hasNext())
+            {
+                Requiedqualification rq1=(Requiedqualification) it1.next();
+                rq1.setJobopeningdetails(jod);
+                 System.out.println("-----------------"+rq1.toString());
+            }
+        }
+        s.clear();
+        s.flush();
+        s.close();*/
         return listjod;
+
     }
-    
     
 }

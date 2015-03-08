@@ -35,6 +35,11 @@ public class Requiedqualification  implements java.io.Serializable {
         this.jobopeningdetails = jobopeningdetails;
     }
 
+    @Override
+    public String toString() {
+        return "Requiedqualification{" + "id=" + id + ", jobopeningdetails=" + jobopeningdetails + '}';
+    }
+
 
 
 

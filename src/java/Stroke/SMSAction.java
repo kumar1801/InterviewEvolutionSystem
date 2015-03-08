@@ -6,7 +6,6 @@
 package Stroke;
 
 import Procedure.*;
-import java.util.StringTokenizer;
 
 /**
  *
@@ -18,9 +17,5 @@ public class SMSAction {
         SMSOperation smso = new SMSOperation();
         String response = smso.SMSSender(mono, msg);
         System.out.println(response);
-    }
-
-    void SMSSend(StringTokenizer st, String joile_aavi_gyo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

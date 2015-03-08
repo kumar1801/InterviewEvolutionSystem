@@ -33,7 +33,7 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
 
     Jobopeningdetails jod;
     String requiredDocuments, desiredskilled,requiredQualification;
-   List<Jobopeningdetails> listjod;
+    List<Jobopeningdetails> listjod;
     DesiredskillsId did;
     Desiredskills desiredskills;
     Set<Desiredskills> std;
@@ -47,6 +47,8 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
     private File userImage;
     private String userImageContentType;
     private String userImageFileName;
+    List<Requiedqualification> required;
+    List<Requireddocuments> documents;
 
     public List<Jobopeningdetails> getListjod() {
         return listjod;
@@ -118,7 +120,6 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
     }
 
     public String SaveData() {
-        
         StringTokenizer stds = new StringTokenizer(desiredskilled, ",");
         StringTokenizer strd = new StringTokenizer(requiredQualification, ",");
         StringTokenizer strq = new StringTokenizer(requiredDocuments, ",");
@@ -200,8 +201,20 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
     public void setJobcode(String jobcode) {
         this.jobcode = jobcode;
     }
-    
 
-   
+    public List<Requiedqualification> getRequired() {
+        return required;
+    }
 
+    public void setRequired(List<Requiedqualification> required) {
+        this.required = required;
+    }
+
+    public List<Requireddocuments> getDocuments() {
+        return documents;
+    }
+
+    public void setDocuments(List<Requireddocuments> documents) {
+        this.documents = documents;
+    }
 }

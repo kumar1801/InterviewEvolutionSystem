@@ -27,130 +27,148 @@
 
 
                     <div class="box-body">
-                        <form name="HeadForm" action="headsubmit.action" method="post" id="signinform" enctype="multipart/form-data">
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <label>Head ID:</label>                                         
-                                            <s:textfield name="personid" cssClass="form-control my-colorpicker1"/>
-                                        </div>
+                        <form name="HeadForm" action="headsubmit" method="post" id="signinform" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-6">      
+                                        <s:label key="global.headid" class="label"></s:label>
+                                       
+                                        <s:textfield type="text" name="personid" cssClass="form-control my-colorpicker1"/>
                                     </div>
                                 </div>
+                            </div>
 
-                                <div class="form-group">
-                                    <label>Head Name:</label>
-                                    <div class="row">
-                                        <div class="col-lg-4">               
-                                            <s:textfield type="text" name="fname" cssClass="form-control" placeholder="FirstName"/>
-                                        </div>
-                                        <div class="col-lg-4">            
-                                            <s:textfield type="text" name="mname" cssClass="form-control my-colorpicker1" placeholder="SecondName"/>
-                                        </div>
-                                        <div class="col-lg-4">                
-                                            <s:textfield type="text" name="lname" cssClass="form-control my-colorpicker1" placeholder="LastName"/>
-                                        </div>
+                            <div class="form-group">
+                                <label>Head Name:</label>
+                                <div class="row">
+                                    <div class="col-lg-4">               
+                                        <s:textfield type="text" name="fname" cssClass="form-control" placeholder="FirstName"/>
+                                    </div>
+                                    <div class="col-lg-4">            
+                                        <s:textfield type="text" name="mname" cssClass="form-control my-colorpicker1" placeholder="SecondName"/>
+                                    </div>
+                                    <div class="col-lg-4">                
+                                        <s:textfield type="text" name="lname" cssClass="form-control my-colorpicker1" placeholder="LastName"/>
                                     </div>
                                 </div>
+                            </div>
 
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <label>Head Type:</label>                                         
-                                            <s:textfield name="headType" cssClass="form-control my-colorpicker1"/>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label>Head Type:</label>                                         
+                                        <s:textfield name="headType" cssClass="form-control my-colorpicker1"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label>Head Details:</label>                                         
+                                        <s:textfield name="headDetail" cssClass="form-control my-colorpicker1"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                                <s:textfield name="emailid" cssClass="form-control"/>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <label>Head Details:</label>                                         
-                                            <s:textfield name="headDetail" cssClass="form-control my-colorpicker1"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                                    <s:textfield name="emailid" cssClass="form-control"/>
+                            </div> 
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-phone"></i>
                                             </div>
-                                        </div>
+                                            <s:textfield name="contactno" placeholder="Eg:xxx-xxx-xxxx" cssClass="form-control" data-inputmask="&quot;mask&quot;: &quot;(999) 999-9999&quot;" data-mask=""/>
+                                        </div><!-- /.input group -->
                                     </div>
-                                </div> 
+                                </div>
+                            </div>
 
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-phone"></i>
-                                        </div>
-                                        <s:textfield name="contactno" placeholder="Eg:xxx-xxx-xxxx" cssClass="form-control" data-inputmask="&quot;mask&quot;: &quot;(999) 999-9999&quot;" data-mask=""/>
-                                    </div><!-- /.input group -->
-                                   </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-6">
 
-                                            <label>Head Username:</label>                                         
-                                            <s:textfield type="text" cssClass="form-control" name="username"/>
+                                        <label>Head Username:</label>                                         
+                                        <s:textfield type="text" cssClass="form-control" name="username"/>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label>Head Password:</label>                                         
+                                        <s:password type="password" name="password" cssClass="form-control"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row"> 
+                                    <div class="col-lg-6">
+                                        <label>Head Image: </label>   
+                                        <div class="btn btn-success btn-file">
+                                            <i class="fa fa-paperclip"></i>
+
+                                            <input id="fileupload" type="file" name="userImage" size="30"/> Upload Image   
                                         </div>
                                     </div>
+
                                 </div> 
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <label>Head Password:</label>                                         
-                                            <s:password type="password" name="password" cssClass="form-control"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row"> 
-                                        <div class="col-lg-6">
-                                            <label>Head Image: </label>   
-                                            <div class="btn btn-success btn-file">
-                                                <i class="fa fa-paperclip"></i>
-                                               
-                                                <input id="fileupload" type="file" name="userImage" size="30"/> Upload Image   
-                                            </div>
-                                        </div>
-                                         
-                                    </div> 
-                                </div>
-                                        <div id="dvPreview">
-                                            
-                                           
-                                        </div>
-                           
-                                   <div class="form-group" >
-                                        &nbsp; &nbsp;
-                                        <button type="submit" class="btn btn-success">Submit</button> <button class="btn btn-default btn-flat">Back</button>
-                                    </div>     
-                  
+                            </div>
+                            <div id="dvPreview">
+
+
+                            </div>
+
+                            <div class="form-group" >
+                                &nbsp; &nbsp;
+                                <button type="submit" class="btn btn-success">Submit</button> <button class="btn btn-default btn-flat">Back</button>
+                            </div>     
+
                     </div>
-                                          
-                                            
+
+
 
                 </div>   
-                                                
-                 </form>
+                <s:url id="localeEN" namespace="/" action="locale">
+                    <s:param name="request_locale" >en</s:param>
+                </s:url>
+                <s:url id="localezhCN" namespace="/" action="locale">
+                    <s:param name="request_locale" >zh_CN</s:param>
+                </s:url>
+                <s:url id="localeDE" namespace="/" action="locale">
+                    <s:param name="request_locale" >de</s:param>
+                </s:url>
+                <s:url id="localeFR" namespace="/" action="locale">
+                    <s:param name="request_locale" >fr</s:param>
+                </s:url>
+
+                <s:a href="%{localeEN}" >English</s:a>
+                <s:a href="%{localezhCN}">Chinese</s:a>
+                <s:a href="%{localeDE}" >German</s:a>
+                <s:a href="%{localeFR}" >France</s:a>
+
+                    </form>
 
 
 
 
-        </div>
+            </div>
 
 
-        </div><!-- /.box-body -->
-        </div>
+            </div><!-- /.box-body -->
+            </div>
 
-    </section>
-</div><!-- /.row (main row) -->
+        </section>
+    </div><!-- /.row (main row) -->
 
 </section><!-- /.content -->
 </aside><!-- /.right-side -->
@@ -158,42 +176,42 @@
 
 <!-- add new calendar event modal -->
 <script language="javascript" type="text/javascript">
-$(function () {
-    $("#fileupload").change(function () {
-        $("#dvPreview").html("");
-        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
-        if (regex.test($(this).val().toLowerCase())) {
-            if ($.browser && parseFloat(jQuery.browser.version) <= 9.0) {
-                $("#dvPreview").show();
-                $("#dvPreview")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
-            }
-            else {
-                if (typeof (FileReader) !== "undefined") {
+    $(function() {
+        $("#fileupload").change(function() {
+            $("#dvPreview").html("");
+            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+            if (regex.test($(this).val().toLowerCase())) {
+                if ($.browser && parseFloat(jQuery.browser.version) <= 9.0) {
                     $("#dvPreview").show();
-                    $("#dvPreview").append("<img />");
-                    var reader = new FileReader();
-                    reader.onload = function (e) {
-                        $("#dvPreview img").attr("src", e.target.result);
-                    };
-                    reader.readAsDataURL($(this)[0].files[0]);
-                } else {
-                    alert("This browser does not support FileReader.");
+                    $("#dvPreview")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
                 }
+                else {
+                    if (typeof (FileReader) !== "undefined") {
+                        $("#dvPreview").show();
+                        $("#dvPreview").append("<img />");
+                        var reader = new FileReader();
+                        reader.onload = function(e) {
+                            $("#dvPreview img").attr("src", e.target.result);
+                        };
+                        reader.readAsDataURL($(this)[0].files[0]);
+                    } else {
+                        alert("This browser does not support FileReader.");
+                    }
+                }
+            } else {
+                alert("Please upload a valid image file.");
             }
-        } else {
-            alert("Please upload a valid image file.");
-        }
+        });
     });
-});
 </script>
 <style type="text/css">
-#dvPreview
-{
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
-    min-height: 250px;
-    min-width: 250px;
-    display: none;
-}
+    #dvPreview
+    {
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+        min-height: 250px;
+        min-width: 250px;
+        display: none;
+    }
 </style>
 <script src="<%=application.getContextPath()%>/visualization/js/jquery1.8.3.min.js"></script>
 <%@include file="validation.jsp" %>

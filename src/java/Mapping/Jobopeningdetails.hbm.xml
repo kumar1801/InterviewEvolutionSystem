@@ -48,19 +48,19 @@
     <property name="jobType" type="string">
       <column length="45" name="JobType" not-null="true"/>
     </property>
-    <set cascade="all" fetch="select" inverse="true" lazy="true" name="requiedqualifications" table="requiedqualification">
+    <set cascade="all" fetch="select" inverse="true" lazy="false" name="requiedqualifications" table="requiedqualification">
       <key>
         <column name="JobReferenceCode" not-null="true"/>
       </key>
       <one-to-many class="Prototypical.Requiedqualification"/>
     </set>
-    <set cascade="all" fetch="select" inverse="true" lazy="true" name="desiredskillses" table="desiredskills">
+    <set cascade="all" fetch="select" inverse="true" lazy="false" name="desiredskillses" table="desiredskills">
       <key>
         <column name="JobReferenceCode" not-null="true"/>
       </key>
       <one-to-many class="Prototypical.Desiredskills"/>
     </set>
-     <set cascade="all" fetch="select" inverse="true" lazy="true" name="requireddocuments" table="requireddocuments">
+     <set cascade="all" fetch="select" inverse="true" lazy="false" name="requireddocuments" table="requireddocuments">
       <key>
         <column name="JobReferenceCode" not-null="true"/>
       </key>

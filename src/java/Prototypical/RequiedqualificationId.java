@@ -12,6 +12,11 @@ public class RequiedqualificationId  implements java.io.Serializable {
      private int jobReferenceCode;
      private String requierdQualification;
 
+    @Override
+    public String toString() {
+        return "RequiedqualificationId{" + "jobReferenceCode=" + jobReferenceCode + ", requierdQualification=" + requierdQualification + '}';
+    }
+
     public RequiedqualificationId() {
     }
 

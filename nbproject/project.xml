@@ -41,6 +41,10 @@
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
             <word>Admin</word>
+            <word>CN</word>
+            <word>fr</word>
+            <word>zh</word>
+            <word>用户名</word>
         </spellchecker-wordlist>
     </configuration>
 </project>

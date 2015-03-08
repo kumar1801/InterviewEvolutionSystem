@@ -31,13 +31,14 @@
                 <div class="lockscreen-credentials">   
                              <form action="adminlogin" method="post">
                     <div class="input-group">
-                        <s:textfield cssClass="form-control" placeholder="name" name="username"/>
+                        <s:textfield cssClass="form-control" placeholder="username" name="username"/>
                         <s:password cssClass="form-control" placeholder="password" name="password"/>
                         
                         <div class="input-group-btn">
                             <button class="btn btn-flat"><i class="fa fa-arrow-right text-muted"></i></button>
                         </div>
                     </div>
+                      
                          </form>
                 </div><!-- /.lockscreen credentials -->
                     <s:if test="hasActionErrors()">
@@ -47,8 +48,7 @@
 				</s:if>
 			</td>
 
-            </div><!-- /.lockscreen-item -->
-
+            </div><!-- /.lockscreen-item --
             <div class="lockscreen-link">
                 <a href="#">Or sign in as a different user</a>
             </div>            
