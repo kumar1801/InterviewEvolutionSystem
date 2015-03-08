@@ -77,7 +77,8 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
         st = new StringTokenizer(contactno, ",");
         
         while (st.hasMoreElements()) {
-            str = st.nextToken().trim();
+            str = "91"+st.nextToken().trim();
+            System.out.println("<-------<<<<<<<<"+str);
             a = Long.parseLong(str);
             co.setContactno(a);
             co.setPersonid(interviewee.getPersonid());
@@ -103,7 +104,7 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
         if(save)
         {
             SMSAction smsa = new SMSAction();
-            smsa.SMSSend("91"+str, "You are Registered in Interview Evolution System.\nUsername: "+interviewee.getUsername()+"\nPassword: "+interviewee.getPassword()+"\nThankyou");
+            smsa.SMSSend(str, "You are Registered in Interview Evolution System.\nUsername: "+interviewee.getUsername()+"\nPassword: "+interviewee.getPassword()+"\nThankyou");
             addActionMessage("SUCCESSFULLY INSERTED");
             return SUCCESS;
         }
