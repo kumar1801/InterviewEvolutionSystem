@@ -7,7 +7,7 @@
     <constant name="struts.devMode" value="false"/>
     <include file="example.xml"/>
     <!-- Configuration for the default package. -->
-    <package name="default" extends="struts-default" namespace="/">
+    <package name="default" extends="struts-default">
         <action name="home" class="Stroke.JobOpeningAction" method="retriveData">
             <result name="success">/Home/homepage.jsp</result>
         </action>
@@ -69,6 +69,10 @@
             <result name="success">/Home/Rounds.jsp</result> 
         </action>
         
+         <action name="chang" class="Stroke.ChangePasswordAction" method="changePwd">
+            <result name="success">/HRManager/DeshBord.jsp</result> 
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
         
         
         <action name="headsubmit" class="Stroke.HeadAction" method="saveData">
