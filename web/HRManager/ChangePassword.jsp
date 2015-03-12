@@ -35,8 +35,8 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <label>Old Password</label>
-                                        <s:textfield name="password" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                            
+                                        <s:textfield key="global.oldpassword" name="password" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                         </div>
                                     </div>
                                 </div>
@@ -44,16 +44,16 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>New Password</label>
-                                        <s:textfield name="newpassword" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                          
+                                        <s:textfield key="global.newpassword" name="newpassword" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Confirm Password</label>
-                                        <s:textfield  cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                            
+                                        <s:textfield key="global.confirmpassword"  cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                         </div>
                                     </div>
                                 </div>

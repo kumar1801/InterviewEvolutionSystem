@@ -41,8 +41,8 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <label>Job Reference Code:</label>
-                                        <s:textfield type="text" name="jobReferenceCode" cssClass="form-control" placeholder="Enter...."></s:textfield>
+                                      
+                                        <s:textfield key="global.jobreferenceode" type="text" name="jobReferenceCode" cssClass="form-control" placeholder="Enter...."></s:textfield>
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Department:</label>
-                                                <select class="form-control" name="department">
+                                                <select  class="form-control" name="department">
                                                 <option value="-1"> Select Department</option> 
                                                 <option>Marketing</option>
                                                 <option>Production</option>
@@ -91,8 +91,8 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <label>Terms &amp; Condition:</label>
-                                        <s:textarea  placeholder="Enter ..." rows="2" cssClass="form-control"></s:textarea>
+                                         
+                                        <s:textarea key="global.terms&amp;condition"  placeholder="Enter ..." rows="2" cssClass="form-control"></s:textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -110,16 +110,16 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Desired Skill:</label>
-                                        <s:textfield name="desiredskilled" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                            
+                                        <s:textfield key="global.desiredskilled" name="desiredskilled" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Vacancies:</label>
-                                        <s:textfield name="vacancies" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                           
+                                        <s:textfield key="global.vacancies" name="vacancies" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                         </div>
                                     </div>
                                 </div>
@@ -137,8 +137,8 @@
                                    <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>CTC:</label>
-                                        <s:textfield name="ctc" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                           
+                                        <s:textfield key="global.ctc" name="ctc" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                         </div>
                                     </div>
                                 </div> 
@@ -191,42 +191,43 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-lg-12">
-                                                <label>Street Name:</label>
-                                            <s:textfield name="street" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                                
+                                            <s:textfield key="global.streetname" name="street" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-lg-12">
-                                                <label>Zip Code:</label>
-                                            <s:textfield type="text" name="pincode" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                               
+                                            <s:textfield key="global.zipcode" type="text" name="pincode" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Starting &amp; Ending Date:</label>
+                                       
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </div>
-                                        <s:textfield name="seDate" cssClass="form-control pull-right" placeholder="Pick a Date ..." ></s:textfield>
+                                        <s:textfield key="global.starting&amp;endingdate" name="seDate" cssClass="form-control pull-right" placeholder="Pick a Date ..." ></s:textfield>
                                         </div><!-- /.input group -->
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-lg-12">
-                                                <label>Required Qualification:</label>
-                                            <s:textfield name="requiredQualification" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                                
+                                                
+                                            <s:textfield key="global.requiredqualification" name="requiredQualification" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-lg-12">
-                                                <label>Required Document:</label>
-                                            <s:textfield name="requiredDocuments" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                               
+                                            <s:textfield key="global.requireddocument" name="requiredDocuments" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                             </div>
                                         </div>
                                     </div>

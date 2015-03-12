@@ -44,10 +44,10 @@
                                         <s:textfield key="global.headname" type="text" name="fname" cssClass="form-control" placeholder="FirstName"/>
                                     </div>
                                     <div class="col-lg-4">            
-                                        <s:textfield type="text" name="mname" cssClass="form-control my-colorpicker1" placeholder="SecondName"/>
+                                        <s:textfield key="" type="text" name="mname" cssClass="form-control my-colorpicker1" placeholder="SecondName"/>
                                     </div>
                                     <div class="col-lg-4">                
-                                        <s:textfield type="text" name="lname" cssClass="form-control my-colorpicker1" placeholder="LastName"/>
+                                        <s:textfield  type="text" name="lname" cssClass="form-control my-colorpicker1" placeholder="LastName"/>
                                     </div>
                                 </div>
                             </div>
@@ -55,16 +55,16 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <label>Head Type:</label>                                         
-                                        <s:textfield name="headType" cssClass="form-control my-colorpicker1"/>
+                                                                               
+                                        <s:textfield key="global.headtype" name="headType" cssClass="form-control my-colorpicker1"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <label>Head Details:</label>                                         
-                                        <s:textfield name="headDetail" cssClass="form-control my-colorpicker1"/>
+                                                                                
+                                        <s:textfield key="global.headdetails" name="headDetail" cssClass="form-control my-colorpicker1"/>
                                     </div>
                                 </div>
                             </div>
@@ -96,16 +96,16 @@
                                 <div class="row">
                                     <div class="col-lg-6">
 
-                                        <label>Head Username:</label>                                         
-                                        <s:textfield type="text" cssClass="form-control" name="username"/>
+                                                                                 
+                                        <s:textfield key="global.headusername" type="text" cssClass="form-control" name="username"/>
                                     </div>
                                 </div>
                             </div> 
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <label>Head Password:</label>                                         
-                                        <s:password type="password" name="password" cssClass="form-control"/>
+                                                                                 
+                                        <s:password key="global.headpassword" type="password" name="password" cssClass="form-control"/>
                                     </div>
                                 </div>
                             </div>
