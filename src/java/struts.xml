@@ -49,7 +49,7 @@
         </action>
         
         <action name="locale" class="example.Test">
-            <result name="success">/SuperAdmin/HeadDetails.jsp</result>
+            <result name="success">/Home/homepage.jsp</result>
         </action>
         
         <action name="registrationsubmit" class="Stroke.IntervieweeAction" method="saveData">

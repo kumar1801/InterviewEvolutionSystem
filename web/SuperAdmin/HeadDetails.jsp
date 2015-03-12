@@ -137,23 +137,7 @@
 
 
                 </div>   
-                <s:url id="localeEN" namespace="/" action="locale">
-                    <s:param name="request_locale" >en</s:param>
-                </s:url>
-                <s:url id="localezhCN" namespace="/" action="locale">
-                    <s:param name="request_locale" >zh_CN</s:param>
-                </s:url>
-                <s:url id="localeDE" namespace="/" action="locale">
-                    <s:param name="request_locale" >de</s:param>
-                </s:url>
-                <s:url id="localeFR" namespace="/" action="locale">
-                    <s:param name="request_locale" >fr</s:param>
-                </s:url>
-
-                <s:a href="%{localeEN}" >English</s:a>
-                <s:a href="%{localezhCN}">Chinese</s:a>
-                <s:a href="%{localeDE}" >German</s:a>
-                <s:a href="%{localeFR}" >France</s:a>
+                
 
                     </form>
 

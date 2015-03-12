@@ -99,7 +99,7 @@ public class HeadActionTest {
     public void testSaveData() {
         System.out.println("saveData");
         HeadAction instance = new HeadAction();
-        String expResult = null;
+        String expResult = "";
         String result = instance.saveData();
         assertEquals(expResult, result);
         
