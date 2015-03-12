@@ -7,11 +7,17 @@
     <constant name="struts.devMode" value="false"/>
     <include file="example.xml"/>
     <!-- Configuration for the default package. -->
-    <package name="default" extends="struts-default" namespace="/">
+    <package name="default" extends="struts-default">
         <action name="home" class="Stroke.JobOpeningAction" method="retriveData">
             <result name="success">/Home/homepage.jsp</result>
         </action>
         <action name="superadmin" class="example.home">
+            <result name="success">/Home/superadmin.jsp</result>
+        </action>
+        <action name="dashbord" class="example.home">
+            <result name="success">/Home/superadmin.jsp</result>
+        </action>
+         <action name="overview" class="example.home">
             <result name="success">/Home/superadmin.jsp</result>
         </action>
         <action name="Jobopening" class="Stroke.JobOpeningAction" method="retriveData">
@@ -43,7 +49,7 @@
         </action>
         
         <action name="locale" class="example.Test">
-            <result name="success">/SuperAdmin/HeadDetails.jsp</result>
+            <result name="success">/Home/homepage.jsp</result>
         </action>
         
         <action name="registrationsubmit" class="Stroke.IntervieweeAction" method="saveData">
@@ -69,6 +75,25 @@
             <result name="success">/Home/Rounds.jsp</result> 
         </action>
         
+         <action name="chang" class="Stroke.ChangePasswordAction" method="changePwd">
+            <result name="success">/HRManager/DeshBord.jsp</result> 
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
+         <action name="changpwd" class="Stroke.ChangePasswordAction" method="changePwd">
+            <result name="success">/Interviewer/interviewer_main.jsp</result> 
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
+        <action name="chngpwd" class="Stroke.ChangePasswordAction" method="changePwd">
+            <result name="success">/RecruiterAssistant/recruiter_main.jsp</result> 
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
+        <action name="chngpassword" class="Stroke.ChangePasswordAction" method="changePwd">
+            <result name="success">/SuperAdmin/super_admin_main.jsp</result> 
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
         
         
         <action name="headsubmit" class="Stroke.HeadAction" method="saveData">
@@ -112,6 +137,10 @@
             <result name="error">/Home/Round.jsp</result>
         </action>
         
+        <action name="viewRound" class="Stroke.RoundAction" method="viewR">
+            <result name="success">/RecruiterAssistant/Rounds.jsp</result>
+            <result name="error">/Home/Round.jsp</result>
+        </action>
         
         <action name="viewjod" class="Stroke.JobOpeningAction" method="retriveData">
             <result name="success">/Home/homepage.jsp</result> 

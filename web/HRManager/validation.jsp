@@ -45,6 +45,32 @@
                     }
                 },
                 
+                oldpassword: {
+                      row:'.col-md-12',
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        },
+                       
+                         regexp: {
+                        regexp: /^[a-zA-Z0-9_]+$/,
+                        message: 'The password can only consist of alphabetical, number and underscore'
+                    }
+                    }
+                },
+                newpassword: {
+                      row:'.col-lg-12',
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        },
+                       
+                         regexp: {
+                        regexp: /^[a-zA-Z0-9_]+$/,
+                        message: 'The password can only consist of alphabetical, number and underscore'
+                    }
+                    }
+                },
                 desiredskilled: {
                     row:'.col-lg-12',
                     validators: {

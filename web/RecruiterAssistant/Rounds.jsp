@@ -29,37 +29,37 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <label>Round ID:</label>
-                                        <s:textfield name="roundId" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                       
+                                        <s:textfield key="global.roundid" name="roundId" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Round Name:</label>                                         
-                                        <s:textfield name="roundName" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                                                                   
+                                        <s:textfield key="global.roundname" name="roundName" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Round Preference:</label>
-                                        <s:textfield name="roundPreference" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                            
+                                        <s:textfield key="global.roundpreference" name="roundPreference" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <label>Round Description:</label>
-                                    <s:textarea name="roundDescription" placeholder="Enter ..." rows="3" cssClass="form-control" ></s:textarea>
+                                       
+                                    <s:textarea key="global.rounddescription" name="roundDescription" placeholder="Enter ..." rows="3" cssClass="form-control" ></s:textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <label>RCM ID:</label>                                         
-                                    <s:select name="personid" list="%{listrcm}" listKey="personid" listValue="personid" cssClass="form-control"/>
+                                                                                 
+                                    <s:select key="global.rcmid" name="personid" list="%{listrcm}" listKey="personid" listValue="personid" cssClass="form-control"/>
                                 </div>
                             </div>
                         </div><!-- /.box-body -->
@@ -73,27 +73,27 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Total Marks:</label>
-                                            <s:textfield name="totalMarks" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                          
+                                            <s:textfield key="global.totalmarks" name="totalMarks" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                             </div>
                                         </div>
                                     </div>
                                     
                                     <!-- Date range -->
                                     <div class="form-group">
-                                        <label>Date range:</label>
+                                      
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </div>
-                                        <s:textfield name="date" cssClass="form-control pull-right" id="reservation"></s:textfield>
+                                        <s:textfield key="global.daterange" name="date" cssClass="form-control pull-right" id="reservation"></s:textfield>
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
                                     <div class="bootstrap-timepicker">
                                         <div class="form-group">
-                                            <label>Time:</label>
+                                         
                                             <div class="input-group">
-                                            <s:textfield name="time" cssClass="form-control timepicker"></s:textfield>
+                                            <s:textfield key="global.time" name="time" cssClass="form-control timepicker"></s:textfield>
                                                 <div class="input-group-addon">
                                                     <i class="fa fa-clock-o"></i>
                                                 </div>
@@ -160,7 +160,7 @@
 
                             </table>
 
-                            <a href="view.action">Update</a>
+                            <a href="viewRound">Update</a>
 
                         </div><!-- /.box-body -->
 
