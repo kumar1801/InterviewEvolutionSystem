@@ -21,7 +21,7 @@
             <li class="active">Change Password</li>
         </ol>
     </section>
-    <form name="changepwd" action="chang" method="post">
+    <form name="changepwd" action="chngpassword" method="post">
         <section class="content">
            
             <div class="row">

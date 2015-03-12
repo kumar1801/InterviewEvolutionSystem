@@ -5,7 +5,7 @@
 --%>
 <!DOCTYPE html>
 <%@taglib prefix="s" uri="/struts-tags" %>
-<%@include file="header.jsp"%>
+<%@include file="recruiter_header.jsp"%>
 <!-- Main content -->
 
 <!-- Right side column. Contains the navbar and content of the page -->
@@ -21,7 +21,7 @@
             <li class="active">Change Password</li>
         </ol>
     </section>
-    <form name="changepwd" action="chang" method="post">
+    <form name="changepwd" action="chngpwd" method="post">
         <section class="content">
            
             <div class="row">

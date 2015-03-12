@@ -219,10 +219,10 @@
                                     </thead>
                                     <tbody>
 
-                                        <TD><INPUT type="text" name="degreetype"/></TD>
-                                        <TD><INPUT type="text" name="institutionname" /></TD>
-                                        <TD><INPUT type="text" name="yearofpassing" /></TD>
-                                        <TD><INPUT type="text" name="percentageobtained" /></TD>
+                                        <TD><INPUT type="text" name="degreetype" class="form-control"/></TD>
+                                        <TD><INPUT type="text" name="institutionname" class="form-control" /></TD>
+                                        <TD><INPUT type="text" name="yearofpassing" class="form-control" /></TD>
+                                        <TD><INPUT type="text" name="percentageobtained" class="form-control" /></TD>
 
                                     </tbody>    
                                 </table>
@@ -246,11 +246,11 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <TD><INPUT type="text" name="orgname"/></TD>
-                                        <TD><INPUT type="text" name="responsibility" /></TD>
-                                        <TD><INPUT type="text" name="designation" /></TD>
-                                        <TD><INPUT type="text" name="duration" /></TD>
-                                        <TD><INPUT type="text" name="salaryDrawn" /></TD>
+                                        <TD><INPUT type="text" name="orgname" class="form-control"/></TD>
+                                        <TD><INPUT type="text" name="responsibility" class="form-control" /></TD>
+                                        <TD><INPUT type="text" name="designation" class="form-control" /></TD>
+                                        <TD><INPUT type="text" name="duration" class="form-control" /></TD>
+                                        <TD><INPUT type="text" name="salaryDrawn" class="form-control" /></TD>
                                         
                                     </tbody>
                                 </table>

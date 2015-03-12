@@ -14,6 +14,12 @@
         <action name="superadmin" class="example.home">
             <result name="success">/Home/superadmin.jsp</result>
         </action>
+        <action name="dashbord" class="example.home">
+            <result name="success">/Home/superadmin.jsp</result>
+        </action>
+         <action name="overview" class="example.home">
+            <result name="success">/Home/superadmin.jsp</result>
+        </action>
         <action name="Jobopening" class="Stroke.JobOpeningAction" method="retriveData">
             <result name="success">/Home/jobopening.jsp</result>
         </action>
@@ -71,6 +77,21 @@
         
          <action name="chang" class="Stroke.ChangePasswordAction" method="changePwd">
             <result name="success">/HRManager/DeshBord.jsp</result> 
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
+         <action name="changpwd" class="Stroke.ChangePasswordAction" method="changePwd">
+            <result name="success">/Interviewer/interviewer_main.jsp</result> 
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
+        <action name="chngpwd" class="Stroke.ChangePasswordAction" method="changePwd">
+            <result name="success">/RecruiterAssistant/recruiter_main.jsp</result> 
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
+        <action name="chngpassword" class="Stroke.ChangePasswordAction" method="changePwd">
+            <result name="success">/SuperAdmin/super_admin_main.jsp</result> 
             <result name="error">/Home/homepage.jsp</result>
         </action>
         

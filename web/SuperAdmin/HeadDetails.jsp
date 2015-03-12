@@ -31,18 +31,17 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-lg-6">      
-                                        <s:label key="global.headid" class="label"></s:label>
-                                       
-                                        <s:textfield type="text" name="personid" cssClass="form-control my-colorpicker1"/>
+                                        
+                                        <s:textfield key="global.headid" type="text" name="personid" cssClass="form-control my-colorpicker1"/>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label>Head Name:</label>
+                                
                                 <div class="row">
                                     <div class="col-lg-4">               
-                                        <s:textfield type="text" name="fname" cssClass="form-control" placeholder="FirstName"/>
+                                        <s:textfield key="global.headname" type="text" name="fname" cssClass="form-control" placeholder="FirstName"/>
                                     </div>
                                     <div class="col-lg-4">            
                                         <s:textfield type="text" name="mname" cssClass="form-control my-colorpicker1" placeholder="SecondName"/>

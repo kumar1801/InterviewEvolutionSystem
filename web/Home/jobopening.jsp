@@ -70,4 +70,5 @@
         </div><!--/.container-->
         <%@include file="contactus.jsp"%>
     </section><!--/#services-->
+    <%@include file="js.jsp" %>
     
