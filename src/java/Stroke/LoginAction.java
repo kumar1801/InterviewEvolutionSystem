@@ -7,10 +7,6 @@
 package Stroke;
 
 import Databaseutil.MyFilterHib;
-import Procedure.HeadOperation;
-import Procedure.IntervieweeOperation;
-import Procedure.RCMOperation;
-import Prototypical.Head;
 import Prototypical.Interviewee;
 import Prototypical.Login;
 import Prototypical.Person;
@@ -23,7 +19,6 @@ import com.opensymphony.xwork2.Preparable;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import javassist.bytecode.Descriptor;
 import javax.servlet.ServletContext;
 import static org.apache.struts2.ServletActionContext.getServletContext;
 import org.apache.struts2.interceptor.SessionAware;
@@ -138,7 +133,7 @@ public class LoginAction extends ActionSupport implements ModelDriven,Preparable
             }
        } 
         if(flagn && !flagp)
-        {
+        {         
                      addActionError("password is incorrect");
                      str= ERROR;
         }

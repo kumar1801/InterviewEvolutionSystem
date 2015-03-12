@@ -44,7 +44,7 @@ public class RCMAction extends ActionSupport implements ModelDriven,Preparable,S
    
 
     public String getContactno() {
-        System.out.println("get");
+        
         return contactno;
     }
 
@@ -100,10 +100,12 @@ public class RCMAction extends ActionSupport implements ModelDriven,Preparable,S
         if(save)
         {
             addActionMessage("SUCCESSFULLY INSERTED");
+            request.setAttribute("SUCCESS", "SUCCESS");
             return SUCCESS;
         }
         else
-        {
+        {   addActionError(ERROR);
+            request.setAttribute("SUCCESS", "SUCCESS");
             return ERROR;
         }
     }

@@ -25,7 +25,16 @@
                         <div id="loginBox">                
                        <form id="loginForm" action="login" method="post">
                         <fieldset id="body">
-                            <div class="error-pages"><s:actionerror/></div>
+                           
+                               <script>
+                                        <s:if test="hasActionErrors()">
+                                            showDialog("<s:actionerror/>");
+                                            </s:if>
+                                                function showDialog(msg){
+                                                       document.write(msg);         
+                                                    }
+                                                </script>
+                            
                             <fieldset>
                                 <input placeholder="Desired-ID" type="text" name="username" id="desiredid" />
                             </fieldset>
@@ -48,3 +57,4 @@
             </div>
         </div>
     </header><!--/#header-->
+    

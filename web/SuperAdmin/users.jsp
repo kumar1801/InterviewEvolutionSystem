@@ -117,7 +117,15 @@
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-success">Submit</button> <button class="btn btn-danger">Cancel</button>  
                                     </div>
-
+                                                <s:if test="#request.SUCCESS!=null">
+                                                    <a id="#compose-modal"/>
+                                                </s:if>
+                                               
+                                             
+                                              
+                                                 <s:if test="#request.SUCCESS!=null">
+                                                      <a id="#compose-modal"/>
+                                                 </s:if>
 
 
                                 </div>
@@ -131,6 +139,17 @@
 
     </aside><!-- /.right-side -->
 </div><!-- ./wrapper -->
-
+<div class="modal fade" id="compose-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <s:actionerror/>
+                <s:actionmessage/>
+            </div>
+           
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
 <%@include file="validation.jsp" %>>
 <%@include file="footer.jsp"%>
