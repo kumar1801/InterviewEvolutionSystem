@@ -117,15 +117,7 @@
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-success">Submit</button> <button class="btn btn-danger">Cancel</button>  
                                     </div>
-                                                <s:if test="#request.SUCCESS!=null">
-                                                    <a id="#compose-modal"/>
-                                                </s:if>
-                                               
-                                             
-                                              
-                                                 <s:if test="#request.SUCCESS!=null">
-                                                      <a id="#compose-modal"/>
-                                                 </s:if>
+                                                
 
 
                                 </div>
