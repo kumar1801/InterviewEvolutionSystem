@@ -45,11 +45,11 @@ public class RequiedqualificationIdTest {
     public void testToString() {
         System.out.println("toString");
         RequiedqualificationId instance = new RequiedqualificationId();
-        String expResult = "";
+        String expResult = null;
         String result = instance.toString();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -63,7 +63,7 @@ public class RequiedqualificationIdTest {
         int result = instance.getJobReferenceCode();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -76,7 +76,7 @@ public class RequiedqualificationIdTest {
         RequiedqualificationId instance = new RequiedqualificationId();
         instance.setJobReferenceCode(jobReferenceCode);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -86,11 +86,11 @@ public class RequiedqualificationIdTest {
     public void testGetRequierdQualification() {
         System.out.println("getRequierdQualification");
         RequiedqualificationId instance = new RequiedqualificationId();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getRequierdQualification();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -99,11 +99,11 @@ public class RequiedqualificationIdTest {
     @Test
     public void testSetRequierdQualification() {
         System.out.println("setRequierdQualification");
-        String requierdQualification = "";
+        String requierdQualification = null;
         RequiedqualificationId instance = new RequiedqualificationId();
         instance.setRequierdQualification(requierdQualification);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

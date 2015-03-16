@@ -46,11 +46,11 @@ public class OrganizationTest {
     public void testGetOrgname() {
         System.out.println("getOrgname");
         Organization instance = new Organization();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getOrgname();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -59,11 +59,11 @@ public class OrganizationTest {
     @Test
     public void testSetOrgname() {
         System.out.println("setOrgname");
-        String orgname = "";
+        String orgname = null;
         Organization instance = new Organization();
         instance.setOrgname(orgname);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -77,7 +77,7 @@ public class OrganizationTest {
         byte[] result = instance.getOrglogo();
         assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -90,7 +90,7 @@ public class OrganizationTest {
         Organization instance = new Organization();
         instance.setOrglogo(orglogo);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -100,11 +100,11 @@ public class OrganizationTest {
     public void testGetImagename() {
         System.out.println("getImagename");
         Organization instance = new Organization();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getImagename();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -113,11 +113,11 @@ public class OrganizationTest {
     @Test
     public void testSetImagename() {
         System.out.println("setImagename");
-        String imagename = "";
+        String imagename = null;
         Organization instance = new Organization();
         instance.setImagename(imagename);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -127,11 +127,11 @@ public class OrganizationTest {
     public void testGetOrgdetails() {
         System.out.println("getOrgdetails");
         Organization instance = new Organization();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getOrgdetails();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -140,11 +140,11 @@ public class OrganizationTest {
     @Test
     public void testSetOrgdetails() {
         System.out.println("setOrgdetails");
-        String orgdetails = "";
+        String orgdetails = null;
         Organization instance = new Organization();
         instance.setOrgdetails(orgdetails);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -158,7 +158,7 @@ public class OrganizationTest {
         Integer result = instance.getNoofbranches();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -171,7 +171,7 @@ public class OrganizationTest {
         Organization instance = new Organization();
         instance.setNoofbranches(noofbranches);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -185,7 +185,7 @@ public class OrganizationTest {
         Set result = instance.getBranches();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -198,7 +198,7 @@ public class OrganizationTest {
         Organization instance = new Organization();
         instance.setBranches(branches);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

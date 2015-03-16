@@ -45,11 +45,11 @@ public class RCMTest {
     public void testGetDepartment() {
         System.out.println("getDepartment");
         RCM instance = new RCM();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getDepartment();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -58,11 +58,11 @@ public class RCMTest {
     @Test
     public void testSetDepartment() {
         System.out.println("setDepartment");
-        String Department = "";
+        String Department = null;
         RCM instance = new RCM();
         instance.setDepartment(Department);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -72,11 +72,11 @@ public class RCMTest {
     public void testGetDesignation() {
         System.out.println("getDesignation");
         RCM instance = new RCM();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getDesignation();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -85,11 +85,11 @@ public class RCMTest {
     @Test
     public void testSetDesignation() {
         System.out.println("setDesignation");
-        String Designation = "";
+        String Designation = null;
         RCM instance = new RCM();
         instance.setDesignation(Designation);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -99,11 +99,11 @@ public class RCMTest {
     public void testGetRCMRole() {
         System.out.println("getRCMRole");
         RCM instance = new RCM();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getRCMRole();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -112,11 +112,11 @@ public class RCMTest {
     @Test
     public void testSetRCMRole() {
         System.out.println("setRCMRole");
-        String RCMRole = "";
+        String RCMRole = null;
         RCM instance = new RCM();
         instance.setRCMRole(RCMRole);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

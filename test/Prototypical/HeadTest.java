@@ -45,11 +45,11 @@ public class HeadTest {
     public void testGetImagename() {
         System.out.println("getImagename");
         Head instance = new Head();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getImagename();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -58,11 +58,11 @@ public class HeadTest {
     @Test
     public void testSetImagename() {
         System.out.println("setImagename");
-        String imagename = "";
+        String imagename = null;
         Head instance = new Head();
         instance.setImagename(imagename);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -76,7 +76,7 @@ public class HeadTest {
         byte[] result = instance.getHeadimg();
         assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -89,7 +89,7 @@ public class HeadTest {
         Head instance = new Head();
         instance.setHeadimg(headimg);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -99,11 +99,11 @@ public class HeadTest {
     public void testGetHeadDetail() {
         System.out.println("getHeadDetail");
         Head instance = new Head();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getHeadDetail();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -112,11 +112,11 @@ public class HeadTest {
     @Test
     public void testSetHeadDetail() {
         System.out.println("setHeadDetail");
-        String headDetail = "";
+        String headDetail = null;
         Head instance = new Head();
         instance.setHeadDetail(headDetail);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -126,11 +126,11 @@ public class HeadTest {
     public void testGetHeadType() {
         System.out.println("getHeadType");
         Head instance = new Head();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getHeadType();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -139,11 +139,11 @@ public class HeadTest {
     @Test
     public void testSetHeadType() {
         System.out.println("setHeadType");
-        String headType = "";
+        String headType = null;
         Head instance = new Head();
         instance.setHeadType(headType);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

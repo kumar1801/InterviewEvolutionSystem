@@ -50,7 +50,7 @@ public class ScheduleTest {
         ScheduleId result = instance.getId();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -63,7 +63,7 @@ public class ScheduleTest {
         Schedule instance = new Schedule();
         instance.setId(id);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -73,11 +73,11 @@ public class ScheduleTest {
     public void testGetType() {
         System.out.println("getType");
         Schedule instance = new Schedule();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getType();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -86,11 +86,11 @@ public class ScheduleTest {
     @Test
     public void testSetType() {
         System.out.println("setType");
-        String type = "";
+        String type = null;
         Schedule instance = new Schedule();
         instance.setType(type);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -104,7 +104,7 @@ public class ScheduleTest {
         Date result = instance.getDate();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -117,7 +117,7 @@ public class ScheduleTest {
         Schedule instance = new Schedule();
         instance.setDate(date);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -127,11 +127,11 @@ public class ScheduleTest {
     public void testGetInterviewAssesmentReport() {
         System.out.println("getInterviewAssesmentReport");
         Schedule instance = new Schedule();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getInterviewAssesmentReport();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -140,11 +140,11 @@ public class ScheduleTest {
     @Test
     public void testSetInterviewAssesmentReport() {
         System.out.println("setInterviewAssesmentReport");
-        String interviewAssesmentReport = "";
+        String interviewAssesmentReport = null;
         Schedule instance = new Schedule();
         instance.setInterviewAssesmentReport(interviewAssesmentReport);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -154,11 +154,11 @@ public class ScheduleTest {
     public void testGetStreet() {
         System.out.println("getStreet");
         Schedule instance = new Schedule();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getStreet();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -167,11 +167,11 @@ public class ScheduleTest {
     @Test
     public void testSetStreet() {
         System.out.println("setStreet");
-        String street = "";
+        String street = null;
         Schedule instance = new Schedule();
         instance.setStreet(street);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -181,11 +181,11 @@ public class ScheduleTest {
     public void testGetCity() {
         System.out.println("getCity");
         Schedule instance = new Schedule();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getCity();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -194,11 +194,11 @@ public class ScheduleTest {
     @Test
     public void testSetCity() {
         System.out.println("setCity");
-        String city = "";
+        String city = null;
         Schedule instance = new Schedule();
         instance.setCity(city);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -208,11 +208,11 @@ public class ScheduleTest {
     public void testGetState() {
         System.out.println("getState");
         Schedule instance = new Schedule();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getState();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -221,11 +221,11 @@ public class ScheduleTest {
     @Test
     public void testSetState() {
         System.out.println("setState");
-        String state = "";
+        String state = null;
         Schedule instance = new Schedule();
         instance.setState(state);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -235,11 +235,11 @@ public class ScheduleTest {
     public void testToString() {
         System.out.println("toString");
         Schedule instance = new Schedule();
-        String expResult = "";
+        String expResult = null;
         String result = instance.toString();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

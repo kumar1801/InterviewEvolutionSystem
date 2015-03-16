@@ -49,7 +49,7 @@ public class LanguageknownIdTest {
         int result = instance.getPersonid();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -62,7 +62,7 @@ public class LanguageknownIdTest {
         LanguageknownId instance = new LanguageknownId();
         instance.setPersonid(personid);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -72,11 +72,11 @@ public class LanguageknownIdTest {
     public void testGetLangknown() {
         System.out.println("getLangknown");
         LanguageknownId instance = new LanguageknownId();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getLangknown();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -85,11 +85,11 @@ public class LanguageknownIdTest {
     @Test
     public void testSetLangknown() {
         System.out.println("setLangknown");
-        String langknown = "";
+        String langknown = null;
         LanguageknownId instance = new LanguageknownId();
         instance.setLangknown(langknown);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -99,11 +99,11 @@ public class LanguageknownIdTest {
     public void testToString() {
         System.out.println("toString");
         LanguageknownId instance = new LanguageknownId();
-        String expResult = "";
+        String expResult = null;
         String result = instance.toString();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

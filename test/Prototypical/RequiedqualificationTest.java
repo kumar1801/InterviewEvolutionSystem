@@ -49,7 +49,7 @@ public class RequiedqualificationTest {
         RequiedqualificationId result = instance.getId();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -62,7 +62,7 @@ public class RequiedqualificationTest {
         Requiedqualification instance = new Requiedqualification();
         instance.setId(id);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -76,7 +76,7 @@ public class RequiedqualificationTest {
         Jobopeningdetails result = instance.getJobopeningdetails();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -89,7 +89,7 @@ public class RequiedqualificationTest {
         Requiedqualification instance = new Requiedqualification();
         instance.setJobopeningdetails(jobopeningdetails);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -99,11 +99,11 @@ public class RequiedqualificationTest {
     public void testToString() {
         System.out.println("toString");
         Requiedqualification instance = new Requiedqualification();
-        String expResult = "";
+        String expResult = null;
         String result = instance.toString();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

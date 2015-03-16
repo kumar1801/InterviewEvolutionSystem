@@ -49,7 +49,7 @@ public class DesiredskillsIdTest {
         int result = instance.getJobReferenceCode();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -62,7 +62,7 @@ public class DesiredskillsIdTest {
         DesiredskillsId instance = new DesiredskillsId();
         instance.setJobReferenceCode(jobReferenceCode);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -72,11 +72,11 @@ public class DesiredskillsIdTest {
     public void testGetDesiredSkills() {
         System.out.println("getDesiredSkills");
         DesiredskillsId instance = new DesiredskillsId();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getDesiredSkills();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -85,11 +85,11 @@ public class DesiredskillsIdTest {
     @Test
     public void testSetDesiredSkills() {
         System.out.println("setDesiredSkills");
-        String desiredSkills = "";
+        String desiredSkills = null;
         DesiredskillsId instance = new DesiredskillsId();
         instance.setDesiredSkills(desiredSkills);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

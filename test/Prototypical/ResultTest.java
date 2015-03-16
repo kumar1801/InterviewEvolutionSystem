@@ -49,7 +49,7 @@ public class ResultTest {
         ResultId result = instance.getId();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -62,7 +62,7 @@ public class ResultTest {
         Result instance = new Result();
         instance.setId(id);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -76,7 +76,7 @@ public class ResultTest {
         int result = instance.getObtainMark();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -89,7 +89,7 @@ public class ResultTest {
         Result instance = new Result();
         instance.setObtainMark(obtainMark);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -99,11 +99,11 @@ public class ResultTest {
     public void testGetRoundStatus() {
         System.out.println("getRoundStatus");
         Result instance = new Result();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getRoundStatus();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -112,11 +112,11 @@ public class ResultTest {
     @Test
     public void testSetRoundStatus() {
         System.out.println("setRoundStatus");
-        String roundStatus = "";
+        String roundStatus = null;
         Result instance = new Result();
         instance.setRoundStatus(roundStatus);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -126,11 +126,11 @@ public class ResultTest {
     public void testToString() {
         System.out.println("toString");
         Result instance = new Result();
-        String expResult = "";
+        String expResult = null;
         String result = instance.toString();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

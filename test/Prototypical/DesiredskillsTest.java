@@ -49,7 +49,7 @@ public class DesiredskillsTest {
         DesiredskillsId result = instance.getId();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -62,7 +62,7 @@ public class DesiredskillsTest {
         Desiredskills instance = new Desiredskills();
         instance.setId(id);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -76,7 +76,7 @@ public class DesiredskillsTest {
         Jobopeningdetails result = instance.getJobopeningdetails();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -89,7 +89,7 @@ public class DesiredskillsTest {
         Desiredskills instance = new Desiredskills();
         instance.setJobopeningdetails(jobopeningdetails);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

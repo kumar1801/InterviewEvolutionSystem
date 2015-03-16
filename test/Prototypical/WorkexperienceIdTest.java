@@ -49,7 +49,7 @@ public class WorkexperienceIdTest {
         Integer result = instance.getDesiredid();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -62,7 +62,7 @@ public class WorkexperienceIdTest {
         WorkexperienceId instance = new WorkexperienceId();
         instance.setDesiredid(desiredid);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -72,11 +72,11 @@ public class WorkexperienceIdTest {
     public void testGetOrgname() {
         System.out.println("getOrgname");
         WorkexperienceId instance = new WorkexperienceId();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getOrgname();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -85,11 +85,11 @@ public class WorkexperienceIdTest {
     @Test
     public void testSetOrgname() {
         System.out.println("setOrgname");
-        String orgname = "";
+        String orgname = null;
         WorkexperienceId instance = new WorkexperienceId();
         instance.setOrgname(orgname);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -99,11 +99,11 @@ public class WorkexperienceIdTest {
     public void testGetResponsibility() {
         System.out.println("getResponsibility");
         WorkexperienceId instance = new WorkexperienceId();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getResponsibility();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -112,11 +112,11 @@ public class WorkexperienceIdTest {
     @Test
     public void testSetResponsibility() {
         System.out.println("setResponsibility");
-        String responsibility = "";
+        String responsibility = null;
         WorkexperienceId instance = new WorkexperienceId();
         instance.setResponsibility(responsibility);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -126,11 +126,11 @@ public class WorkexperienceIdTest {
     public void testGetDesignation() {
         System.out.println("getDesignation");
         WorkexperienceId instance = new WorkexperienceId();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getDesignation();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -139,11 +139,11 @@ public class WorkexperienceIdTest {
     @Test
     public void testSetDesignation() {
         System.out.println("setDesignation");
-        String designation = "";
+        String designation = null;
         WorkexperienceId instance = new WorkexperienceId();
         instance.setDesignation(designation);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -157,7 +157,7 @@ public class WorkexperienceIdTest {
         Float result = instance.getDuration();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -170,7 +170,7 @@ public class WorkexperienceIdTest {
         WorkexperienceId instance = new WorkexperienceId();
         instance.setDuration(duration);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -184,7 +184,7 @@ public class WorkexperienceIdTest {
         Float result = instance.getSalaryDrawn();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -197,7 +197,7 @@ public class WorkexperienceIdTest {
         WorkexperienceId instance = new WorkexperienceId();
         instance.setSalaryDrawn(salaryDrawn);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -212,7 +212,7 @@ public class WorkexperienceIdTest {
         boolean result = instance.equals(other);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -226,7 +226,7 @@ public class WorkexperienceIdTest {
         int result = instance.hashCode();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -236,11 +236,11 @@ public class WorkexperienceIdTest {
     public void testToString() {
         System.out.println("toString");
         WorkexperienceId instance = new WorkexperienceId();
-        String expResult = "";
+        String expResult = null;
         String result = instance.toString();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

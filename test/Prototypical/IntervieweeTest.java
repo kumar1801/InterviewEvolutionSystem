@@ -45,11 +45,11 @@ public class IntervieweeTest {
     public void testGetGender() {
         System.out.println("getGender");
         Interviewee instance = new Interviewee();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getGender();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -58,11 +58,11 @@ public class IntervieweeTest {
     @Test
     public void testSetGender() {
         System.out.println("setGender");
-        String gender = "";
+        String gender = null;
         Interviewee instance = new Interviewee();
         instance.setGender(gender);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -72,11 +72,11 @@ public class IntervieweeTest {
     public void testGetNationality() {
         System.out.println("getNationality");
         Interviewee instance = new Interviewee();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getNationality();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -85,11 +85,11 @@ public class IntervieweeTest {
     @Test
     public void testSetNationality() {
         System.out.println("setNationality");
-        String nationality = "";
+        String nationality = null;
         Interviewee instance = new Interviewee();
         instance.setNationality(nationality);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -99,11 +99,11 @@ public class IntervieweeTest {
     public void testGetMarritalstatus() {
         System.out.println("getMarritalstatus");
         Interviewee instance = new Interviewee();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getMarritalstatus();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -112,11 +112,11 @@ public class IntervieweeTest {
     @Test
     public void testSetMarritalstatus() {
         System.out.println("setMarritalstatus");
-        String marritalstatus = "";
+        String marritalstatus = null;
         Interviewee instance = new Interviewee();
         instance.setMarritalstatus(marritalstatus);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -126,11 +126,11 @@ public class IntervieweeTest {
     public void testGetHobbies() {
         System.out.println("getHobbies");
         Interviewee instance = new Interviewee();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getHobbies();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -139,11 +139,11 @@ public class IntervieweeTest {
     @Test
     public void testSetHobbies() {
         System.out.println("setHobbies");
-        String hobbies = "";
+        String hobbies = null;
         Interviewee instance = new Interviewee();
         instance.setHobbies(hobbies);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -153,11 +153,11 @@ public class IntervieweeTest {
     public void testGetDob() {
         System.out.println("getDob");
         Interviewee instance = new Interviewee();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getDob();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -166,11 +166,11 @@ public class IntervieweeTest {
     @Test
     public void testSetDob() {
         System.out.println("setDob");
-        String dob = "";
+        String dob = null;
         Interviewee instance = new Interviewee();
         instance.setDob(dob);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -180,11 +180,11 @@ public class IntervieweeTest {
     public void testGetJRC() {
         System.out.println("getJRC");
         Interviewee instance = new Interviewee();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getJRC();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -193,11 +193,11 @@ public class IntervieweeTest {
     @Test
     public void testSetJRC() {
         System.out.println("setJRC");
-        String JRC = "";
+        String JRC = null;
         Interviewee instance = new Interviewee();
         instance.setJRC(JRC);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

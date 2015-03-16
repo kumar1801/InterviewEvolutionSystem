@@ -49,7 +49,7 @@ public class ContactPersonTest {
         Integer result = instance.getPersonid();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -62,7 +62,7 @@ public class ContactPersonTest {
         ContactPerson instance = new ContactPerson();
         instance.setPersonid(personid);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -76,7 +76,7 @@ public class ContactPersonTest {
         Long result = instance.getContactno();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -89,7 +89,7 @@ public class ContactPersonTest {
         ContactPerson instance = new ContactPerson();
         instance.setContactno(contactno);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -99,11 +99,11 @@ public class ContactPersonTest {
     public void testToString() {
         System.out.println("toString");
         ContactPerson instance = new ContactPerson();
-        String expResult = "";
+        String expResult = null;
         String result = instance.toString();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

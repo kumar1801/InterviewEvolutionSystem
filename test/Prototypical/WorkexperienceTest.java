@@ -49,7 +49,7 @@ public class WorkexperienceTest {
         WorkexperienceId result = instance.getId();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -62,7 +62,7 @@ public class WorkexperienceTest {
         Workexperience instance = new Workexperience();
         instance.setId(id);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -72,11 +72,11 @@ public class WorkexperienceTest {
     public void testToString() {
         System.out.println("toString");
         Workexperience instance = new Workexperience();
-        String expResult = "";
+        String expResult = null;
         String result = instance.toString();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

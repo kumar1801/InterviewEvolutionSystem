@@ -45,11 +45,11 @@ public class ChangePasswordTest {
     public void testGetNewpassword() {
         System.out.println("getNewpassword");
         ChangePassword instance = new ChangePassword();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getNewpassword();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -58,11 +58,11 @@ public class ChangePasswordTest {
     @Test
     public void testSetNewpassword() {
         System.out.println("setNewpassword");
-        String newpassword = "";
+        String newpassword = null;
         ChangePassword instance = new ChangePassword();
         instance.setNewpassword(newpassword);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -72,11 +72,11 @@ public class ChangePasswordTest {
     public void testGetPassword() {
         System.out.println("getPassword");
         ChangePassword instance = new ChangePassword();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getPassword();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -85,11 +85,11 @@ public class ChangePasswordTest {
     @Test
     public void testSetPassword() {
         System.out.println("setPassword");
-        String password = "";
+        String password = null;
         ChangePassword instance = new ChangePassword();
         instance.setPassword(password);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

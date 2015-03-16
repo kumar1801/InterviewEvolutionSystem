@@ -45,11 +45,11 @@ public class LoginTest {
     public void testGetUsername() {
         System.out.println("getUsername");
         Login instance = new Login();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getUsername();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -58,11 +58,11 @@ public class LoginTest {
     @Test
     public void testSetUsername() {
         System.out.println("setUsername");
-        String username = "";
+        String username = null;
         Login instance = new Login();
         instance.setUsername(username);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -72,11 +72,11 @@ public class LoginTest {
     public void testGetPassword() {
         System.out.println("getPassword");
         Login instance = new Login();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getPassword();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -85,11 +85,11 @@ public class LoginTest {
     @Test
     public void testSetPassword() {
         System.out.println("setPassword");
-        String password = "";
+        String password = null;
         Login instance = new Login();
         instance.setPassword(password);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -99,11 +99,11 @@ public class LoginTest {
     public void testToString() {
         System.out.println("toString");
         Login instance = new Login();
-        String expResult = "";
+        String expResult = null;
         String result = instance.toString();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

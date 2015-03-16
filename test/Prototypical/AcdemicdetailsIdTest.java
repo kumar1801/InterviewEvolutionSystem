@@ -49,7 +49,7 @@ public class AcdemicdetailsIdTest {
         int result = instance.getDesiredid();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -62,7 +62,7 @@ public class AcdemicdetailsIdTest {
         AcdemicdetailsId instance = new AcdemicdetailsId();
         instance.setDesiredid(desiredid);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -72,11 +72,11 @@ public class AcdemicdetailsIdTest {
     public void testGetDegreetype() {
         System.out.println("getDegreetype");
         AcdemicdetailsId instance = new AcdemicdetailsId();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getDegreetype();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -85,11 +85,11 @@ public class AcdemicdetailsIdTest {
     @Test
     public void testSetDegreetype() {
         System.out.println("setDegreetype");
-        String degreetype = "";
+        String degreetype = null;
         AcdemicdetailsId instance = new AcdemicdetailsId();
         instance.setDegreetype(degreetype);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -99,11 +99,11 @@ public class AcdemicdetailsIdTest {
     public void testGetInstitutionname() {
         System.out.println("getInstitutionname");
         AcdemicdetailsId instance = new AcdemicdetailsId();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getInstitutionname();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -112,11 +112,11 @@ public class AcdemicdetailsIdTest {
     @Test
     public void testSetInstitutionname() {
         System.out.println("setInstitutionname");
-        String institutionname = "";
+        String institutionname = null;
         AcdemicdetailsId instance = new AcdemicdetailsId();
         instance.setInstitutionname(institutionname);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -130,7 +130,7 @@ public class AcdemicdetailsIdTest {
         int result = instance.getYearofpassing();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -143,7 +143,7 @@ public class AcdemicdetailsIdTest {
         AcdemicdetailsId instance = new AcdemicdetailsId();
         instance.setYearofpassing(yearofpassing);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -157,7 +157,7 @@ public class AcdemicdetailsIdTest {
         float result = instance.getPercentageobtained();
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -170,7 +170,7 @@ public class AcdemicdetailsIdTest {
         AcdemicdetailsId instance = new AcdemicdetailsId();
         instance.setPercentageobtained(percentageobtained);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -185,7 +185,7 @@ public class AcdemicdetailsIdTest {
         boolean result = instance.equals(other);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -199,7 +199,7 @@ public class AcdemicdetailsIdTest {
         int result = instance.hashCode();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }

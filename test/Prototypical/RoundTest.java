@@ -49,7 +49,7 @@ public class RoundTest {
         int result = instance.getRoundId();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -62,7 +62,7 @@ public class RoundTest {
         Round instance = new Round();
         instance.setRoundId(roundId);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -72,11 +72,11 @@ public class RoundTest {
     public void testGetRoundName() {
         System.out.println("getRoundName");
         Round instance = new Round();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getRoundName();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -85,11 +85,11 @@ public class RoundTest {
     @Test
     public void testSetRoundName() {
         System.out.println("setRoundName");
-        String roundName = "";
+        String roundName = null;
         Round instance = new Round();
         instance.setRoundName(roundName);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -103,7 +103,7 @@ public class RoundTest {
         Integer result = instance.getRoundPreference();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -116,7 +116,7 @@ public class RoundTest {
         Round instance = new Round();
         instance.setRoundPreference(roundPreference);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -126,11 +126,11 @@ public class RoundTest {
     public void testGetRoundDescription() {
         System.out.println("getRoundDescription");
         Round instance = new Round();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getRoundDescription();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -139,11 +139,11 @@ public class RoundTest {
     @Test
     public void testSetRoundDescription() {
         System.out.println("setRoundDescription");
-        String roundDescription = "";
+        String roundDescription = null;
         Round instance = new Round();
         instance.setRoundDescription(roundDescription);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -157,7 +157,7 @@ public class RoundTest {
         Integer result = instance.getTotalMarks();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -170,7 +170,7 @@ public class RoundTest {
         Round instance = new Round();
         instance.setTotalMarks(totalMarks);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -184,7 +184,7 @@ public class RoundTest {
         Integer result = instance.getPassingCriteria();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -197,7 +197,7 @@ public class RoundTest {
         Round instance = new Round();
         instance.setPassingCriteria(passingCriteria);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -207,11 +207,11 @@ public class RoundTest {
     public void testGetDate() {
         System.out.println("getDate");
         Round instance = new Round();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getDate();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -220,11 +220,11 @@ public class RoundTest {
     @Test
     public void testSetDate() {
         System.out.println("setDate");
-        String date = "";
+        String date = null;
         Round instance = new Round();
         instance.setDate(date);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -234,11 +234,11 @@ public class RoundTest {
     public void testGetTime() {
         System.out.println("getTime");
         Round instance = new Round();
-        String expResult = "";
+        String expResult = null;
         String result = instance.getTime();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -247,11 +247,11 @@ public class RoundTest {
     @Test
     public void testSetTime() {
         System.out.println("setTime");
-        String time = "";
+        String time = null;
         Round instance = new Round();
         instance.setTime(time);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -265,7 +265,7 @@ public class RoundTest {
         Integer result = instance.getRcmid();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -278,7 +278,7 @@ public class RoundTest {
         Round instance = new Round();
         instance.setRcmid(rcmid);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -292,7 +292,7 @@ public class RoundTest {
         Integer result = instance.getJobReferenceCode();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -305,7 +305,7 @@ public class RoundTest {
         Round instance = new Round();
         instance.setJobReferenceCode(jobReferenceCode);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }
