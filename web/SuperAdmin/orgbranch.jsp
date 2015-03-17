@@ -29,16 +29,16 @@
                                         <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <label>Org Name:</label>                                         
-                                            <s:textfield type="text" cssClass="form-control my-colorpicker1" name="orgname"/>
+                                                                                  
+                                            <s:textfield key="global.orgname" type="text" cssClass="form-control my-colorpicker1" name="orgname"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <label>Org Details:</label>                                         
-                                            <s:textarea placeholder="Enter ..." rows="3" cssClass="form-control" name="orgdetails"/>                                        </div>
+                                                                                 
+                                            <s:textarea key="global.orgdetails" placeholder="Enter ..." rows="3" cssClass="form-control" name="orgdetails"/>                                        </div>
                                     </div>
                                 </div>
                                     
@@ -46,11 +46,11 @@
                                 <div class="form-group">
                                     <div class="row"> 
                                         <div class="col-lg-6">
-                                            <label>ORG LOGO: </label>   
+                                              
                                             <div class="btn btn-success btn-file">
                                                 <i class="fa fa-paperclip"></i>
                                                
-                                                <s:file name="userImage"/>  
+                                                <s:file key="global.orglogo" name="userImage"/>  
                                             </div>
                                         </div>
                                          
@@ -59,8 +59,8 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <label>No of branch:</label>                                         
-                                            <s:textfield type="text" cssClass="form-control my-colorpicker1" name="noofbranches"/>
+                                                                                  
+                                            <s:textfield key="global.noofbranch" type="text" cssClass="form-control my-colorpicker1" name="noofbranches"/>
                                         </div>
                                     </div>
                                 </div>
@@ -71,8 +71,8 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <label>Branch ID:</label>                                         
-                                            <s:textfield type="text" cssClass="form-control my-colorpicker1" name="br.branchid" required="has-error form-control:focus"/>
+                                                                             
+                                            <s:textfield key="global.branchid" type="text" cssClass="form-control my-colorpicker1" name="br.branchid" required="has-error form-control:focus"/>
                                         </div>
 
                                     </div>
@@ -80,8 +80,8 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <label>Branch type:</label>                                         
-                                            <s:textfield type="text" cssClass="form-control my-colorpicker1" name="br.branchtype" required="has-error form-control:focus"/>
+                                                                                 
+                                            <s:textfield key="global.banchtype" type="text" cssClass="form-control my-colorpicker1" name="br.branchtype" required="has-error form-control:focus"/>
                                         </div>
                                     </div>
                                 </div>
@@ -102,8 +102,8 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                             <label>Street Name:</label>
-                                            <s:textfield name="street" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                             
+                                            <s:textfield key="global.streetname" name="street" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                             
                                         </div>
                                     </div> 
@@ -141,8 +141,8 @@
                                     <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <label>Pincode:</label>                                         
-                                            <s:textfield type="text" cssClass="form-control my-colorpicker1" name="pincode"/>
+                                                                                   
+                                        <s:textfield key="global.pincod" type="text" cssClass="form-control my-colorpicker1" name="pincode"/>
                                         </div>
                                     </div>
                                 </div>

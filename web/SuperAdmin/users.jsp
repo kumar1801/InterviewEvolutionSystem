@@ -43,16 +43,16 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <label>Person_ID</label>                                         
-                                            <s:textfield name="personid" cssClass="form-control my-colorpicker1"/>
+                                                                                   
+                                            <s:textfield key="global.personid" name="personid" cssClass="form-control my-colorpicker1"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <label>UserName</label>                                         
-                                            <s:textfield name="username" cssClass="form-control my-colorpicker1"/>
+                                                                                   
+                                            <s:textfield key="global.username" name="username" cssClass="form-control my-colorpicker1"/>
                                         </div>
                                     </div>
                                 </div>
@@ -60,32 +60,48 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <label>Password</label>                                         
-                                            <s:password name="password" cssClass="form-control my-colorpicker1"/>
+                                                                                  
+                                            <s:password key="global.password" name="password" cssClass="form-control my-colorpicker1"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <label>Assign Role</label>
-                                            <s:select list="{'HR Manger','Recruiter Assistant','Interviewer'}" name="RCMRole" cssClass="form-control"></s:select>
+                                            
+                                           <label>Assign Role:</label>
+                                                <select  class="form-control" name="RCMRole">
+                                                <option value="-1"> Select Role</option> 
+                                                <option>HR Manger</option>
+                                                <option>Recruiter Assistant</option>
+                                                <option>Interviewer<option>
+                                                 
+                                            </select>
+                                            
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-lg-6">
-                                                <label>Department</label>
-                                            <s:select list="{'Production','Marketing'}" name="Department" cssClass="form-control"></s:select>
-                                            </div>
+                                                
+                                                <label>Department:</label>
+                                                <select  class="form-control" name="Department">
+                                                <option value="-1"> Select Department</option> 
+                                                <option>Production</option>
+                                                <option>Marketing</option>
+                                              
+                                                 
+                                            </select>
+                                                
+                                              </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-lg-6">
-                                                <label>Designation</label>                                         
-                                            <s:textfield name="designation" cssClass="form-control my-colorpicker1"/>
+                                                                                        
+                                                <s:textfield key="global.designation" name="designation" cssClass="form-control my-colorpicker1"/>
                                         </div>
                                     </div>
                                 </div>
@@ -117,7 +133,7 @@
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-success">Submit</button> <button class="btn btn-danger">Cancel</button>  
                                     </div>
-                                                
+
 
 
                                 </div>
@@ -131,17 +147,6 @@
 
     </aside><!-- /.right-side -->
 </div><!-- ./wrapper -->
-<div class="modal fade" id="compose-modal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <s:actionerror/>
-                <s:actionmessage/>
-            </div>
-           
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div>
+
 <%@include file="validation.jsp" %>>
 <%@include file="footer.jsp"%>

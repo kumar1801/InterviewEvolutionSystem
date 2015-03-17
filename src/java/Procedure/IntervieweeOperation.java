@@ -33,6 +33,23 @@ public class IntervieweeOperation {
         List<Interviewee> listinterviewee=q.list();
         return listinterviewee;
     }
+     
+       public boolean deleteMultipleCourse(int selectedDataId[]) {
+        Session session = MyFilterHib.getsessionfactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            for (int i = 0; i < selectedDataId.length; i++) {
+                Person p = (Person)session.get(Person.class, selectedDataId[i]);
+                session.delete(p);
+            }
+            transaction.commit();
+            return true;
+        } catch (HibernateException e) {                                                                
+            return false;
+        }
+    }
+
+    
      public boolean insertDetails(Interviewee interviewee) {
          
         SessionFactory sf = MyFilterHib.getsessionfactory();

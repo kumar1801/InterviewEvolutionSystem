@@ -29,60 +29,59 @@
                                         <div class="form-group">
                                     	<div class="row">
                                     	<div class="col-lg-4">
-                                            <label>Desired ID</label>
-                                            <s:select name="personid" id="lst_DesiredID" cssClass="form-control" list="%{dispint}" listKey="personid" listValue="personid"/>
+                                           
+                                            <s:select key="global.username" name="personid" id="lst_DesiredID" cssClass="form-control" list="%{dispint}" listKey="personid" listValue="personid"/>
                                             </div>
                                             </div>
                                       </div>
                                      <div class="form-group">
-                                       <label>Interviewee Name:</label>
+                                     
                                         <div class="row">
                                          <div class="col-lg-4">               
-                                             <s:textfield name="fname" cssClass="form-control my-colorpicker1" placeholder="FirstName"/>
+                                             <s:textfield key="global.intervieweename" name="fname" cssClass="form-control my-colorpicker1" placeholder="FirstName"/>
                                          </div>
                                          <div class="col-lg-4">               
-                                             <s:textfield name="mname" cssClass="form-control my-colorpicker1" placeholder="SecondName"/>
+                                             <s:textfield key="" name="mname" cssClass="form-control my-colorpicker1" placeholder="SecondName"/>
                                          </div>
                                          <div class="col-lg-4">                
-                                             <s:textfield name="lname" cssClass="form-control my-colorpicker1" placeholder="LastName"/>
+                                             <s:textfield key="" name="lname" cssClass="form-control my-colorpicker1" placeholder="LastName"/>
                                          </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
                                          <div class="col-lg-4">
-                                         <label>CTC</label>                                         
-                                         <s:textfield name="ctc" cssClass="form-control my-colorpicker1"/>
+                                                                         
+                                             <s:textfield key="global.ctc" name="ctc" cssClass="form-control my-colorpicker1"/>
                                          </div>
                                         </div>
                                     </div>
                                         <div class="form-group">
                                         <div class="row">
                                          <div class="col-lg-4">
-                                         <label>Posting</label>                                         
-                                         <s:textfield name="posting" cssClass="form-control my-colorpicker1"/>
+                                           
+                                             <s:textfield key="global.posting" name="posting" cssClass="form-control my-colorpicker1"/>
                                          </div>
                                         </div>
                                     </div>
                                         <div class="form-group">
                                         <div class="row">
-                                         <div class="col-lg-4">
-                                         <label>Interviewer ID</label>                                         
-                                         <s:textfield name="desiredid" cssClass="form-control my-colorpicker1"/>
+                                         <div class="col-lg-4">                                       
+                                         <s:textfield key="global.interviewerid" name="desiredid" cssClass="form-control my-colorpicker1"/>
                                          </div>
                                         </div>
                                     </div>
                                         <div class="form-group">
-                                       <label>Interviewer Name:</label>
+                                      
                                         <div class="row">
                                          <div class="col-lg-4">               
-                                             <s:textfield name="fname" cssClass="form-control my-colorpicker1" placeholder="FirstName"/>
+                                             <s:textfield key="global.interviewername" name="fname" cssClass="form-control my-colorpicker1" placeholder="FirstName"/>
                                          </div>
                                          <div class="col-lg-4">               
-                                             <s:textfield name="mname" cssClass="form-control my-colorpicker1" placeholder="SecondName"/>
+                                             <s:textfield  name="mname" cssClass="form-control my-colorpicker1" placeholder="SecondName"/>
                                          </div>
                                          <div class="col-lg-4">                
-                                             <s:textfield name="lname" cssClass="form-control my-colorpicker1" placeholder="LastName"/>
+                                             <s:textfield  name="lname" cssClass="form-control my-colorpicker1" placeholder="LastName"/>
                                          </div>
                                         </div>
                                     </div>
@@ -90,16 +89,16 @@
                                         <div class="form-group">
                                     	<div class="row">
                                     	<div class="col-lg-4">
-                                            <label>Round ID</label>
-                                            <s:select name="roundId" id="lst_DesiredID" cssClass="form-control" list="%{disprnd}" listValue="roundId" listKey="roundId"/>
+                                           
+                                            <s:select key="global.roundid" name="roundId" id="lst_DesiredID" cssClass="form-control" list="%{disprnd}" listValue="roundId" listKey="roundId"/>
                                             </div>
                                             </div>
                                       </div>
                                         <div class="form-group">
                                         <div class="row">
                                          <div class="col-lg-4">
-                                         <label>Round Name</label>                                         
-                                         <s:textfield name="roundname" cssClass="form-control my-colorpicker1"/>
+                                                                                
+                                             <s:textfield key="global.roundname" name="roundname" cssClass="form-control my-colorpicker1"/>
                                          </div>
                                         </div>
                                     </div>
@@ -107,8 +106,8 @@
                                         <div class="form-group">
                                         <div class="row">
                                          <div class="col-lg-4">
-                                         <label>Passing Criteria</label>                                         
-                                         <s:textfield name="passingcriteria" cssClass="form-control my-colorpicker1"/>
+                                                                                
+                                             <s:textfield key="global.passingcriteria" name="passingcriteria" cssClass="form-control my-colorpicker1"/>
                                          </div>
                                         </div>
                                     </div>
@@ -116,8 +115,8 @@
                                      <div class="form-group">
                                         <div class="row">
                                          <div class="col-lg-4">
-                                         <label>Obtained Marks</label>                                         
-                                         <s:textfield name="obtainMark" cssClass="form-control my-colorpicker1"/>
+                                                                               
+                                             <s:textfield key="global.obtainedmarks" name="obtainMark" cssClass="form-control my-colorpicker1"/>
                                          </div>
                                         </div>
                                     </div>
@@ -125,8 +124,8 @@
                                     <div class="form-group">
                                         <div class="row">
                                          <div class="col-lg-4">
-                                         <label>Round Status</label>                                         
-                                         <s:textfield name="roundStatus" cssClass="form-control my-colorpicker1"/>
+                                                                                
+                                         <s:textfield key="global.roundstatus" name="roundStatus" cssClass="form-control my-colorpicker1"/>
                                          </div>
                                         </div>
                                     </div>
@@ -137,7 +136,7 @@
                             
                                    
                                    <div class="form-group">
-                                    <button class="btn btn-success">Download Resume</button> <button class="btn btn-danger">Update</button>  
+                                    <button  class="btn btn-success">Download Resume</button> <button class="btn btn-danger">Update</button>  
                                     </div>
                                    
                                    

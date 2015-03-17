@@ -93,7 +93,7 @@
                                         <div class="col-sm-8">
                                             <s:textfield type="text" placeholder="eg: 800 085 8511" cssClass="form-control" name="contactno" />
                                         </div>
-                                        <div class="col-sm-2"><input type="button" id="b1" align="center" class="btn btn-primary" value="+"/></div>
+                                        <div class="col-sm-2"><input type="button" id="b1" align="center" class="btn btn-warning" value="+"/></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -109,9 +109,9 @@
                                 <div class="form-group">
                                     <label class="col-lg-2 col-sm-2 control-label">Gender</label>
                                     <div class="col-lg-10">
-                                        Male &nbsp;&nbsp;<input type="radio" value="1" id="radio-01" name="gender" checked="" />
+                                        <input type="radio" value="1" id="radio-01" name="gender" checked="" />&nbsp;&nbsp; Male &nbsp;&nbsp;
 
-                                        &nbsp;&nbsp; Female &nbsp;&nbsp;<input type="radio" value="1" id="radio-02" name="gender"/>
+                                        <input type="radio" value="1" id="radio-02" name="gender"/>&nbsp;&nbsp; Female &nbsp;&nbsp;
                                     </div>
                                 </div>
 
@@ -190,13 +190,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="inputSuccess" class="col-sm-2 col-sm-2 control-label">Marrital Status</label>
-                                    <div class="col-lg-12"  style="margin-left: 180px; position: absolute">
+                                    <div class="col-lg-12"  style="margin-left: 160px; position: absolute">
                                         <label class="checkbox-inline">
-                                            <input type="checkbox" value="english" id="inlineCheckbox1" name="marritalstatus">
-                                            Single </label>
+                                            <input type="radio" value="english" id="inlineCheckbox1" name="marritalstatus">&nbsp;&nbsp;Single
+                                             </label>
                                         <label class="checkbox-inline">
-                                            <input type="checkbox" value="gujarati" id="inlineCheckbox2" name="marritalstatus">
-                                            Marries </label>
+                                            <input type="radio" value="gujarati" id="inlineCheckbox2" name="marritalstatus">&nbsp;&nbsp;Married
+                                              </label>
 
                                     </div>
                                 </div>
