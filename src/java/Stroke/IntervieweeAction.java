@@ -65,7 +65,7 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
     
     
      public String retriveData(){
-         System.out.println("------------------------------------------------------------------------------------------");
+        
         IntervieweeOperation intop = new IntervieweeOperation();
         JobOpeningOperation joo = new JobOpeningOperation();
          RoundOperation ro1 = new RoundOperation();

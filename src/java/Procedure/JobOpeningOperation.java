@@ -7,6 +7,7 @@ package Procedure;
 
 import Databaseutil.MyFilterHib;
 import Prototypical.Jobopeningdetails;
+import Prototypical.Person;
 import Prototypical.Requiedqualification;
 import Prototypical.RequiedqualificationId;
 import Prototypical.Requireddocuments;
@@ -14,6 +15,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -43,6 +45,22 @@ public class JobOpeningOperation {
             return false;
         } finally {
             s.close();
+        }
+    }
+    
+    public boolean deleteMultipleCourse(int selectedDataId[]) {
+        Session session = MyFilterHib.getsessionfactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            for (int i = 0; i < selectedDataId.length; i++) {
+                Jobopeningdetails jodp = (Jobopeningdetails)session.get(Jobopeningdetails.class, selectedDataId[i]);
+                session.delete(jodp);
+                 transaction.commit();
+            }
+           
+            return true;
+        } catch (HibernateException e) {                                                                
+            return false;
         }
     }
 

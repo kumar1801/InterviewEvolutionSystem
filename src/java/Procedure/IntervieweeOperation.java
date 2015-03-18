@@ -41,8 +41,9 @@ public class IntervieweeOperation {
             for (int i = 0; i < selectedDataId.length; i++) {
                 Person p = (Person)session.get(Person.class, selectedDataId[i]);
                 session.delete(p);
+                 transaction.commit();
             }
-            transaction.commit();
+           
             return true;
         } catch (HibernateException e) {                                                                
             return false;

@@ -100,8 +100,8 @@
                                     <label>Job Type:</label>
                                      <select class="form-control" name="jobType">
                                                 <option value="-1"> Select Jobtype</option> 
-                                                <option>Developer</option>
-                                                <option>Trainee</option>
+                                                <option>Parttime</option>
+                                                <option>Fulltime</option>
                                                 
                                             </select>
                                     

@@ -141,8 +141,8 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="RegisteredCandidatesRetrive"><i class="fa fa-users"></i> Registered Candidates</a>						</li>
-                                <li><a href="#"><i class="fa fa-user"></i> Shortlisted Candidates</a></li>
-                                <li><a href="#"><i class="fa fa-bar-chart-o"></i> Graphs and Reports</a></li>
+                                <li><a href="ShortlistedCandidatesRetrive"><i class="fa fa-user"></i> Shortlisted Candidates</a></li>
+                                
                                
                             </ul>
                         </li>

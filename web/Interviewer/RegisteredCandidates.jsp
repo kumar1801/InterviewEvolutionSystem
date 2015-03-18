@@ -10,14 +10,12 @@
 <!-- Right side column. Contains the navbar and content of the page -->
 <aside class="right-side">
     <link href="<%=application.getContextPath()%>/visualization/css/images/demo_page.css" rel="stylesheet" type="text/css" />
-        <link href="<%=application.getContextPath()%>/visualization/css/images/demo_table.css" rel="stylesheet" type="text/css" />
-        <link href="<%=application.getContextPath()%>/visualization/css/images/demo_table_jui.css" rel="stylesheet" type="text/css" />    
+          
         <link href="<%=application.getContextPath()%>/visualization/css/images/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css">
                              
         <script src="<%=application.getContextPath()%>/visualization/js/jquery-1.10.2.js"></script>
         <script src="<%=application.getContextPath()%>/visualization/js/jquery-ui-1.10.4.custom.min.js"></script>
-        <script src="<%=application.getContextPath()%>/visualization/js/jquery.dataTables.min.js"></script>
-        <script src="<%=application.getContextPath()%>/visualization/js/jquery.dataTables.editable.js"></script>
+        
         <script src="<%=application.getContextPath()%>/visualization/js/jquery.jeditable.js"></script>
         <script src="<%=application.getContextPath()%>/visualization/js/jquery.validate.js"></script>
     <!-- Content Header (Page header) -->
@@ -31,47 +29,7 @@
             <li class="active">Registered</li>
         </ol>
     </section>
- <script type="text/javascript">
-     function deleteSelectedData() {
-                
-                var checkboxx = document.getElementsByName('listSelectedData');
-                
-                var listSelectedData = "";
-                for (var i = 0; i < checkboxx.length; i++) {
-                    if (checkboxx[i].checked) {    
-                        alert(checkboxx[i].value+"-----");
-                        listSelectedData = listSelectedData + checkboxx[i].value + ":";
-                    }
-                }
-                $("#dialog-confirm").dialog({
-                    resizable: false,
-                    height: 140,
-                    dialogClass: "mycolor",
-                    modal: true,
-                    show: {
-                        effect: "blind",
-                        duration: 1000
-                    },
-                    hide: {
-                        effect: "explode",
-                        duration: 1000
-                    },
-                    buttons:
-                            {
-                                "Delete data": function() {
-                                    $( this ).dialog( "close" );   
-                                    location.href = "deleteMultipleRecords.action?listSelectedData=" + listSelectedData;
-                                },
-                                Cancel: function() {
-                                    $(this).dialog("close");
-                                }
-                            }
-                });
-                $("#dialog-confirm").dialog("open");
-            }
-                       
-        </script>
-        
+ 
 
        
        
@@ -112,16 +70,14 @@
                                              <td><s:property value="username" /></td>
                                             <td><s:property value="emailid" /></td>
                                             <td><s:property value="JRC" /></td>
-                                            <td align="center">
-                                              
-                                            </td>
+                                            
                                         </tr>                                                                                                          
                                     </s:iterator>   
                                 </tbody>
 
                             </table>
 
-                             <input type="button" id="buttondelete"  onclick="deleteSelectedData()" value="Delete"/>
+                             <input class="btn btn-group-xs" type="button" id="buttondelete"  onclick="deleteSelectedData()" value="Delete"/>
 
                         </div><!-- /.box-body -->
 
@@ -142,6 +98,48 @@
 <!-- DATA TABES SCRIPT -->
 <script src="<%=application.getContextPath()%>/visualization/js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
 <script src="<%=application.getContextPath()%>/visualization/js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+     function deleteSelectedData() {
+                
+                var checkboxx = document.getElementsByName('listSelectedData');
+                
+                var listSelectedData = "";
+                for (var i = 0; i < checkboxx.length; i++) {
+                    if (checkboxx[i].checked) {    
+                        
+                        listSelectedData = listSelectedData + checkboxx[i].value + ":";
+                    }
+                }
+                $("#dialog-confirm").dialog({
+                    resizable: false,
+                    height: 140,
+                    dialogClass: "mycolor",
+                    modal: true,
+                    show: {
+                        effect: "blind",
+                        duration: 1000
+                    },
+                    hide: {
+                        effect: "explode",
+                        duration: 1000
+                    },
+                    buttons:
+                            {
+                                "Delete data": function() {
+                                    $( this ).dialog( "close" );   
+                                    location.href = "deleteMultipleRecords.action?listSelectedData=" + listSelectedData;
+                                },
+                                Cancel: function() {
+                                    $(this).dialog("close");
+                                }
+                            }
+                });
+                $("#dialog-confirm").dialog("open");
+            }
+                       
+        </script>
+        
 
 
 <!-- page script -->

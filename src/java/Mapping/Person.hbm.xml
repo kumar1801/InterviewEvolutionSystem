@@ -64,7 +64,7 @@
         </set>
     
         
-        <set cascade="all" inverse="false" name="contact">
+        <set cascade="all" inverse="true" name="contact">
             <key column="personid"/>
             <one-to-many class="Prototypical.ContactPerson"/>
         </set>

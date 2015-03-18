@@ -49,6 +49,8 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
     private String userImageFileName;
     List<Requiedqualification> required;
     List<Requireddocuments> documents;
+    private String listSelectedData;
+     private int JOD;
 
     public List<Jobopeningdetails> getListjod() {
         return listjod;
@@ -57,7 +59,26 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
     public void setListjod(List<Jobopeningdetails> listjod) {
         this.listjod = listjod;
     }
+
+    public String getListSelectedData() {
+        return listSelectedData;
+    }
+
+    public void setListSelectedData(String listSelectedData) {
+        this.listSelectedData = listSelectedData;
+    }
+
+    public int getJOD() {
+        return JOD;
+    }
+
+    public void setJOD(int JOD) {
+        this.JOD = JOD;
+    }
    
+    
+    
+    
     
      public File getUserImage() {
         return userImage;
@@ -184,6 +205,37 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
         listjod = joo.dataretrival();
         return SUCCESS;
     }
+    
+    public int[] getBatchIds() {
+        StringTokenizer stSelectedDataId = new StringTokenizer(listSelectedData, ":");
+        String d = "";
+        int selectedDataId[] = new int[stSelectedDataId.countTokens()];
+        int i = 0;
+        while (stSelectedDataId.hasMoreTokens()) {
+            d = stSelectedDataId.nextToken();
+            
+            selectedDataId[i] = Integer.parseInt(d);
+            i++;
+        }
+        return selectedDataId;
+    }
+    
+    
+    
+    public String deleteMultiple() {
+        int selectedDataId[] = getBatchIds();
+      JobOpeningOperation joop = new JobOpeningOperation();
+        boolean check = joop.deleteMultipleCourse(selectedDataId);
+        if (check) {
+            retriveData();
+            return SUCCESS;
+        } else {
+            return ERROR;
+        }
+    }
+    
+    
+    
     
     
 

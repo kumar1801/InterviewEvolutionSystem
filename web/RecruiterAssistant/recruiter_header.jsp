@@ -118,11 +118,23 @@
                             </a>
                         </li>
                         
-                        <li> 
-                            <a href="RecruiterAssistant/shortlisting.jsp">
-                                <i class="fa fa-users"></i> <span>ShortListing</span>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-eye"></i>
+                                <span>View</span>
+                                <i class="fa fa-angle-left pull-right"></i>
                             </a>
+                            <ul class="treeview-menu">
+                                <li><a href="RegisterCandidateRetrive"><i class="fa fa-users"></i> Registered Candidates</a>						</li>
+                                <li><a href="ShortlistCandidateRetrive"><i class="fa fa-user"></i> Shortlisted Candidates</a></li>
+                               
+                               
+                            </ul>
                         </li>
+                        
+                        
+                        
+                        
                         
                         <li>
                             <a href="RecruiterAssistant/shortlisting.jsp">

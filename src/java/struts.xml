@@ -155,10 +155,88 @@
             <result name="error">/Home/homepage.jsp</result>
         </action>
         
+        <!-- gridview for interviewer panel -->
+        
         <action name="RegisteredCandidatesRetrive" class="Stroke.IntervieweeAction" method="retriveData">
             <result name="success">/Interviewer/RegisteredCandidates.jsp</result>
-            <result name="error">/Interviewer/RegisteredCandidates.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
         </action>
+        
+        <action name="ShortlistedCandidatesRetrive" class="Stroke.IntervieweeAction" method="retriveData">
+            <result name="success">/Interviewer/ShortlistedCandidates.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
+        <action name="deleteMultipleRecords" class="Stroke.IntervieweeAction" method="deleteMultiple">
+            <result name="success">/Interviewer/RegisteredCandidates.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action> 
+        
+        <action name="deleteshortlisted" class="Stroke.IntervieweeAction" method="deleteMultiple">
+            <result name="success">/Interviewer/ShortlistedCandidates.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
+        <!-- Gridview for RecruiterAssistant panel -->
+        
+        
+         <action name="RegisterCandidateRetrive" class="Stroke.IntervieweeAction" method="retriveData">
+            <result name="success">/RecruiterAssistant/RegisteredCandidates.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
+        <action name="ShortlistCandidateRetrive" class="Stroke.IntervieweeAction" method="retriveData">
+            <result name="success">/RecruiterAssistant/ShortlistedCandidates.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
+        <action name="registered" class="Stroke.IntervieweeAction" method="deleteMultiple">
+            <result name="success">/RecruiterAssistant/RegisteredCandidates.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action> 
+        
+        <action name="shortlisting" class="Stroke.IntervieweeAction" method="deleteMultiple">
+            <result name="success">/RecruiterAssistant/ShortlistedCandidates.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action> 
+        
+        <!-- Gridview for HRMAnager -->
+        
+        
+        <action name="RegisterCandidateRetrive" class="Stroke.IntervieweeAction" method="retriveData">
+            <result name="success">/HRManager/RegisteredCandidates.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
+         <action name="ShortlistCandidateRetrive" class="Stroke.IntervieweeAction" method="retriveData">
+            <result name="success">/HRManager/ShortlistedCandidates.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
+        <action name="deleteRecords" class="Stroke.IntervieweeAction" method="deleteMultiple">
+            <result name="success">/HRManager/RegisteredCandidates.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action> 
+        
+        <action name="deleteshortlistedrecord" class="Stroke.IntervieweeAction" method="deleteMultiple">
+            <result name="success">/HRManager/ShortlistedCandidates.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action> 
+        
+        <!-- Gridview for jod on superadmin panel -->
+        
+        <action name="jobopeningdetails" class="Stroke.JobOpeningAction" method="retriveData">
+            <result name="success">/SuperAdmin/Jobopeningdetails.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
+        <action name="jobopening" class="Stroke.JobOpeningAction" method="deleteMultiple">
+            <result name="success">/SuperAdmin/Jobopeningdetails.jsp</result>
+            <result name="error">/Home/homepage.jsp</result>
+        </action>
+        
+        
+        
         <action name="branchRetrive" class="Stroke.OrganizationAction" method="retriveData">
             <result name="success">/Home/Branch.jsp</result> 
             <result name="error">/Home/homepage.jsp</result> 
@@ -172,10 +250,12 @@
             <result name="error">/Home/homepage.jsp</result>
         </action>
         
-        <action name="deleteMultipleRecords" class="Stroke.IntervieweeAction" method="deleteMultiple">
-            <result name="success">/Interviewer/RegisteredCandidates.jsp</result>
-            <result name="error">/Home/homepage.jsp</result>
-        </action> 
+         
+        
+         
+        
+        
+        
         
         
     </package>

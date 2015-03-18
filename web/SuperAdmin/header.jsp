@@ -164,7 +164,7 @@
                         </li>
 
                         <li>
-                            <a href="#">
+                            <a href="jobopeningdetails">
                                 <i class="fa fa-file-text-o"></i> <span>JOD</span>
                             </a>
                         </li>

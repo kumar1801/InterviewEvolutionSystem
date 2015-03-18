@@ -1,5 +1,5 @@
 
-<%@include file="interviewer_header.jsp"%>
+<%@include file="header.jsp"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -25,7 +25,7 @@
             <small>Control panel</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="<%=application.getContextPath()%>/Interviewer/ShortlistedCandidates.jsp"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Shortlisted</li>
         </ol>
     </section>
@@ -119,7 +119,7 @@
                             {
                                 "Delete data": function() {
                                     $( this ).dialog( "close" );   
-                                    location.href = "deleteshortlisted.action?listSelectedData=" + listSelectedData;
+                                    location.href = "deleteshortlistedrecord.action?listSelectedData=" + listSelectedData;
                                 },
                                 Cancel: function() {
                                     $(this).dialog("close");

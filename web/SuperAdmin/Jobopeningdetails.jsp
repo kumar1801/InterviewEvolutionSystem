@@ -1,5 +1,5 @@
 
-<%@include file="interviewer_header.jsp"%>
+<%@include file="header.jsp"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -21,61 +21,79 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            ShortListed Candidates
+            Job Opening Details
             <small>Control panel</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="<%=application.getContextPath()%>/Interviewer/ShortlistedCandidates.jsp"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Shortlisted</li>
+            <li><a href="<%=application.getContextPath()%>/SuperAdmin/Jobopeningdetails.jsp"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">JobOpenings</li>
         </ol>
     </section>
+ 
 
+      
+       
+    
     <!-- Main content -->
     <section class="content">
-            <!-- Main content -->
-            <section class="content">
-                <div id="dialog-confirm" title="Are you sure?"></div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="box">
-                            <div class="box-header">
-                                <h3 class="box-title">Data Table With Full Features</h3>                                    
-                            </div><!-- /.box-header -->
+        <!-- Main content -->
+        <section class="content">
+             <div id="dialog-confirm" title="Are you sure?"></div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">Data Table With Full Features</h3>                                    
+                        </div><!-- /.box-header -->
 
-                            <div class="box-body table-responsive">
-                                <table id="example1" class="table table-bordered table-striped">
-                                     <thead>
+                        <div class="box-body table-responsive">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
                                     <tr>
-                                        <th>Person-ID</th>
-                                        <th>Name</th>
-                                        <th>Email-ID</th>
                                         <th>Job Reference Code</th>
+                                        <th>Posting</th>
+                                        <th>Department</th>
+                                         <th>Vacancies</th>
+                                        <th>Job Type</th>
+                                        <th>Required Qualification</th>
+                                        <th>Gender</th>
+                                        <th>Cost per Company(CTC)</th>
+                                        <th>Required Skills</th>
                                        
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <s:iterator value="%{listinterviewee}">                 
+                                    <s:iterator value="%{listjod}">                 
                                         <tr> 
                                             <td>
                                   <input type="checkbox" name="listSelectedData"  id="listSelectedData"
-                                   value="<s:property value="personid" />" style="width:30px;" />
-                                   <s:property value="personid" />
+                                   value="<s:property value="jobReferenceCode" />" style="width:30px;" />
+                                   <s:property value="jobReferenceCode" />
                                 </td>
-                                            <td><s:property value="fname+' '+lname" /></td>
-                                            <td><s:property value="emailid" /></td>
-                                            <td><s:property value="JRC" /></td>
+                                            <td><s:property value="posting" /></td>
+                                             <td><s:property value="department" /></td>
+                                            <td><s:property value="vacancies" /></td>
+                                            <td><s:property value="jobType" /></td>
+                                            <td><s:iterator value="%{requiedqualifications}">
+                                             <s:property value="id.requierdQualification"/>,
+                                                </s:iterator> </td>
+                                            <td><s:property value="gender" /></td>
+                                            <td><s:property value="ctc" /></td>
+                                            <s:iterator value="%{desiredskillses}">
+                                                <td> <s:property value="id.desiredSkills"/>,
+                                                </s:iterator></td>
+                 
                                             
                                         </tr>                                                                                                          
                                     </s:iterator>   
                                 </tbody>
-                                 
 
                             </table>
 
-                               
+                             <input class="btn btn-group-xs" type="button" id="buttondelete"  onclick="deleteSelectedData()" value="Delete"/>
 
                         </div><!-- /.box-body -->
-                        <input class="btn btn-group-xs" type="button" id="buttondelete"  onclick="deleteSelectedData()" value="Delete"/>
+
 
                     </div><!-- /.box -->
                 </div>
@@ -89,6 +107,10 @@
 <!-- jQuery 2.0.2 -->
 <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>-->
 <!-- Bootstrap -->
+
+<!-- DATA TABES SCRIPT -->
+<script src="<%=application.getContextPath()%>/visualization/js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
+<script src="<%=application.getContextPath()%>/visualization/js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
 
 <script type="text/javascript">
      function deleteSelectedData() {
@@ -119,7 +141,7 @@
                             {
                                 "Delete data": function() {
                                     $( this ).dialog( "close" );   
-                                    location.href = "deleteshortlisted.action?listSelectedData=" + listSelectedData;
+                                    location.href = "jobopening.action?listSelectedData=" + listSelectedData;
                                 },
                                 Cancel: function() {
                                     $(this).dialog("close");
@@ -130,10 +152,7 @@
             }
                        
         </script>
-
-<!-- DATA TABES SCRIPT -->
-<script src="<%=application.getContextPath()%>/visualization/js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
-<script src="<%=application.getContextPath()%>/visualization/js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
+        
 
 
 <!-- page script -->
