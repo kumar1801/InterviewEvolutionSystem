@@ -72,10 +72,10 @@
                                             <div class="col-lg-4">
                                                 <s:textfield type="text" placeholder="First name" cssClass="form-control" name="fname"  />
                                             </div>
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-4">
                                                 <s:textfield type="text" placeholder="Middle name" cssClass="form-control" name="mname" />
                                             </div>
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-4">
                                                 <s:textfield type="text" placeholder="Last name" cssClass="form-control" name="lname" />
                                             </div>
                                         </div>
@@ -123,39 +123,44 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 col-sm-2 control-label">Street</label>
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-10">
                                         <s:textfield type="text" cssClass="form-control" name="street" />
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-2 col-sm-2 control-label">City</label>
                                     <div class="col-lg-10">
-                                        <select class="form-control m-bot15" name="city">
-                                            <option></option>
-                                            <option>Vadodara</option>
-                                            <option>Junagadh</option>
-                                            <option>Surat</option>
-                                        </select>
+                                       <select class="form-control" name="city">
+                                                <option value="-1"> Select City</option> 
+                                                <option>Vadodara</option>
+                                                <option>Junagadh</option>
+                                                <option>Surat</option>
+                                                
+                                            </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-2 col-sm-2 control-label">State</label>
                                     <div class="col-lg-10">
-                                        <select class="form-control m-bot15" name="state">
-                                            <option>Gujarat</option>
-                                            <option>Rajshthan</option>
-                                            <option>Madhyapradesh</option>
-                                        </select>
+                                        <select class="form-control" name="state">
+                                                <option value="-1"> Select State</option> 
+                                                <option>Gujarat</option>
+                                                <option>Maharashtra</option>
+                                                <option>Delhi</option>
+                                                
+                                            </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-lg-2 col-sm-2 control-label">Country</label>
                                     <div class="col-lg-10">
-                                        <select class="form-control m-bot15" name="country">
-                                            <option>India</option>
-                                            <option>US</option>
-                                            <option>UK</option>
-                                        </select>
+                                         <select class="form-control" name="country">
+                                                <option value="-1"> Select Country</option> 
+                                                <option>India</option>
+                                                <option>Poland</option>
+                                                <option>USA</option>
+                                                
+                                            </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
