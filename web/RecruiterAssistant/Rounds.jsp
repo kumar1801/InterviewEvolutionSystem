@@ -100,6 +100,7 @@
                                             </div><!-- /.input group -->
                                         </div><!-- /.form group -->
                                     </div>
+                                                
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-lg-12">
@@ -128,6 +129,7 @@
             </div>
             <!-- Main content -->
             <section class="content">
+                <div id="dialog-confirm" title="Are you sure?"></div>
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="box">
@@ -149,7 +151,12 @@
                                     <tbody>
                                     <s:iterator value="%{listround}">                 
                                         <tr> 
-                                            <td><s:property value="roundId" /></td>
+                                            <td>
+                                  <input type="checkbox" name="listSelectedData"  id="listSelectedData"
+                                   value="<s:property value="roundId" />" style="width:30px;" />
+                                   <s:property value="roundId" />
+                                </td>
+                                           
                                             <td><s:property value="roundName" /></td>
                                             <td><s:property value="roundPreference" /></td>
                                             <td><s:property value="totalMarks" />&percnt; </td>                                
@@ -160,7 +167,7 @@
 
                             </table>
 
-                            <a href="viewRound">Update</a>
+                            <a href="viewRound">Update</a><input class="btn btn-group-xs" type="button" id="buttondelete"  onclick="deleteSelectedData()" value="Delete"/>
 
                         </div><!-- /.box-body -->
 
@@ -181,7 +188,15 @@
 <!-- DATA TABES SCRIPT -->
 <script src="<%=application.getContextPath()%>/visualization/js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
 <script src="<%=application.getContextPath()%>/visualization/js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
-
+<link href="<%=application.getContextPath()%>/visualization/css/images/demo_page.css" rel="stylesheet" type="text/css" />
+          
+        <link href="<%=application.getContextPath()%>/visualization/css/images/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css">
+                             
+        <script src="<%=application.getContextPath()%>/visualization/js/jquery-1.10.2.js"></script>
+        <script src="<%=application.getContextPath()%>/visualization/js/jquery-ui-1.10.4.custom.min.js"></script>
+        
+        <script src="<%=application.getContextPath()%>/visualization/js/jquery.jeditable.js"></script>
+        <script src="<%=application.getContextPath()%>/visualization/js/jquery.validate.js"></script>
 
 <!-- page script -->
 <script type="text/javascript">
@@ -197,6 +212,48 @@
         });
     });
 </script>
+
+
+<script type="text/javascript">
+     function deleteSelectedData() {
+                
+                var checkboxx = document.getElementsByName('listSelectedData');
+                
+                var listSelectedData = "";
+                for (var i = 0; i < checkboxx.length; i++) {
+                    if (checkboxx[i].checked) {    
+                        
+                        listSelectedData = listSelectedData + checkboxx[i].value + ":";
+                    }
+                }
+                $("#dialog-confirm").dialog({
+                    resizable: false,
+                    height: 140,
+                    dialogClass: "mycolor",
+                    modal: true,
+                    show: {
+                        effect: "blind",
+                        duration: 1000
+                    },
+                    hide: {
+                        effect: "explode",
+                        duration: 1000
+                    },
+                    buttons:
+                            {
+                                "Delete data": function() {
+                                    $( this ).dialog( "close" );   
+                                    location.href = "deleteRecords.action?listSelectedData=" + listSelectedData;
+                                },
+                                Cancel: function() {
+                                    $(this).dialog("close");
+                                }
+                            }
+                });
+                $("#dialog-confirm").dialog("open");
+            }
+                       
+        </script>
 
 </aside><!-- /.right-side -->
 </section>

@@ -50,7 +50,7 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
     List<Requiedqualification> required;
     List<Requireddocuments> documents;
     private String listSelectedData;
-     private int JOD;
+     private int jobReferenceCode;
 
     public List<Jobopeningdetails> getListjod() {
         return listjod;
@@ -68,13 +68,15 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
         this.listSelectedData = listSelectedData;
     }
 
-    public int getJOD() {
-        return JOD;
+    public int getJobReferenceCode() {
+        return jobReferenceCode;
     }
 
-    public void setJOD(int JOD) {
-        this.JOD = JOD;
+    public void setJobReferenceCode(int jobReferenceCode) {
+        this.jobReferenceCode = jobReferenceCode;
     }
+
+    
    
     
     
