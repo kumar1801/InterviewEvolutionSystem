@@ -177,12 +177,9 @@
                         notEmpty: {
                             message: 'Passing marks are required'
                             
-                        },
-                        
-                       regexp: {
-                            regexp:/^[0-9]+$/,
-                            message: 'The field only consist of Numeric Value'
                         }
+                        
+                       
                     }
                 },
                 userImage:{

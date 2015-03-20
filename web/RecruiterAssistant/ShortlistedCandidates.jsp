@@ -128,7 +128,7 @@
                             {
                                 "Delete data": function() {
                                     $( this ).dialog( "close" );   
-                                    location.href = "shortlisting.action?listSelectedData=" + listSelectedData;
+                                    location.href = "shortlisting?listSelectedData=" + listSelectedData;
                                 },
                                 Cancel: function() {
                                     $(this).dialog("close");

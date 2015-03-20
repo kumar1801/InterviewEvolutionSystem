@@ -22,7 +22,7 @@
                                 <div class="box-header">
                                     <h3 class="box-title">Round</h3>
                                 </div>
-            <form action="saveRound.action">
+            <form action="saveround.action">
                 <section class="col-lg-6">
                     <div class="box box-primary">
                         <div class="box-body">
@@ -104,15 +104,8 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-lg-12">
-                                                <label>Passing Criteria:</label> 
-                                                <select class="form-control" name="passingCriteria">
-                                                <option value="-1"> Select Criteria</option> 
-                                                <option><50</option>
-                                                <option>50-60</option>
-                                                <option>>60<option>
-                                                   
                                                 
-                                            </select>
+                                               <s:textfield key="global.passingCriteria" name="passingCriteria" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                                 
                                             
                                             </div>
@@ -243,7 +236,7 @@
                             {
                                 "Delete data": function() {
                                     $( this ).dialog( "close" );   
-                                    location.href = "deleteRecords.action?listSelectedData=" + listSelectedData;
+                                    location.href = "deleteRounds?listSelectedData=" + listSelectedData;
                                 },
                                 Cancel: function() {
                                     $(this).dialog("close");

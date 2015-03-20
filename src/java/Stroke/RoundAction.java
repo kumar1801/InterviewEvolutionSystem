@@ -105,6 +105,8 @@ public class RoundAction extends ActionSupport implements ModelDriven, Preparabl
     public String deleteMultiple() {
         int selectedDataId[] = getBatchIds();
       RoundOperation rnd = new RoundOperation();
+       RCMOperation rcmop = new RCMOperation();
+        listrcm = rcmop.dataretrival();
         boolean check = rnd.deleteMultipleCourse(selectedDataId);
         if (check) {
             retriveData();
@@ -118,7 +120,8 @@ public class RoundAction extends ActionSupport implements ModelDriven, Preparabl
     
     public String saveRound(){
         RoundOperation ro = new RoundOperation();
-        
+        RCMOperation rcmop = new RCMOperation();
+         listrcm = rcmop.dataretrival();
         boolean save =  ro.insRound(round);
         if(save){
             return SUCCESS;

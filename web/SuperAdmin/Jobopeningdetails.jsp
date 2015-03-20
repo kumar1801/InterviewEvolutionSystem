@@ -141,7 +141,7 @@
                             {
                                 "Delete data": function() {
                                     $( this ).dialog( "close" );   
-                                    location.href = "jobopening.action?listSelectedData=" + listSelectedData;
+                                    location.href = "jobopening?listSelectedData=" + listSelectedData;
                                 },
                                 Cancel: function() {
                                     $(this).dialog("close");

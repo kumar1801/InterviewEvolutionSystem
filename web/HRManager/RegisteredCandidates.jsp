@@ -128,7 +128,7 @@
                             {
                                 "Delete data": function() {
                                     $( this ).dialog( "close" );   
-                                    location.href = "deleteRecords.action?listSelectedData=" + listSelectedData;
+                                    location.href = "deleteRecords?listSelectedData=" + listSelectedData;
                                 },
                                 Cancel: function() {
                                     $(this).dialog("close");
