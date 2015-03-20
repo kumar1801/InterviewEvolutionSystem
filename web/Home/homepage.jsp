@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html lang="en">
     <head>
@@ -6,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>IES - Interview Evolution System</title>
+        <title>IES - <s:property value="getText('global.ies')"/></title>
         <link href="<%=application.getContextPath()%>/Home/css/bootstrap.min.css" rel="stylesheet">
         <link href="<%=application.getContextPath()%>/Home/css/font-awesome.min.css" rel="stylesheet">
         <link href="<%=application.getContextPath()%>/Home/css/prettyPhoto.css" rel="stylesheet">
@@ -28,33 +29,33 @@
             <div class="item active">
                 <div class="container">
                     <div class="carousel-content">
-                        <h1>Interview Evolution System</h1>
+                        <h1><s:property value="getText('global.ies')"/></h1>
                         <s:property value="#session.username"/>
-                        <p class="lead">Interview Evolution System is a process of selecting required candidates for a vacant position and selecting the candidates who fulfill the requirement of the organization</p>
+                        <p class="lead"><s:property value="getText('global.iestheory')"/></p>
                     </div>
                 </div>
             </div><!--/.item-->
             <div class="item">
                 <div class="container">
                     <div class="carousel-content">
-                        <h1>It is Generic System</h1>
-                        <p class="lead">This system can be implemented in industries like manufacturing, chemical, mechanical, electrical, any educational institute, training center, hospital systems, and government organizations</p>
+                        <h1><s:property value="getText('global.generic')"/></h1>
+                        <p class="lead"><s:property value="getText('global.generictheory')"/></p>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <div class="container">
                     <div class="carousel-content">
-                        <h1>The Main Objective</h1>
-                        <p class="lead">The main objective of "Interview Evolution System"   is to help the Manager (HR) in the process of recruiting new candidates for the company. This Interview Evolution system will primarily focus on the posting and management of job vacancies</p>
+                        <h1><s:property value="getText('global.mainobjective')"/></h1>
+                        <p class="lead"><s:property value="getText('global.mainobjectivetheory')"/></p>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <div class="container">
                     <div class="carousel-content">
-                        <h1>The Main Focus</h1>
-                        <p class="lead">This Interview Evolution system will primarily focus on the posting and management of job vacancies.</p>
+                        <h1><s:property value="getText('global.mainfocus')"/></h1>
+                        <p class="lead"><s:property value="getText('global.mainfocustheory')"/></p>
                     </div>
                 </div>
             </div><!--/.item-->
@@ -66,14 +67,14 @@
     <section id="services">
         <div class="container">
             <div class="box center">                
-                <h1>Our experience</h1>                
-                <p class="lead">Conducting an Interview involves different phases from job-opening to recruitment for any nature of organization. Interview process should be sound-managed, transparent and speedy.</p>                
-                <p>Interview Evolution System is a process of selecting required candidates for a vacant position and selecting the candidates who fulfill the requirement of the organization; hence selecting is a strategic function for human resource (HR) department. Human resource management includes several responsibilities, mainly selecting required candidates that the company needs so that this system will help the company in selecting the best required applicant that could help in achieving its goals. Recruitment is very systematic process of generating a pool of qualified applicant for organization job. Selection and recruitment is a very important process for a company.</p><br>
+                <h1><s:property value="getText('global.orgexperience')"/></h1>                
+                <p class="lead"><s:property value="getText('global.conducting')"/></p>                
+                <p><s:property value="getText('global.bigtheory')"/></p><br>
                 <p><a data-filter=".bootstrap" href="#" class="btn btn-primary btn-btnbig active">Read more</a></p>
                 <br><br>
             </div>
 
-            <div class="box">                
+           <!-- <div class="box">                
                 <h1>Services of IES</h1>                
                 <ul class="checklist">
                     <li><i class="icon-check"></i> But also the leap into electronic typesetting, remainin</li>
@@ -85,7 +86,7 @@
                     <li><i class="icon-check"></i> But also the leap into electronic typesetting, remainin</li>
                     <li><i class="icon-check"></i> But also the leap into electronic typesetting, remainin</li>
                 </ul>
-            </div>
+            </div>-->
 
 
             <!--/.box-->
@@ -97,23 +98,23 @@
         <div class="container">
             <div class="box">
                 <div class="center row">
-                    <h2>Job Opening</h2>
-                    <p class="lead">Currently we have following <a href="viewjod"> job openings</a></p>
+                    <h2><s:property value="getText('global.jobopening')"/></h2>
+                    <p class="lead"><s:property value="getText('global.cuurentlywehave')"/> <a href="viewjod"> <s:property value="getText('global.jobopening')"/></a></p>
                     <s:iterator value="%{listjod}">
                         <div id="wrapper">
-                            <div class="accordionButton">Job Reference Code:-<s:property value="jobReferenceCode" /></div>
+                            <div class="accordionButton"><s:property value="getText('global.jobreferenceode')"/>:-<s:property value="jobReferenceCode" /></div>
                             <div style="display: none;" class="accordionContent">
                                 <dl>
                                     <dt></dt>
-                                    <dt>Vacancies</dt>
+                                    <dt><s:property value="getText('global.vacancies')"/></dt>
                                     <dd><s:property value="vacancies"/></dd>
-                                    <dt>job-type</dt>
+                                    <dt><s:property value="getText('global.jobtype')"/></dt>
                                     <dd><s:property value="jobType"/></dd>
                                     <dt>CTC</dt>
                                     <dd><s:property value="ctc"/></dd>
                                 </dl>
-                                for further details <a href="Jobopening?jobcode=<s:property value="jobReferenceCode"/>">  click on  </a><br/>
-                                If you are interested then click on<a href="registration?jobcode=<s:property value="jobReferenceCode"/>">  registration  </a>
+                                 <s:property value="getText('global.furtherdetails')"/><a href="Jobopening?jobcode=<s:property value="jobReferenceCode"/>"> <s:property value="getText('global.clickon')"/>   </a><br/>
+                                <s:property value="getText('global.ifurintrested')"/><a href="registration?jobcode=<s:property value="jobReferenceCode"/>">  registration  </a>
                             </div>  
 
 
@@ -135,12 +136,6 @@
 
     <%@include file="contactus.jsp" %>
 
-    <script src="<%=application.getContextPath()%>/Home/js/jquery.js"></script>
-    <script src="<%=application.getContextPath()%>/Home/js/bootstrap.min.js"></script>
-    <script src="<%=application.getContextPath()%>/Home/js/jquery.isotope.min.js"></script>
-    <script src="<%=application.getContextPath()%>/Home/js/jquery.prettyPhoto.js"></script>
-    <script src="<%=application.getContextPath()%>/Home/js/main.js"></script>
-    <script src="<%=application.getContextPath()%>/Home/js/accordian.js"></script>
-    <script src="<%=application.getContextPath()%>/Home/js/login.js"></script>
+    <%@include file="js.jsp" %>
 </body>
 </html>

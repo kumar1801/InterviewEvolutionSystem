@@ -28,44 +28,44 @@
     <section class="content">
 
         <div class="row">
-            <form method="get" action="saveRound.action" id="signinform">
+            <form action="saveRound" id="signinform">
                 <section class="col-lg-6">
                     <div class="box box-primary">
                         <div class="box-body">
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <label>Round ID:</label>
-                                        <s:textfield name="roundId" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                       
+                                        <s:textfield key="global.roundid" name="roundId" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Round Name:</label>                                         
-                                        <s:textfield name="roundName" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                                                                  
+                                        <s:textfield key="global.roundname" name="roundName" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Round Preference:</label>
-                                        <s:textfield name="roundPreference" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                           
+                                        <s:textfield key="global.roundpreference" name="roundPreference" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <label>Round Description:</label>
-                                    <s:textarea name="roundDescription" placeholder="Enter ..." rows="3" cssClass="form-control" ></s:textarea>
+                                        
+                                    <s:textarea key="global.rounddescription" name="roundDescription" placeholder="Enter ..." rows="3" cssClass="form-control" ></s:textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <label>RCM ID:</label>                                         
-                                    <s:select name="personid" list="%{listrcm}" listKey="personid" listValue="personid" cssClass="form-control"/>
+                                                                              
+                                    <s:select key="global.rcmid" name="personid" list="%{listrcm}" listKey="personid" listValue="personid" cssClass="form-control"/>
                                 </div>
                             </div>
                         </div><!-- /.box-body -->
@@ -79,17 +79,18 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Total Marks:</label>
-                                            <s:textfield name="totalMarks" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                           
+                                            <s:textfield key="global.totalmarks" name="totalMarks" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                             </div>
                                         </div>
                                     </div>
                                     
                                     <!-- Date range -->
                                     <div class="form-group">
-                                        <label>Date range:</label>
+                                       
                                         <div class="input-group">
                                             <div class="input-group-addon">
+                                            <s:property value="getText('global.daterange')"/>
                                                 <i class="fa fa-calendar"></i>
                                             </div>
                                         <s:textfield name="date" cssClass="form-control pull-right" id="reservation"></s:textfield>
@@ -97,34 +98,25 @@
                                     </div><!-- /.form group -->
                                     <div class="bootstrap-timepicker">
                                         <div class="form-group">
-                                            <label>Time:</label>
+                                             <s:property value="getText('global.time')"/>
                                             <div class="input-group">
-                                            <s:textfield name="time" cssClass="form-control timepicker"></s:textfield>
+                                            <s:textfield  name="time" cssClass="form-control timepicker"></s:textfield>
                                                 <div class="input-group-addon">
                                                     <i class="fa fa-clock-o"></i>
                                                 </div>
                                             </div><!-- /.input group -->
                                         </div><!-- /.form group -->
                                     </div>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <label>Passing Criteria:</label> 
-                                                <select class="form-control" name="passingCriteria">
-                                                <option value="-1"> Select Criteria</option> 
-                                                <option><50</option>
-                                                <option>50-60</option>
-                                                <option>>60<option>
-                                                   
-                                                
-                                            </select>
-                                                
-                                            
+                                  <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                           
+                                            <s:textfield key="global.passingcrieteria" name="passingCriteria" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                    <s:submit name="btnNext" cssClass="btn btn-primary col-lg-5"  style="margin-right:20px; margin-left:30px"></s:submit>
+                                    <s:submit type="submit" name="btnNext" cssClass="btn btn-primary col-lg-5"  style="margin-right:20px; margin-left:30px"></s:submit>
                                         <button class="btn btn-success col-lg-5">Finish</button>
                                     </div>
                                 </div>
@@ -138,7 +130,7 @@
                     <div class="col-xs-12">
                         <div class="box">
                             <div class="box-header">
-                                <h3 class="box-title">Data Table With Full Features</h3>                                    
+                                <h3 class="box-title">Total Round</h3>                                    
                             </div><!-- /.box-header -->
 
                             <div class="box-body table-responsive">

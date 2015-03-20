@@ -24,13 +24,13 @@
             <div class="container">
                 <div class="box"> 
                     <div class="headline1">
-                        <h5>Registration Form</h5>
+                        <h5><s:property value="getText('global.registrationform')"/></h5>
                     </div>
                     <header class="panel-heading">Fill Details  </header>
                     <div class="panel-body">
                         <form class="form-horizontal adminex-form" name="registration" action="registrationsubmit" method="post" id="registrationform">
                             <div class="form-group">
-                                <label class="col-lg-2 col-sm-2 control-label">Job Reference Code</label>
+                                <label class="col-lg-2 col-sm-2 control-label"><s:property value="getText('global.jobreferenceode')"/></label>
                                 <div class="col-lg-10">
                                     <s:if test="jobcode!=null">
                                         <s:select name="JRC" list="%{listjod}" listKey="jobReferenceCode" listValue="jobReferenceCode" cssClass="form-control" value="#request.jobcode" disabled="true"/>  
@@ -42,26 +42,26 @@
                             </div>
                             <div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">Desired-Id</label>
+                                    <label class="col-sm-2 col-sm-2 control-label"><s:property value="getText('global.desiredid')"/></label>
                                     <div class="col-lg-10">
                                         <s:textfield type="text" name="personid" cssClass="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">User-Name</label>
+                                    <label class="col-sm-2 col-sm-2 control-label"><s:property value="getText('global.user-name')"/></label>
                                     <div class="col-sm-10">
                                         <s:textfield type="text" name="username" cssClass="form-control"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">Password</label>
+                                    <label class="col-sm-2 col-sm-2 control-label"><s:property value="getText('global.password')"/></label>
                                     <div class="col-sm-10">
                                         <s:password type="password" placeholder="" cssClass="form-control" name="password" />
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">Confirm-Password</label>
-                                    <div class="col-sm-10">
+                                    <label class="col-sm-2 col-sm-2 control-label"><s:property value="getText('global.confirmpassword')"/></label>
+                                    <div class="col-md-10">
                                         <s:password type="password" name="confirmpassword" placeholder="" cssClass="form-control" />
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@
                                         <div class="col-sm-8">
                                             <s:textfield type="text" placeholder="eg: 800 085 8511" cssClass="form-control" name="contactno" />
                                         </div>
-                                        <div class="col-sm-2"><input type="button" id="b1" align="center" class="btn btn-primary" value="+"/></div>
+                                        <div class="col-sm-2"><input type="button" id="b1" align="center" class="btn btn-warning" value="+"/></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -104,19 +104,19 @@
                                             <span class="input-group-btn add-on">
                                                 <button class="btn btn-primary" type="button"><i class="icon-calendar"></i></button>
                                             </span> </div>
-                                        <span class="help-block">Select date</span> </div>
+                                        <span class="help-block"></span><s:property value="getText('global.selectdate')"/> </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-2 col-sm-2 control-label">Gender</label>
+                                    <label class="col-lg-2 col-sm-2 control-label"><s:property value="getText('global.gender')"/></label>
                                     <div class="col-lg-10">
-                                        Male &nbsp;&nbsp;<input type="radio" value="1" id="radio-01" name="gender" checked="" />
+                                        <input type="radio" value="1" id="radio-01" name="gender" checked="" />&nbsp;&nbsp; Male &nbsp;&nbsp;
 
-                                        &nbsp;&nbsp; Female &nbsp;&nbsp;<input type="radio" value="1" id="radio-02" name="gender"/>
+                                        <input type="radio" value="1" id="radio-02" name="gender"/>&nbsp;&nbsp; Female &nbsp;&nbsp;
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">Nationality</label>
+                                    <label class="col-sm-2 col-sm-2 control-label"><s:property value="getText('global.nationality')"/></label>
                                     <div class="col-lg-4">
                                         <s:textfield type="text" placeholder="eg: Indian" cssClass="form-control" name="nationality" />
                                     </div>
@@ -164,7 +164,7 @@
                                         <s:textfield type="text" placeholder="Enter.." cssClass="form-control" name="pincode"/>
                                     </div>
                                 </div>
-                                <label class="col-sm-2 control-label col-lg-2">Language Known</label>
+                                <label class="col-sm-2 control-label col-lg-2"><s:property value="getText('global.langknown')"/></label>
                                 <div class="form-group">
                                     <div class="col-lg-12" style="margin-left: 180px;margin-top: 7px; position: absolute">
 
@@ -183,27 +183,27 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">Hobbies</label>
+                                    <label class="col-sm-2 col-sm-2 control-label"><s:property value="getText('global.hobbies')"/></label>
                                     <div class="col-sm-10">
                                         <s:textfield type="text" cssClass="form-control" name="hobbies"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputSuccess" class="col-sm-2 col-sm-2 control-label">Marrital Status</label>
-                                    <div class="col-lg-12"  style="margin-left: 180px; position: absolute">
+                                    <label for="inputSuccess" class="col-sm-2 col-sm-2 control-label"><s:property value="getText('global.marritalstatus')"/></label>
+                                    <div class="col-lg-12"  style="margin-left: 160px; position: absolute">
                                         <label class="checkbox-inline">
-                                            <input type="checkbox" value="english" id="inlineCheckbox1" name="marritalstatus">
-                                            Single </label>
+                                            <input type="radio" value="english" id="inlineCheckbox1" name="marritalstatus">&nbsp;&nbsp;Single
+                                             </label>
                                         <label class="checkbox-inline">
-                                            <input type="checkbox" value="gujarati" id="inlineCheckbox2" name="marritalstatus">
-                                            Marries </label>
+                                            <input type="radio" value="gujarati" id="inlineCheckbox2" name="marritalstatus">&nbsp;&nbsp;Married
+                                              </label>
 
                                     </div>
                                 </div>
 
 
                                 <div class="form-group">
-                                    <label for="inputSuccess" class="col-sm-2 control-label col-lg-2">Acdemic Details</label>
+                                    <label for="inputSuccess" class="col-sm-2 control-label col-lg-2"><s:property value="getText('global.acedemicdetails')"/></label>
                                 </div>
 
                                <table id="AcdemicDetails" class="table  table-hover general-table">
@@ -211,18 +211,18 @@
                                         <tr>
                                            
                                             <th>Degree-Type</th>
-                                            <th>Institution-Name</th>
-                                            <th>Year of Passing</th>
-                                            <th>% Obtained</th>
+                                            <th><s:property value="getText('global.institutionname')"/></th>
+                                            <th><s:property value="getText('global.yearofpassing')"/></th>
+                                            <th>% <s:property value="getText('global.obtained')"/></th>
 
                                         </tr>
                                     </thead>
                                     <tbody>
 
-                                        <TD><INPUT type="text" name="degreetype"/></TD>
-                                        <TD><INPUT type="text" name="institutionname" /></TD>
-                                        <TD><INPUT type="text" name="yearofpassing" /></TD>
-                                        <TD><INPUT type="text" name="percentageobtained" /></TD>
+                                        <TD><INPUT type="text" name="degreetype" class="form-control"/></TD>
+                                        <TD><INPUT type="text" name="institutionname" class="form-control" /></TD>
+                                        <TD><INPUT type="text" name="yearofpassing" class="form-control" /></TD>
+                                        <TD><INPUT type="text" name="percentageobtained" class="form-control" /></TD>
 
                                     </tbody>    
                                 </table>
@@ -232,25 +232,25 @@
 
                                 <!--experience start><-->
                                 <div class="form-group">
-                                    <label for="inputSuccess" class="col-sm-2 control-label col-lg-2">Work Experience</label>
+                                    <label for="inputSuccess" class="col-sm-2 control-label col-lg-2"><s:property value="getText('global.we')"/></label>
                                 </div>
 
                                <table id="WorkExperienceTable" class="table  table-hover general-table">
                                     <thead>
                                         <tr>
                                             <th>Organization Name</th>
-                                            <th>Responsibility</th>
-                                            <th>Designation</th>
-                                            <th>Duration in years</th>
-                                            <th>Salary drawn]</th>	
+                                            <th><s:property value="getText('global.responsibility')"/></th>
+                                            <th><s:property value="getText('global.designation')"/></th>
+                                            <th><s:property value="getText('global.durationyears')"/></th>
+                                            <th><s:property value="getText('global.salarydrawn')"/></th>	
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <TD><INPUT type="text" name="orgname"/></TD>
-                                        <TD><INPUT type="text" name="responsibility" /></TD>
-                                        <TD><INPUT type="text" name="designation" /></TD>
-                                        <TD><INPUT type="text" name="duration" /></TD>
-                                        <TD><INPUT type="text" name="salaryDrawn" /></TD>
+                                        <TD><INPUT type="text" name="orgname" class="form-control"/></TD>
+                                        <TD><INPUT type="text" name="responsibility" class="form-control" /></TD>
+                                        <TD><INPUT type="text" name="designation" class="form-control" /></TD>
+                                        <TD><INPUT type="text" name="duration" class="form-control" /></TD>
+                                        <TD><INPUT type="text" name="salaryDrawn" class="form-control" /></TD>
                                         
                                     </tbody>
                                 </table>
@@ -292,21 +292,21 @@
         <script src="<%=application.getContextPath()%>/visualization/validation/js/framework/bootstrap.min.js"></script>
         <!--end validation-->
 
-<!--<script src="<%=application.getContextPath()%>/Home/js/jquery.js"></script>--%>
+        <!--<script src="<%=application.getContextPath()%>/Home/js/jquery.js"></script>-->
         <script src="<%=application.getContextPath()%>/Home/js/bootstrap.min.js"></script>
         <script src="<%=application.getContextPath()%>/Home/js/jquery.isotope.min.js"></script>
         <script src="<%=application.getContextPath()%>/Home/js/jquery.prettyPhoto.js"></script>
-        <script src="<%=application.getContextPath()%>/Home/js/main.js"></script>
-        <script src="<%=application.getContextPath()%>/Home/js/accordian.js"></script>
+       
         
 
-
+            <script src="<%=application.getContextPath()%>/Home/js/main.js"></script>
+            <script src="<%=application.getContextPath()%>/Home/js/accordian.js"></script>
         <!--pickers plugins-->
         <script src="<%=application.getContextPath()%>/Home/js/bootstrap-datepicker.js"></script>
 
         <!--pickers initialization-->
         <script src="<%=application.getContextPath()%>/Home/js/pickers-init.js"></script>
-
+        <script src="<%=application.getContextPath()%>/Home/js/login.js"></script>
 
         <!--common scripts for all pages-->
         <script src="<%=application.getContextPath()%>/Home/js/scripts.js"></script>

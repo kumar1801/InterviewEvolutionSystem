@@ -28,8 +28,8 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Schedule Number :</label>
-                                            <s:textfield name="scheduleNo" cssClass="form-control my-colorpicker1"/>
+                                            
+                                            <s:textfield key="global.schedulenumber" name="scheduleNo" cssClass="form-control my-colorpicker1"/>
                                         </div>
                                     </div>
                                 </div>
@@ -37,8 +37,8 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Round ID :</label>
-                                            <s:select name="roundId" list="%{disprnd}" cssClass="form-control" listValue="roundName" listKey="roundId"/>
+                                            
+                                            <s:select key="global.roundid" name="roundId" list="%{disprnd}" cssClass="form-control" listValue="roundName" listKey="roundId"/>
                                         </div>
                                     </div>
                                 </div>
@@ -46,27 +46,28 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Job Type :</label>
-
-                                            <s:select name="type" list="{'101','102'}" cssClass="form-control"/>
+                                          
+                                            <s:select key="global.jobtype" name="type" list="{'Fulltime','Parttime'}" cssClass="form-control"/>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Date range :</label>
+                                    
                                     <div class="input-group">
+                                        
                                         <div class="input-group-addon">
+                                            <s:property value="getText('global.daterange')"/>
                                             <i class="fa fa-calendar"></i>
                                         </div>
-                                        <input type="text" class="form-control pull-right" id="reservation"/>
+                                         <s:textfield name="date" cssClass="form-control pull-right" id="reservation"></s:textfield>
                                     </div><!-- /.input group -->
                                 </div><!-- /.form group -->
                                 <div class="bootstrap-timepicker">
                                     <div class="form-group">
-                                        <label>Time :</label>
+                                       <s:property value="getText('global.time')"/>
                                         <div class="input-group">                                            
-                                            <input type="text" class="form-control timepicker"/>
+                                          <s:textfield name="time" cssClass="form-control timepicker"></s:textfield>
                                             <div class="input-group-addon">
                                                 <i class="fa fa-clock-o"></i>
                                             </div>
@@ -77,8 +78,8 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Interview Assesment Report :</label>
-                                            <textarea name="interviewAssesmentReport" class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                                          
+                                        <s:textarea key="global.interviewassesmentreport" name="interviewAssesmentReport" class="form-control" rows="3" placeholder="Enter ..."></s:textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -86,8 +87,8 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Street :</label>                                         
-                                            <s:textfield name="street" cssClass="form-control my-colorpicker1"/>
+                                                                                    
+                                        <s:textfield key="global.streetname" name="street" cssClass="form-control my-colorpicker1"/>
                                         </div>
                                     </div>
                                 </div>
@@ -95,9 +96,16 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>City :</label>
+                                             <label>City:</label>
+                                                <select class="form-control" name="city">
+                                                <option value="-1"> Select City</option> 
+                                                <option>Vadodara</option>
+                                                <option>Junagadh</option>
+                                                <option>Surat</option>
+                                                
+                                            </select>
 
-                                            <s:select name="city" list="{'Baroda','Surat'}" cssClass="form-control"/>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -105,9 +113,14 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>State :</label>
-
-                                            <s:select name="state" list="{'Gujarat','UP'}" cssClass="form-control"/>
+                                            <label>State:</label>
+                                                <select class="form-control" name="state">
+                                                <option value="-1"> Select State</option> 
+                                                <option>Gujarat</option>
+                                                <option>Maharashtra</option>
+                                                <option>Delhi</option>
+                                                
+                                            </select>
                                         </div>
                                     </div>
                                 </div>

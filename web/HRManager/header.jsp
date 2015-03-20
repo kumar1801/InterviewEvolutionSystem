@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>HR</title>
+        <title>IES-HR</title>
+         <link rel="shortcut icon" href="<%=application.getContextPath()%>/Home/images/ico/favicon.png">
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="<%=application.getContextPath()%>/visualization/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -79,7 +80,7 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Change Password</a>
+                                        <a href="<%=application.getContextPath()%>/HRManager/ChangePassword.jsp" class="btn btn-default btn-flat">Change Password</a>
                                     </div>
                                     <div class="pull-right">
                                         <a href="signout" class="btn btn-default btn-flat">Sign out</a>
@@ -137,10 +138,18 @@
                                 <i class="fa fa-users"></i> <span>Round</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="<%=application.getContextPath()%>/HRManager/View.jsp">
-                                <i class="fa fa-eye	"></i> <span>View</span>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-eye"></i>
+                                <span>View</span>
+                                <i class="fa fa-angle-left pull-right"></i>
                             </a>
+                            <ul class="treeview-menu">
+                                <li><a href="RegisterCandidateRetrive"><i class="fa fa-users"></i> Registered Candidates</a>						</li>
+                                <li><a href="ShortlistCandidateRetrive"><i class="fa fa-user"></i> Shortlisted Candidates</a></li>
+                                
+                               
+                            </ul>
                         </li>
                         <li class="treeview">
                             <a href="#">

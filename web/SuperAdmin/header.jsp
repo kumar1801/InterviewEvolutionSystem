@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Super Admin</title>
+        <title>IES-Super Admin</title>
+         <link rel="shortcut icon" href="<%=application.getContextPath()%>/Home/images/ico/favicon.png">
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="<%=application.getContextPath()%>/visualization/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -37,10 +38,15 @@
           <script src="https://oss.maxcdn.com/libs/respond.<%=application.getContextPath()%>/visualization/js/1.3.0/respond.min.js"></script>
         <![endif]-->
     </head>
+    
+   
+    
+    
+    
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="<%=application.getContextPath()%>/SuperAdmin/super_admin_main.jsp" class="logo">
+            <a href="home" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 <img src="<%=application.getContextPath()%>/visualization/img/logo.png">
             </a>
@@ -72,7 +78,7 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Change Password</a>
+                                        <a href="<%=application.getContextPath()%>/SuperAdmin/ChangePassword.jsp" class="btn btn-default btn-flat">Change Password</a>
                                     </div>
                                     <div class="pull-right">
                                         <a href="signout" class="btn btn-default btn-flat">Sign out</a>
@@ -114,14 +120,14 @@
                     <ul class="sidebar-menu">
 
                         <li class="active">
-                            <a href="<%=application.getContextPath()%>/SuperAdmin/super_admin_main.jsp">
+                            <a href=dashbord">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
 
                         
                         <li>
-                            <a href="<%=application.getContextPath()%>/SuperAdmin/super_admin_main.jsp">
+                            <a href="overview">
                                 <i class="fa fa-user"></i> <span>Overview</span>
                             </a>
                         </li>
@@ -159,7 +165,7 @@
                         </li>
 
                         <li>
-                            <a href="#">
+                            <a href="jobopeningdetails">
                                 <i class="fa fa-file-text-o"></i> <span>JOD</span>
                             </a>
                         </li>

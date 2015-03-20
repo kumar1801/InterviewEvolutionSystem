@@ -1,7 +1,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Interviewer</title>
+        <title>IES-Interviewer</title>
+         <link rel="shortcut icon" href="<%=application.getContextPath()%>/Home/images/ico/favicon.png">
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
                 <link href="<%=application.getContextPath()%>/visualization/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -79,7 +80,7 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Change Password</a>
+                                        <a href="<%=application.getContextPath()%>/Interviewer/ChangePassword.jsp" class="btn btn-default btn-flat">Change Password</a>
                                     </div>
                                     <div class="pull-right">
                                         <a href="signout" class="btn btn-default btn-flat">Sign out</a>
@@ -141,8 +142,8 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="RegisteredCandidatesRetrive"><i class="fa fa-users"></i> Registered Candidates</a>						</li>
-                                <li><a href="#"><i class="fa fa-user"></i> Shortlisted Candidates</a></li>
-                                <li><a href="#"><i class="fa fa-bar-chart-o"></i> Graphs and Reports</a></li>
+                                <li><a href="ShortlistedCandidatesRetrive"><i class="fa fa-user"></i> Shortlisted Candidates</a></li>
+                                
                                
                             </ul>
                         </li>

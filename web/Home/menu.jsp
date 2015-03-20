@@ -1,3 +1,6 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ page errorPage="404.jsp" %>
+
 <body data-spy="scroll" data-target="#navbar" data-offset="0">
     <header id="header" role="banner">
         <div class="container">
@@ -13,19 +16,20 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#main-slider"><i class="icon-home"></i></a></li>
-                        <li><a href="#services">Our Experience</a></li>
-                        <li><a href="branchRetrive">Branch</a></li>
-                        <li><a href="#jobopening">Job Opening</a></li>
+                        <li class="active"><a href="home"><i class="icon-home"></i></a></li>
+                        <li><a href="#services"><s:property value="getText('global.orgexperience')"/></a></li>
+                        <li><a href="branchRetrive"><s:property value="getText('global.branch')"/></a></li>
+                        <li><a href="#jobopening"><s:property value="getText('global.jobopening')"/></a></li>
                         <s:if test="#session.username==null">
-                        <li><a href="registration">Registration</a></li>
+                        <li><a href="registration"><s:property value="getText('global.registration')"/></a></li>
                        
                         
-                        <li><a id="loginButton" href="#">Login <i class="icon-chevron-down"></i></a>
+                        <li><a id="loginButton" href="#"><s:property value="getText('global.login')"/> <i class="icon-chevron-down"></i></a>
                         <div id="loginBox">                
                        <form id="loginForm" action="login" method="post">
+                           <s:actionerror/>
                         <fieldset id="body">
-                            <div class="error-pages"><s:actionerror/></div>
+                            
                             <fieldset>
                                 <input placeholder="Desired-ID" type="text" name="username" id="desiredid" />
                             </fieldset>
@@ -37,12 +41,13 @@
                         </fieldset>
                         <span><a href="#">Forgot your password?</a></span>
                         </form>
+                            
                      </div>
                         </li>
                         </s:if><s:else>
-                            <li><a href="signout">Signout</a></li>
+                            <li><a href="signout"><s:property value="getText('global.signout')"/></a></li>
                         </s:else>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contact"><s:property value="getText('global.contact')"/></a></li>
                     </ul>
                 </div>
             </div>

@@ -139,12 +139,12 @@ public class LoginAction extends ActionSupport implements ModelDriven,Preparable
        } 
         if(flagn && !flagp)
         {
-                     addActionError("password is incorrect");
+                     addActionError("Invalid Credential.");
                      str= ERROR;
         }
         if(!flagn && !flagp)
         {
-                    addActionError("username & password is incorrect");
+                    addActionError("Invalid Credential.");
                     str= ERROR;
         }
         tx.commit();

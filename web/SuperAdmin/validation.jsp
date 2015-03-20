@@ -185,6 +185,29 @@
                             message: 'The Organization Details is required'
                         }
                     }
+                },
+                
+                username: {
+                    row:'.col-lg-6',
+                    validators: {
+                        notEmpty: {
+                            message: 'The username is required'
+                        }
+                    }
+                },
+            password: {
+                     row:'.col-lg-6',
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        },
+                        stringLength: {
+                            min: 5,
+                            max: 15,
+                            message: 'The Password must be more than 5 and less than 15 characters long'
+                        }
+                        
+                    }
                 }
                 
                 

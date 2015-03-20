@@ -150,20 +150,15 @@ $(document).ready(function() {
                         
                     }
                 },
-                 confirmpassword: {
-                     row:'.col-sm-10',
-                    validators: {
-                        notEmpty: {
-                            message: 'The confirmpassword must match password'
-                        },
-                        stringLength: {
-                            min: 5,
-                            max: 15,
-                            message: 'The Password must be more than 5 and less than 15 characters long'
-                        }
-                        
+                confirmpassword: {
+                    row:'.col-md-10',
+                validators: {
+                    identical: {
+                        field: 'password',
+                        message: 'The password and its confirm are not the same'
                     }
                 }
+            }
                 
                 
         }

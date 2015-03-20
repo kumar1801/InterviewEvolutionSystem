@@ -18,48 +18,46 @@
                 <section class="content">
                     <div class="row">
                         <section class="col-lg-12">
-             					<div class="box box-primary">
-                                <div class="box-header">
-                                    <h3 class="box-title">Round</h3>
-                                </div>
-            <form action="saveRound.action">
+             					
+                                
+            <form action="saveround.action">
                 <section class="col-lg-6">
                     <div class="box box-primary">
                         <div class="box-body">
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <label>Round ID:</label>
-                                        <s:textfield name="roundId" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                       
+                                        <s:textfield key="global.roundid" name="roundId" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Round Name:</label>                                         
-                                        <s:textfield name="roundName" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                                                                   
+                                        <s:textfield key="global.roundname" name="roundName" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Round Preference:</label>
-                                        <s:textfield name="roundPreference" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                            
+                                        <s:textfield key="global.roundpreference" name="roundPreference" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <label>Round Description:</label>
-                                    <s:textarea name="roundDescription" placeholder="Enter ..." rows="3" cssClass="form-control" ></s:textarea>
+                                       
+                                    <s:textarea key="global.rounddescription" name="roundDescription" placeholder="Enter ..." rows="3" cssClass="form-control" ></s:textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <label>RCM ID:</label>                                         
-                                    <s:select name="personid" list="%{listrcm}" listKey="personid" listValue="personid" cssClass="form-control"/>
+                                                                                 
+                                    <s:select key="global.rcmid" name="personid" list="%{listrcm}" listKey="personid" listValue="personid" cssClass="form-control"/>
                                 </div>
                             </div>
                         </div><!-- /.box-body -->
@@ -73,15 +71,15 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Total Marks:</label>
-                                            <s:textfield name="totalMarks" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                          
+                                            <s:textfield key="global.totalmarks" name="totalMarks" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                             </div>
                                         </div>
                                     </div>
                                     
                                     <!-- Date range -->
                                     <div class="form-group">
-                                        <label>Date range:</label>
+                                      <s:property value="getText('global.daterange')"/>
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
@@ -91,27 +89,21 @@
                                     </div><!-- /.form group -->
                                     <div class="bootstrap-timepicker">
                                         <div class="form-group">
-                                            <label>Time:</label>
+                                          <s:property value="getText('global.time')"/>
                                             <div class="input-group">
-                                            <s:textfield name="time" cssClass="form-control timepicker"></s:textfield>
+                                            <s:textfield  name="time" cssClass="form-control timepicker"></s:textfield>
                                                 <div class="input-group-addon">
                                                     <i class="fa fa-clock-o"></i>
                                                 </div>
                                             </div><!-- /.input group -->
                                         </div><!-- /.form group -->
                                     </div>
+                                                
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-lg-12">
-                                                <label>Passing Criteria:</label> 
-                                                <select class="form-control" name="passingCriteria">
-                                                <option value="-1"> Select Criteria</option> 
-                                                <option><50</option>
-                                                <option>50-60</option>
-                                                <option>>60<option>
-                                                   
                                                 
-                                            </select>
+                                               <s:textfield key="global.passingcrieteria" name="passingCriteria" cssClass="form-control" placeholder="Enter ..."></s:textfield>
                                                 
                                             
                                             </div>
@@ -128,11 +120,12 @@
             </div>
             <!-- Main content -->
             <section class="content">
+                <div id="dialog-confirm" title="Are you sure?"></div>
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="box">
                             <div class="box-header">
-                                <h3 class="box-title">Data Table With Full Features</h3>                                    
+                                <h3 class="box-title">Total Rounds</h3>                                    
                             </div><!-- /.box-header -->
 
                             <div class="box-body table-responsive">
@@ -149,7 +142,12 @@
                                     <tbody>
                                     <s:iterator value="%{listround}">                 
                                         <tr> 
-                                            <td><s:property value="roundId" /></td>
+                                            <td>
+                                  <input type="checkbox" name="listSelectedData"  id="listSelectedData"
+                                   value="<s:property value="roundId" />" style="width:30px;" />
+                                   <s:property value="roundId" />
+                                </td>
+                                           
                                             <td><s:property value="roundName" /></td>
                                             <td><s:property value="roundPreference" /></td>
                                             <td><s:property value="totalMarks" />&percnt; </td>                                
@@ -160,7 +158,7 @@
 
                             </table>
 
-                            <a href="view.action">Update</a>
+                            <a href="viewRound">Update</a><input class="btn btn-group-xs" type="button" id="buttondelete"  onclick="deleteSelectedData()" value="Delete"/>
 
                         </div><!-- /.box-body -->
 
@@ -181,7 +179,15 @@
 <!-- DATA TABES SCRIPT -->
 <script src="<%=application.getContextPath()%>/visualization/js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
 <script src="<%=application.getContextPath()%>/visualization/js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
-
+<link href="<%=application.getContextPath()%>/visualization/css/images/demo_page.css" rel="stylesheet" type="text/css" />
+          
+        <link href="<%=application.getContextPath()%>/visualization/css/images/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css">
+                             
+        <script src="<%=application.getContextPath()%>/visualization/js/jquery-1.10.2.js"></script>
+        <script src="<%=application.getContextPath()%>/visualization/js/jquery-ui-1.10.4.custom.min.js"></script>
+        
+        <script src="<%=application.getContextPath()%>/visualization/js/jquery.jeditable.js"></script>
+        <script src="<%=application.getContextPath()%>/visualization/js/jquery.validate.js"></script>
 
 <!-- page script -->
 <script type="text/javascript">
@@ -197,6 +203,48 @@
         });
     });
 </script>
+
+
+<script type="text/javascript">
+     function deleteSelectedData() {
+                
+                var checkboxx = document.getElementsByName('listSelectedData');
+                
+                var listSelectedData = "";
+                for (var i = 0; i < checkboxx.length; i++) {
+                    if (checkboxx[i].checked) {    
+                        
+                        listSelectedData = listSelectedData + checkboxx[i].value + ":";
+                    }
+                }
+                $("#dialog-confirm").dialog({
+                    resizable: false,
+                    height: 140,
+                    dialogClass: "mycolor",
+                    modal: true,
+                    show: {
+                        effect: "blind",
+                        duration: 1000
+                    },
+                    hide: {
+                        effect: "explode",
+                        duration: 1000
+                    },
+                    buttons:
+                            {
+                                "Delete data": function() {
+                                    $( this ).dialog( "close" );   
+                                    location.href = "deleteRounds?listSelectedData=" + listSelectedData;
+                                },
+                                Cancel: function() {
+                                    $(this).dialog("close");
+                                }
+                            }
+                });
+                $("#dialog-confirm").dialog("open");
+            }
+                       
+        </script>
 
 </aside><!-- /.right-side -->
 </section>

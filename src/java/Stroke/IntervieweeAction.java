@@ -33,9 +33,24 @@ import org.apache.struts2.interceptor.ServletRequestAware;
 public class IntervieweeAction extends ActionSupport implements ModelDriven,Preparable,ServletRequestAware {
    
     Interviewee interviewee;
+     private int personid;
     List<Round> listround;
     String str;
    
+    
+      private String listSelectedData;// for multiple
+
+    public int getPersonid() {
+        return personid;
+    }
+
+    public void setPersonid(int personid) {
+        System.out.println(""+personid);
+        this.personid = personid;
+    }
+   
+      
+      
     @Override
         public Interviewee getModel() {
        return interviewee;
@@ -46,8 +61,11 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
         interviewee = new Interviewee();
     }
     
+    
+    
+    
      public String retriveData(){
-       
+        
         IntervieweeOperation intop = new IntervieweeOperation();
         JobOpeningOperation joo = new JobOpeningOperation();
          RoundOperation ro1 = new RoundOperation();
@@ -55,10 +73,38 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
         listround = ro1.asdewes();
         listjod = joo.dataretrival();
         listinterviewee = intop.dataretrival();
+         
        
         return SUCCESS;
     }
     
+    public int[] getBatchIds() {
+        StringTokenizer stSelectedDataId = new StringTokenizer(listSelectedData, ":");
+        String d = "";
+        int selectedDataId[] = new int[stSelectedDataId.countTokens()];
+        int i = 0;
+        while (stSelectedDataId.hasMoreTokens()) {
+            d = stSelectedDataId.nextToken();
+            
+            selectedDataId[i] = Integer.parseInt(d);
+            i++;
+        }
+        return selectedDataId;
+    }
+    
+    
+    
+    public String deleteMultiple() {
+        int selectedDataId[] = getBatchIds();
+      IntervieweeOperation intop = new IntervieweeOperation();
+        boolean check = intop.deleteMultipleCourse(selectedDataId);
+        if (check) {
+            retriveData();
+            return SUCCESS;
+        } else {
+            return ERROR;
+        }
+    }
     
 
     
@@ -157,6 +203,7 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
     }
 
     public void setInterviewee(Interviewee interviewee) {
+        
         this.interviewee = interviewee;
     }
 
@@ -165,6 +212,7 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
     }
 
     public void setListinterviewee(List<Interviewee> listinterviewee) {
+        System.out.println(""+listinterviewee);
         this.listinterviewee = listinterviewee;
     }
     
@@ -181,11 +229,23 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
         return listround;
     }
 
+   
+
+    public String getListSelectedData() {
+        return listSelectedData;
+    }
+
+    public void setListSelectedData(String listSelectedData) {
+        this.listSelectedData = listSelectedData;
+    }
+
     public void setListround(List<Round> listround) {
         this.listround = listround;
     }
     
     
+   
+
 
     
 }

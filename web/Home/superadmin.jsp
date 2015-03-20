@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>IES | Admin</title>
+        <link rel="shortcut icon" href="<%=application.getContextPath()%>/Home/images/ico/favicon.png">
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="<%=application.getContextPath()%>/visualization/css/bootstrap.min.css" rel="stylesheet" type="text/css" />

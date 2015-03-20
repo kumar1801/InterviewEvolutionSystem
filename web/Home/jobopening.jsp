@@ -24,7 +24,7 @@
 
 <%@include file="menu.jsp"%>
 
-    <section class="panel" id="registration">
+    <section class="panel">
             <div class="container">
                 <div class="box"> 
                     <div class="headline1">
@@ -33,31 +33,31 @@
                  <s:if test="#request.jobcode!=null">  
                  <s:iterator value="%{listjod}">
                      <s:if test="jobReferenceCode==#request.jobcode">
-                      <header class="panel-heading">Job Reference Code : <s:property value="jobReferenceCode" /></header>
+                      <header class="panel-heading"><s:property value="getText('global.jobreferenceode')"/> : <s:property value="jobReferenceCode" /></header>
                     <div class="panel-body">
                           
                 <ul class="checklist">
-                 <li><i class="icon-check"></i>  Vacancies              :    <s:property value="vacancies"/></li>
-                 <li><i class="icon-check"></i>  Department             :    <s:property value="department"/></li>
-                 <li><i class="icon-check"></i>  Cost per Company(CTC)  :    <s:property value="ctc"/></li>
-                 <li><i class="icon-check"></i>  Gender                 :    <s:property value="gender"/></li>
-                 <li><i class="icon-check"></i>  Job Type               :    <s:property value="jobType"/></li>
-                 <li><i class="icon-check"></i>  Posting                :    <s:property value="posting"/></li>
-                 <li><i class="icon-check"></i>  Required Qualification :    <s:iterator value="%{requiedqualifications}">
+                 <li><i class="icon-check"></i>  <s:property value="getText('global.vacancies')"/>              :    <s:property value="vacancies"/></li>
+                 <li><i class="icon-check"></i>  <s:property value="getText('global.department')"/>             :    <s:property value="department"/></li>
+                 <li><i class="icon-check"></i>  <s:property value="getText('global.ctc')"/>  :    <s:property value="ctc"/></li>
+                 <li><i class="icon-check"></i>  <s:property value="getText('global.gender')"/>                 :    <s:property value="gender"/></li>
+                 <li><i class="icon-check"></i>  <s:property value="getText('global.jobtype')"/>               :    <s:property value="jobType"/></li>
+                 <li><i class="icon-check"></i>  <s:property value="getText('global.posting')"/>                :    <s:property value="posting"/></li>
+                 <li><i class="icon-check"></i>  <s:property value="getText('global.requiredqualification')"/> :    <s:iterator value="%{requiedqualifications}">
                       <s:property value="id.requierdQualification"/>,
                  </s:iterator></li>
-                 <li><i class="icon-check"></i>  Required Documents     :    <s:iterator value="%{requireddocuments}">
+                 <li><i class="icon-check"></i> <s:property value="getText('global.requireddocument')"/>     :    <s:iterator value="%{requireddocuments}">
                       <s:property value="id.requiredDocuments"/>,
                  </s:iterator></li>
                  
-                 <li><i class="icon-check"></i>  Required Skills        :    <s:iterator value="%{desiredskillses}">
+                 <li><i class="icon-check"></i> <s:property value="getText('global.desiredskilled')"/>        :    <s:iterator value="%{desiredskillses}">
                       <s:property value="id.desiredSkills"/>,
                  </s:iterator></li>
                  
                  
                 </ul>
                  <ul class="checklist">
-                <li><i class="icon-check"></i>  Address : <s:property value="street"/>,&nbsp;&nbsp;<s:property value="city"/>;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<s:property value="state"/> <s:property value="country"/>,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<s:property value="pincode"/></li>
+                <li><i class="icon-check"></i>  <s:property value="getText('global.address')"/> : <s:property value="street"/>,&nbsp;&nbsp;<s:property value="city"/>;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<s:property value="state"/> <s:property value="country"/>,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<s:property value="pincode"/></li>
                  </ul>  
                      
                  </div>
@@ -70,4 +70,5 @@
         </div><!--/.container-->
         <%@include file="contactus.jsp"%>
     </section><!--/#services-->
+    <%@include file="js.jsp" %>
     

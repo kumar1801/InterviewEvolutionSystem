@@ -8,6 +8,7 @@ package Procedure;
 import Prototypical.Round;
 import Databaseutil.MyFilterHib;
 import java.util.List;
+import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -37,6 +38,21 @@ public class RoundOperation {
             return false;
         } finally {
             s.close();
+        }
+    }
+     public boolean deleteMultipleCourse(int selectedDataId[]) {
+        Session session = MyFilterHib.getsessionfactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            for (int i = 0; i < selectedDataId.length; i++) {
+                Round ro = (Round)session.get(Round.class, selectedDataId[i]);
+                session.delete(ro);
+                 transaction.commit();
+            }
+           
+            return true;
+        } catch (HibernateException e) {                                                                
+            return false;
         }
     }
     

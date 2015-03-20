@@ -23,6 +23,28 @@ public class RoundAction extends ActionSupport implements ModelDriven, Preparabl
     Round round;
     List<Round> listround;
     List<RCM> listrcm;
+       private String listSelectedData;
+       private int roundId;
+
+    public String getListSelectedData() {
+        return listSelectedData;
+    }
+
+    public void setListSelectedData(String listSelectedData) {
+        this.listSelectedData = listSelectedData;
+    }
+
+    public int getRoundId() {
+        return roundId;
+    }
+
+    public void setRoundId(int roundId) {
+        this.roundId = roundId;
+    }
+       
+       
+       
+    
 
     public List<Round> getListround() {
         return listround;
@@ -58,9 +80,48 @@ public class RoundAction extends ActionSupport implements ModelDriven, Preparabl
          listrcm = rcmop.dataretrival();
         return SUCCESS;
     }
+    
+    public int[] getBatchIds() {
+        StringTokenizer stSelectedDataId = new StringTokenizer(listSelectedData, ":");
+        String d = "";
+        int selectedDataId[] = new int[stSelectedDataId.countTokens()];
+        int i = 0;
+        while (stSelectedDataId.hasMoreTokens()) {
+            d = stSelectedDataId.nextToken();
+            
+            selectedDataId[i] = Integer.parseInt(d);
+            i++;
+        }
+        return selectedDataId;
+    }
+    
+     public String retriveData(){
+        
+        RoundOperation joo = new RoundOperation();
+        listround = joo.asdewes();
+        return SUCCESS;
+    }
+    
+    public String deleteMultiple() {
+        int selectedDataId[] = getBatchIds();
+      RoundOperation rnd = new RoundOperation();
+       RCMOperation rcmop = new RCMOperation();
+        listrcm = rcmop.dataretrival();
+        boolean check = rnd.deleteMultipleCourse(selectedDataId);
+        if (check) {
+            retriveData();
+            return SUCCESS;
+        } else {
+            return ERROR;
+        }
+    }
+    
+    
+    
     public String saveRound(){
         RoundOperation ro = new RoundOperation();
-        
+        RCMOperation rcmop = new RCMOperation();
+         listrcm = rcmop.dataretrival();
         boolean save =  ro.insRound(round);
         if(save){
             return SUCCESS;
