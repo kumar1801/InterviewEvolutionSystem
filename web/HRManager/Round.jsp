@@ -93,7 +93,7 @@
                                             <s:property value="getText('global.daterange')"/>
                                                 <i class="fa fa-calendar"></i>
                                             </div>
-                                        <s:textfield name="date" cssClass="form-control pull-right" id="reservation"></s:textfield>
+                                        <s:textfield key="global.daterange" name="date" cssClass="form-control pull-right" id="reservation"></s:textfield>
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
                                     <div class="bootstrap-timepicker">

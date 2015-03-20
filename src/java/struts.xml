@@ -31,6 +31,12 @@
         </action>
         <action name="dashbord" class="example.home">
             <result name="success">/Home/superadmin.jsp</result>
+        </action>
+         <action name="overview" class="example.home">
+            <result name="success">/Home/superadmin.jsp</result>
+        </action>
+        <action name="dashbord" class="example.home">
+            <result name="success">/Home/superadmin.jsp</result>
             <result name="error">/Home/error.jsp</result>
         </action>
          <action name="overview" class="example.home">
@@ -199,6 +205,8 @@
             <result name="success">/Interviewer/interview.jsp</result>
            <result name="error">/Home/error.jsp</result>
         </action>
+        
+        <!-- gridview for interviewer panel -->
         
         <!-- gridview for interviewer panel -->
         
