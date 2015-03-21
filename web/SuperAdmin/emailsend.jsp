@@ -1,4 +1,3 @@
-
 <!-- COMPOSE MESSAGE MODAL -->
         <div class="modal fade" id="compose-mail" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
@@ -7,7 +6,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title"><i class="fa fa-envelope-o"></i> Compose New Message</h4>
                     </div>
-                    <form action="#" method="post">
+                    <form action="emailsend" method="post">
                         <div class="modal-body">
                             <div class="form-group">
                                 <div class="input-group">
@@ -15,10 +14,16 @@
                                     <input name="email_to" type="email" class="form-control" placeholder="Email TO">
                                 </div>
                             </div>
-                            <div class="form-group">
+                           <!-- <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon">CC:</span>
                                     <input name="email_to" type="email" class="form-control" placeholder="Email CC">
+                                </div>
+                            </div>-->
+                             <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Subject:</span>
+                                    <input name="subject" class="form-control" placeholder="Email CC">
                                 </div>
                             </div>
                             <!--<div class="form-group">
@@ -49,4 +54,3 @@
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-        <%@include file="footer.jsp" %>

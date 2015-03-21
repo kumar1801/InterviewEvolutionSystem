@@ -48,8 +48,8 @@ public class EmailAction extends ActionSupport implements ModelDriven,Preparable
            
         }
         */
-           EmailOperation eop=new EmailOperation();
-           eop.emailSending(email.getEmail_to(), email.getSubject(), email.getMessage());
+         EmailOperation eop=new EmailOperation();
+         eop.emailSending(email.getEmail_to(), email.getSubject(), email.getMessage());
         return SUCCESS;
     }
     
