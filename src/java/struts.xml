@@ -4,7 +4,7 @@
 
 <struts>
     <constant name="struts.custom.i18n.resources" value="global" />
-    <constant name="struts.devMode" value="false"/>
+    <constant name="struts.devMode" value="true"/>
     <include file="example.xml"/>
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
@@ -30,17 +30,17 @@
             <result name="success">/Home/superadmin.jsp</result>
         </action>
         <action name="dashbord" class="example.home">
-            <result name="success">/Home/superadmin.jsp</result>
+            <result name="success">/SuperAdmin/super_admin_main.jsp</result>
         </action>
          <action name="overview" class="example.home">
-            <result name="success">/Home/superadmin.jsp</result>
+            <result name="success">/SuperAdmin/super_admin_main.jsp</result>
         </action>
         <action name="dashbord" class="example.home">
-            <result name="success">/Home/superadmin.jsp</result>
+            <result name="success">/SuperAdmin/super_admin_main.jsp</result>
             <result name="error">/Home/error.jsp</result>
         </action>
          <action name="overview" class="example.home">
-            <result name="success">/Home/superadmin.jsp</result>
+            <result name="success">/SuperAdmin/super_admin_main.jsp</result>
             <result name="error">/Home/error.jsp</result>
         </action>
         <action name="Jobopening" class="Stroke.JobOpeningAction" method="retriveData">
@@ -177,7 +177,7 @@
         </action>
         <action name="adminlogin" class="Stroke.LoginAction" method="execute">
             <result name="success">/SuperAdmin/super_admin_main.jsp</result>
-            <result name="error">/Home/error.jsp</result>
+            <result name="error">/Home/superadmin.jsp</result>
         </action>
         <action name="signout" class="Stroke.LoginAction" method="signOut">
             <result name="success">/Home/homepage.jsp</result>
@@ -303,7 +303,10 @@
             <result name="error">/Home/error.jsp</result>
         </action>
         
-         
+         <action name="emailsend" class="Stroke.EmailAction" method="emailSendByAdmin">
+            <result name="success">/SuperAdmin/super_admin_main.jsp</result>
+            <result name="error">/Home/error.jsp</result>
+        </action>
         
          
         

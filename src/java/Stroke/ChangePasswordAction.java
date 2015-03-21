@@ -40,10 +40,10 @@ public class ChangePasswordAction extends ActionSupport implements ModelDriven,P
      public String changePwd()
     {
         String str="";
-        
+        EmailAction emailaction=new EmailAction();
+        emailaction.emailSend(chpwd.getEmail(), "Your Changed Password Details\n\n","Your New Password\n"+chpwd.getNewpassword());
         
         ChangePasswordOperation cpo=new ChangePasswordOperation();
-       
         boolean save = cpo.changePassword(chpwd);
                                    if (save) {
                                        addActionMessage("SUCCESSFULLY CHANGED");

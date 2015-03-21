@@ -28,7 +28,14 @@
                 <section class="col-lg-6">
                     <div class="box box-primary">
                         <div class="box-body">
-                           
+                            <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label>Email-ID</label>
+                                        <s:textfield name="email" cssClass="form-control" placeholder="Email"></s:textfield>
+                                        </div>
+                                    </div>
+                                </div>
                                 
                                 
                                 
@@ -36,7 +43,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label>Old Password</label>
-                                        <s:textfield name="password" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                        <s:textfield name="password" cssClass="form-control"></s:textfield>
                                         </div>
                                     </div>
                                 </div>
@@ -45,7 +52,7 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <label>New Password</label>
-                                        <s:textfield name="newpassword" cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                        <s:textfield name="newpassword" cssClass="form-control"></s:textfield>
                                         </div>
                                     </div>
                                 </div>
@@ -53,7 +60,7 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <label>Confirm Password</label>
-                                        <s:textfield  cssClass="form-control" placeholder="Enter ..."></s:textfield>
+                                        <s:textfield  cssClass="form-control"></s:textfield>
                                         </div>
                                     </div>
                                 </div>

@@ -29,7 +29,13 @@
                     <div class="box box-primary">
                         <div class="box-body">
                            
-                                
+                              <div class="row">
+                                        <div class="col-md-12">
+                                            <label>Email-ID</label>
+                                        <s:textfield name="email" cssClass="form-control" placeholder="Email"></s:textfield>
+                                        </div>
+                                    </div>
+                                </div>   
                                 
                                 
                                 <div class="form-group">

@@ -146,8 +146,8 @@
                                 <li><a href="#" data-toggle="modal" data-target="#compose-modal"><i class="fa fa-asterisk"></i>Customoise logo</a></li>
                                  <li><a href="organization"><i class="fa fa-gears"></i> Organization</a></li>
                                 <li><a href="head"><i class="fa fa-gears"></i> HeadDetails</a></li>
-                                <li><a href="#"><i class="fa fa-envelope-o"></i> SMS settings</a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i> Email settings</a></li>
+                              <!--  <li><a href="#"><i class="fa fa-envelope-o"></i>Send SMS</a></li>-->
+                                <li><a href="#" data-toggle="modal" data-target="#compose-mail"><i class="fa fa-envelope"></i>Compose Email</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -157,7 +157,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="#" data-toggle="modal" data-target="#compose-modal"><i class="fa fa-bar-chart-o"></i>Interviewer vs Candidates</a></li>
+                                <li><a href="#"><i class="fa fa-bar-chart-o"></i>Interviewer vs Candidates</a></li>
                                 <li><a href="pages/charts/flot.html"><i class="fa fa-bar-chart-o"></i>Job Status</a></li>
                                 <li><a href="pages/charts/inline.html"><i class="fa fa-bar-chart-o"></i>Overall Performance</a></li>
                                 <li><a href="pages/charts/inline.html"><i class="fa fa-bar-chart-o"></i>Roundwise Calculation</a></li>
@@ -174,3 +174,4 @@
                 <!-- /.sidebar -->
             </aside>
                                
+                            

@@ -44,7 +44,7 @@ public class RCMAction extends ActionSupport implements ModelDriven,Preparable,S
    
 
     public String getContactno() {
-        System.out.println("get");
+        
         return contactno;
     }
 
@@ -93,6 +93,8 @@ public class RCMAction extends ActionSupport implements ModelDriven,Preparable,S
             rcm.setContact(cp);
         }
         
+        EmailAction emailaction=new EmailAction();
+        emailaction.emailSend(rcm.getEmailid(), rcm.getFname()+rcm.getMname()+rcm.getLname()+"Registration", "Your Registration Details are \n\n UserName\t:\t"+rcm.getUsername()+"\n Password\t:\t"+rcm.getPassword());
         
         
         boolean save=rcmoperation.insertDetails(rcm);
