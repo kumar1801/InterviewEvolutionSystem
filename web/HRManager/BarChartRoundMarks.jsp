@@ -30,7 +30,7 @@
                         <div class="box-body">
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col-lg-12">
+                                    <div class="col-lg-12 flot-overlay">
                                         <img alt="Recruitment vs Obtained Marks" src="displaychart"/>
                                     </div>
                                 </div>
