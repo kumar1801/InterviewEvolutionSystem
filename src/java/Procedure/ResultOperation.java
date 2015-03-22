@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Procedure;
 
 import Databaseutil.MyFilterHib;
@@ -13,6 +8,11 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
 
 /**
  *
@@ -76,5 +76,47 @@ public class ResultOperation {
             s.close();
         }
         return alinter;
+    }
+
+    public ArrayList<Result> Dispresult() {
+        ArrayList<Result> alinter = null;
+        SessionFactory sf = new Configuration().configure().buildSessionFactory();
+        Session s;
+        Transaction tx = null;
+        s = sf.openSession();
+        tx = s.beginTransaction();
+        try {
+            String hql = "From Result";
+            Query query = s.createQuery(hql);
+            alinter = (ArrayList<Result>) query.list();
+        } catch (HibernateException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            s.close();
+        }
+        return alinter;
+    }
+
+    public JFreeChart getResultChart() {
+        ResultOperation ro = new ResultOperation();
+        ArrayList<Result> dispresult = Dispresult();
+        DefaultCategoryDataset dataSet = new DefaultCategoryDataset();
+        for (Result r : dispresult) {
+            ResultId rid = r.getId();
+            dataSet.setValue(r.getObtainMark(), rid.getRoundId() + "", rid.getPersonid() + "");
+        }
+        JFreeChart chart = ChartFactory.createBarChart3D(
+                "Recrument",
+                "Cadidate",
+                "Obtain Marks",
+                dataSet,
+                PlotOrientation.VERTICAL,
+                true,
+                true,
+                false
+        );
+        chart.setBorderVisible(true);
+        chart.setBorderVisible(false);
+        return chart;
     }
 }

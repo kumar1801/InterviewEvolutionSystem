@@ -36,14 +36,14 @@
         <action name="dashbord" class="example.home">
             <result name="success">/SuperAdmin/super_admin_main.jsp</result>
         </action>
-         <action name="overview" class="example.home">
+        <action name="overview" class="example.home">
             <result name="success">/SuperAdmin/super_admin_main.jsp</result>
         </action>
         <action name="dashbord" class="example.home">
             <result name="success">/SuperAdmin/super_admin_main.jsp</result>
             <result name="error">/Home/error.jsp</result>
         </action>
-         <action name="overview" class="example.home">
+        <action name="overview" class="example.home">
             <result name="success">/SuperAdmin/super_admin_main.jsp</result>
             <result name="error">/Home/error.jsp</result>
         </action>
@@ -79,14 +79,14 @@
         
         <action name="rounds" class="Stroke.RCMAction" method="retriveData" >
             <result name="success">/RecruiterAssistant/Rounds.jsp</result> 
-           <result name="error">/Home/error.jsp</result>
+            <result name="error">/Home/error.jsp</result>
             
             
         </action>
         
         <action name="deleteRounds" class="Stroke.RoundAction" method="deleteMultiple">
             <result name="success">/RecruiterAssistant/Rounds.jsp</result>
-           <result name="error">/Home/error.jsp</result>
+            <result name="error">/Home/error.jsp</result>
         </action> 
         
         
@@ -124,24 +124,24 @@
             <result name="error">/Home/error.jsp</result>
         </action>
         
-         <action name="saveRound" class="Stroke.RoundAction" method="saveRound">
+        <action name="saveRound" class="Stroke.RoundAction" method="saveRound">
             <result name="success">/HRManager/Round.jsp</result> 
             <result name="error">/Home/error.jsp</result>
         </action>
         
-         <action name="chang" class="Stroke.ChangePasswordAction" method="changePwd">
+        <action name="chang" class="Stroke.ChangePasswordAction" method="changePwd">
             <result name="success">/HRManager/DeshBord.jsp</result> 
             <result name="error">/Home/error.jsp</result>
         </action>
         
-         <action name="changpwd" class="Stroke.ChangePasswordAction" method="changePwd">
+        <action name="changpwd" class="Stroke.ChangePasswordAction" method="changePwd">
             <result name="success">/Interviewer/interviewer_main.jsp</result> 
             <result name="error">/Home/error.jsp</result>
         </action>
         
         <action name="chngpwd" class="Stroke.ChangePasswordAction" method="changePwd">
             <result name="success">/RecruiterAssistant/recruiter_main.jsp</result> 
-           <result name="error">/Home/error.jsp</result>
+            <result name="error">/Home/error.jsp</result>
         </action>
         
         <action name="chngpassword" class="Stroke.ChangePasswordAction" method="changePwd">
@@ -207,7 +207,7 @@
         </action>
         <action name="interview" class="Stroke.ResultAction" method="saveResult">
             <result name="success">/Interviewer/interview.jsp</result>
-           <result name="error">/Home/error.jsp</result>
+            <result name="error">/Home/error.jsp</result>
         </action>
         
         <!-- gridview for interviewer panel -->
@@ -226,7 +226,7 @@
         
         <action name="deleteMultipleRecords" class="Stroke.IntervieweeAction" method="deleteMultiple">
             <result name="success">/Interviewer/RegisteredCandidates.jsp</result>
-           <result name="error">/Home/error.jsp</result>
+            <result name="error">/Home/error.jsp</result>
         </action> 
         
         <action name="deleteshortlisted" class="Stroke.IntervieweeAction" method="deleteMultiple">
@@ -237,7 +237,7 @@
         <!-- Gridview for RecruiterAssistant panel -->
         
         
-         <action name="RegisterCandidateRetrive" class="Stroke.IntervieweeAction" method="retriveData">
+        <action name="RegisterCandidateRetrive" class="Stroke.IntervieweeAction" method="retriveData">
             <result name="success">/RecruiterAssistant/RegisteredCandidates.jsp</result>
             <result name="error">/Home/error.jsp</result>
         </action>
@@ -249,7 +249,7 @@
         
         <action name="registered" class="Stroke.IntervieweeAction" method="deleteMultiple">
             <result name="success">/RecruiterAssistant/RegisteredCandidates.jsp</result>
-           <result name="error">/Home/error.jsp</result>
+            <result name="error">/Home/error.jsp</result>
         </action> 
         
         <action name="shortlisting" class="Stroke.IntervieweeAction" method="deleteMultiple">
@@ -265,7 +265,7 @@
             <result name="error">/Home/error.jsp</result>
         </action>
         
-         <action name="ShortlistCandidateRetrive" class="Stroke.IntervieweeAction" method="retriveData">
+        <action name="ShortlistCandidateRetrive" class="Stroke.IntervieweeAction" method="retriveData">
             <result name="success">/HRManager/ShortlistedCandidates.jsp</result>
             <result name="error">/Home/error.jsp</result>
         </action>
@@ -289,7 +289,7 @@
         
         <action name="jobopening" class="Stroke.JobOpeningAction" method="deleteMultiple">
             <result name="success">/SuperAdmin/Jobopeningdetails.jsp</result>
-           <result name="error">/Home/error.jsp</result>
+            <result name="error">/Home/error.jsp</result>
         </action>
         
         
@@ -307,7 +307,7 @@
             <result name="error">/Home/error.jsp</result>
         </action>
         
-         <action name="emailsend" class="Stroke.EmailAction" method="emailSendByAdmin">
+        <action name="emailsend" class="Stroke.EmailAction" method="emailSendByAdmin">
             <result name="success">/SuperAdmin/super_admin_main.jsp</result>
             <result name="error">/Home/error.jsp</result>
         </action>
