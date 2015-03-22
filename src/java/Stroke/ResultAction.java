@@ -11,6 +11,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.opensymphony.xwork2.Preparable;
 import java.util.ArrayList;
+import org.jfree.chart.JFreeChart;
 
 /**
  *
@@ -22,6 +23,7 @@ public class ResultAction extends ActionSupport implements ModelDriven, Preparab
     int personid, roundId;
     ArrayList<Interviewee> dispint;
     ArrayList<Round> disprnd;
+    JFreeChart chart;
 
     @Override
     public Object getModel() {
@@ -89,5 +91,19 @@ public class ResultAction extends ActionSupport implements ModelDriven, Preparab
         } else {
             return ERROR;
         }
+    }
+
+    public JFreeChart getChart() {
+        return chart;
+    }
+
+    public void setChart(JFreeChart chart) {
+        this.chart = chart;
+    }
+
+    public String BarChartResult() {
+        ResultOperation op = new ResultOperation();
+        chart = op.getResultChart();
+        return SUCCESS;
     }
 }

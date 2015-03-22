@@ -41,6 +41,10 @@ public class ResultId  implements java.io.Serializable {
         return "ResultId{" + "personid=" + personid + ", roundId=" + roundId + '}';
     }
 
+    public String getDesiredId() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
 
 

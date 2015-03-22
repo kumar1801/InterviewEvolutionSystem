@@ -154,11 +154,11 @@
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-bar-chart-o"></i>
-                                <span>Final selection</span>
+                                <span>Graphs</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-angle-double-right"></i> Morris</a></li>
+                                <li><a href="playchart"><i class="fa fa-angle-double-right"></i> Recruitment vs Obtained Marks</a></li>
                                 <li><a href="#"><i class="fa fa-angle-double-right"></i> Flot</a></li>
                                 <li><a href="#"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
                             </ul>

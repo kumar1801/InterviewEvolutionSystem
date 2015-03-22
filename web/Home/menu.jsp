@@ -1,5 +1,4 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<%@ page errorPage="404.jsp" %>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="0">
     <header id="header" role="banner">
