@@ -141,7 +141,9 @@
             </div>
         </section>
     </form>
-
+                                    <form action="generatereport">
+                                        <s:submit type="submit" label="generate report"/>
+                                    </form>
 </aside><!-- /.right-side -->
 </div><!-- ./wrapper -->
 

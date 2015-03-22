@@ -21,7 +21,7 @@ public class SMSOperation {
 
     public static String retval = "";
 
-    public String SMSSender(String msisdn, String msg) {
+    public void SMSSender(String msisdn, String msg) {
         String rsp = "";
 
         try {
@@ -49,16 +49,15 @@ public class SMSOperation {
                 // Process line...
                 retval += line;
             }
-            wr.close();
             rd.close();
-
-            System.out.println(retval);
+            wr.close();
             rsp = retval;
-
+               
         } catch (IOException e) {
-            e.printStackTrace();
+           
+            System.out.println(e.getMessage());
         }
-        return rsp;
+               
     }
 
 }

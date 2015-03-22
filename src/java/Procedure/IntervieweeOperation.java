@@ -41,9 +41,9 @@ public class IntervieweeOperation {
             for (int i = 0; i < selectedDataId.length; i++) {
                 Person p = (Person)session.get(Person.class, selectedDataId[i]);
                 session.delete(p);
-                 transaction.commit();
+                 
             }
-           
+            transaction.commit();
             return true;
         } catch (HibernateException e) {                                                                
             return false;
@@ -62,16 +62,15 @@ public class IntervieweeOperation {
              
             Person person = interviewee;
 
-            s.saveOrUpdate(person);
-            s.saveOrUpdate(interviewee);
+            s.save(person);
+            s.save(interviewee);
 
             tx.commit();
-            s.clear();
+           s.clear();
             s.flush();
 
             return true;
         } catch (HibernateException e) {
-            System.out.println(e.getMessage());
             tx.rollback();
             return false;
         } finally {

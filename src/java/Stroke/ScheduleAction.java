@@ -16,6 +16,7 @@ import com.opensymphony.xwork2.ModelDriven;
 import com.opensymphony.xwork2.Preparable;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -25,8 +26,20 @@ public class ScheduleAction extends ActionSupport implements ModelDriven, Prepar
 
     Schedule schedule;
     ScheduleId scheduleId;
+    List<Schedule> arraylistschedule;
+    
     ArrayList<Round> disprnd;
     int scheduleNo,roundId;
+
+    public List<Schedule> getArraylistschedule() {
+        return arraylistschedule;
+    }
+
+    public void setArraylistschedule(List<Schedule> arraylistschedule) {
+        this.arraylistschedule = arraylistschedule;
+    }
+
+    
 
     public int getScheduleNo() {
         return scheduleNo;
@@ -86,5 +99,14 @@ public class ScheduleAction extends ActionSupport implements ModelDriven, Prepar
         } else {
             return ERROR;
         }
+    }
+    
+    public String generateReport()
+    {
+        SchedualOperation so=new SchedualOperation();
+        ResultOperation op = new ResultOperation();
+        arraylistschedule= so.dataretrival();
+        disprnd = op.Disprnd();
+        return SUCCESS;
     }
 }

@@ -15,7 +15,6 @@ public class SMSAction {
 
     public void SMSSend(String mono, String msg) {
         SMSOperation smso = new SMSOperation();
-        String response = smso.SMSSender(mono, msg);
-        System.out.println(response);
+        smso.SMSSender(mono, msg);
     }
 }

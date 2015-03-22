@@ -279,12 +279,6 @@
             </div>
         </section>
 
-<s:property value="#map.username"/>
-
-
-
-
-
 <%@include file="contactus.jsp"%>
 
 

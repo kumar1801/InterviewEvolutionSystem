@@ -4,11 +4,15 @@
 
 <struts>
     <constant name="struts.custom.i18n.resources" value="global" />
-    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.devMode" value="false"/>
     <include file="example.xml"/>
     <!-- Configuration for the default package. -->
-    <package name="default" extends="struts-default">
-        
+    <package name="default" extends="struts-default,jasperreports-default">
+         <result-types>  
+            <result-type class="org.apache.struts2.views.jasperreports.JasperReportsResult" name="jasper">  
+            </result-type>
+    </result-types> 
+    
         <global-results>
             <result name="exception">/Home/error.jsp</result>
             <result name="runtime_exception">/Home/error.jsp</result>
@@ -308,7 +312,14 @@
             <result name="error">/Home/error.jsp</result>
         </action>
         
-         
+         <action name="generatereport" class="Stroke.ScheduleAction" method="generateReport">  
+            <result name="success" type="jasper">  
+                <param name="location">/jasper/scedulereport.jasper</param>
+                <param name="dataSource">disprnd</param>
+                <param name="dataSource">arraylistschedule</param>
+                <param name="format">PDF</param>
+            </result>  
+    </action>   
         
         
         

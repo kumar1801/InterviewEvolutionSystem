@@ -48,8 +48,8 @@ public class SMSOperationTest {
         String msg = "";
         SMSOperation instance = new SMSOperation();
         String expResult = "";
-        String result = instance.SMSSender(msisdn, msg);
-        assertEquals(expResult, result);
+        instance.SMSSender(msisdn, msg);
+       // assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

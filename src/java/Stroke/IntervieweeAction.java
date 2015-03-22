@@ -33,21 +33,21 @@ import org.apache.struts2.interceptor.ServletRequestAware;
 public class IntervieweeAction extends ActionSupport implements ModelDriven,Preparable,ServletRequestAware {
    
     Interviewee interviewee;
-     private int personid;
+    //private int personid;
     List<Round> listround;
     String str;
    
     
-      private String listSelectedData;// for multiple
+    String listSelectedData;// for multiple
 
-    public int getPersonid() {
+   /* public int getPersonid() {
         return personid;
     }
 
     public void setPersonid(int personid) {
-        System.out.println(""+personid);
+        
         this.personid = personid;
-    }
+    }*/
    
       
       
@@ -68,7 +68,7 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
         
         IntervieweeOperation intop = new IntervieweeOperation();
         JobOpeningOperation joo = new JobOpeningOperation();
-         RoundOperation ro1 = new RoundOperation();
+        RoundOperation ro1 = new RoundOperation();
         
         listround = ro1.asdewes();
         listjod = joo.dataretrival();
@@ -124,16 +124,13 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
         
         while (st.hasMoreElements()) {
             str = "91"+st.nextToken().trim();
-            System.out.println("<-------<<<<<<<<"+str);
             a = Long.parseLong(str);
             co.setContactno(a);
             co.setPersonid(interviewee.getPersonid());
             cp.add(co);
             interviewee.setContact(cp);
         }
-        
-     
-        
+            
         StringTokenizer stds = new StringTokenizer(langknown, ",");
         lkn = new HashSet<>();   
         while (stds.hasMoreTokens()) {
@@ -142,16 +139,17 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
             lkn.add(languageknown);
         } 
         interviewee.setLanguageknown(lkn);
-        
-       
-        boolean save=intervieweeoperation.insertDetails(interviewee);
         JobOpeningOperation joo = new JobOpeningOperation();
         listjod = joo.dataretrival();
+       
+        boolean save=intervieweeoperation.insertDetails(interviewee);
+        
+       SMSAction smsa = new SMSAction();
+       smsa.SMSSend(str, "You are Registered in Interview Evolution System.\nUsername: "+interviewee.getUsername()+"\nPassword: "+interviewee.getPassword()+"\nThankyou");
         if(save)
-        {
-            SMSAction smsa = new SMSAction();
-            smsa.SMSSend(str, "You are Registered in Interview Evolution System.\nUsername: "+interviewee.getUsername()+"\nPassword: "+interviewee.getPassword()+"\nThankyou");
-            addActionMessage("SUCCESSFULLY INSERTED");
+        { 
+            //addActionMessage("SUCCESSFULLY INSERTED");
+           
             return SUCCESS;
         }
         else
@@ -167,7 +165,7 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
     Languageknown languageknown;
     Set<Languageknown> lkn;
     List<Jobopeningdetails> listjod;
-    public String intervieweeData()
+   public String intervieweeData()
     {
         IntervieweeOperation io=new IntervieweeOperation();
         listinterviewee=io.dataretrival();
@@ -212,7 +210,6 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
     }
 
     public void setListinterviewee(List<Interviewee> listinterviewee) {
-        System.out.println(""+listinterviewee);
         this.listinterviewee = listinterviewee;
     }
     

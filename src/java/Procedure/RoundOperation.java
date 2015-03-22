@@ -57,7 +57,7 @@ public class RoundOperation {
     }
     
     public List<Round> asdewes(){
-        System.out.println("<--44--<");
+        
         SessionFactory sf = MyFilterHib.getsessionfactory();
         Session s;
         Transaction tx = null;

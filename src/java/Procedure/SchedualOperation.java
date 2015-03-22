@@ -8,7 +8,9 @@ package Procedure;
 import Databaseutil.MyFilterHib;
 import Prototypical.Schedule;
 import java.util.Date;
+import java.util.List;
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -37,6 +39,21 @@ public class SchedualOperation {
         } finally {
             s.close();
         }
+    }
+    public List<Schedule> dataretrival() {
+        SessionFactory sf = MyFilterHib.getsessionfactory();
+        Session s;
+        Transaction tx = null;
+        s = sf.openSession();
+        tx = s.beginTransaction();
+        Query q = s.createQuery("from Schedule ");
+        List<Schedule> listschedule = q.list();
+       
+         s.clear();
+         s.flush();
+         s.close();
+        return listschedule;
+
     }
 
 }

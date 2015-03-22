@@ -73,23 +73,10 @@ public class JobOpeningOperation {
         Query q = s.createQuery("from Jobopeningdetails ");
         Set<Requiedqualification> rq;
         List<Jobopeningdetails> listjod = q.list();
-       /* Iterator it=listjod.iterator();
-         Requiedqualification r = new Requiedqualification();
-        while(it.hasNext())
-        {
-            Jobopeningdetails jod=(Jobopeningdetails) it.next();
-            rq=jod.getRequiedqualifications();
-            Iterator it1=rq.iterator();
-            while(it1.hasNext())
-            {
-                Requiedqualification rq1=(Requiedqualification) it1.next();
-                rq1.setJobopeningdetails(jod);
-                 System.out.println("-----------------"+rq1.toString());
-            }
-        }
-        s.clear();
-        s.flush();
-        s.close();*/
+       
+         s.clear();
+         s.flush();
+         s.close();
         return listjod;
 
     }
