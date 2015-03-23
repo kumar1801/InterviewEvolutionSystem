@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -52,15 +53,15 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="glyphicon glyphicon-user"></i>
-                                <span>Niyati Shah <i class="caret"></i></span>
+                                <span><s:property value="#session.username"/> <i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
                                     <img src="<%=application.getContextPath()%>/visualization/img/avatar2.png" class="img-circle" alt="User Image" />
                                     <p>
-                                        Niyati Shah - Java Developer
-                                        <small>Member since Nov. 2014</small>
+                                        <s:property value="#session.username"/>
+                                        <small>Member since Nov. 2015</small>
                                     </p>
                                 </li>
                                 <!-- Menu Footer-->

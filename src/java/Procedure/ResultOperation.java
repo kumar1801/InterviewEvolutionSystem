@@ -106,7 +106,7 @@ public class ResultOperation {
             dataSet.setValue(r.getObtainMark(), rid.getRoundId() + "", rid.getPersonid() + "");
         }
         JFreeChart chart = ChartFactory.createBarChart3D(
-                "Recrument",
+                "Recruitment",
                 "Cadidate",
                 "Obtain Marks",
                 dataSet,

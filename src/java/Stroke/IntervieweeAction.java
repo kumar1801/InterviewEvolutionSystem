@@ -36,7 +36,7 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
     //private int personid;
     List<Round> listround;
     String str;
-   
+    String userid; 
     
     String listSelectedData;// for multiple
 
@@ -65,7 +65,7 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
     
     
      public String retriveData(){
-        
+        request.setAttribute("userid", userid);
         IntervieweeOperation intop = new IntervieweeOperation();
         JobOpeningOperation joo = new JobOpeningOperation();
         RoundOperation ro1 = new RoundOperation();
@@ -238,6 +238,14 @@ public class IntervieweeAction extends ActionSupport implements ModelDriven,Prep
 
     public void setListround(List<Round> listround) {
         this.listround = listround;
+    }
+
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
     }
     
     

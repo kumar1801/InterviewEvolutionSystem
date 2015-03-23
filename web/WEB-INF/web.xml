@@ -24,12 +24,4 @@
     <welcome-file-list>
         <welcome-file>example/HelloWorld.jsp</welcome-file>
     </welcome-file-list>
-    <error-page>
-            <error-code>404</error-code>
-            <location>/Home/404.jsp</location>
-     </error-page>
-     <error-page>
-            <error-code>505</error-code>
-            <location>/Home/505.jsp</location>
-     </error-page>
 </web-app>

@@ -99,6 +99,7 @@ public class LoginAction extends ActionSupport implements ModelDriven,Preparable
                 {   flagp=true;
                     map.put("username", login.getUsername());
                     map.put("Password", login.getPassword());
+                    
                     break;
                 }
                 

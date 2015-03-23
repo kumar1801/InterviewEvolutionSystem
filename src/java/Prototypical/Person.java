@@ -168,10 +168,6 @@ public class Person  implements java.io.Serializable {
         this.contact = contact;
     }
 
-    @Override
-    public String toString() {
-        return "Person{" + "personid=" + personid + ", fname=" + fname + ", mname=" + mname + ", lname=" + lname + ", emailid=" + emailid + ", street=" + street + ", city=" + city + ", state=" + state + ", country=" + country + ", pincode=" + pincode + ", username=" + username + ", password=" + password + ", confirmpassword=" + confirmpassword + ", contact=" + contact + ", languageknown=" + languageknown + ", type=" + type + ", workexperience=" + workexperience + '}';
-    }
 
     public Set<Acdemicdetails> getAcdemicdetails() {
         return acdemicdetails;

@@ -7,7 +7,7 @@
     <constant name="struts.devMode" value="false"/>
     <include file="example.xml"/>
     <!-- Configuration for the default package. -->
-    <package name="default" extends="struts-default,jasperreports-default">
+    <package name="default" extends="struts-default,jasperreports-default,jfreechart-default">
          <result-types>  
             <result-type class="org.apache.struts2.views.jasperreports.JasperReportsResult" name="jasper">  
             </result-type>
@@ -67,15 +67,18 @@
             <result name="success">/SuperAdmin/HeadDetails.jsp</result> 
             <result name="error">/Home/error.jsp</result>
         </action>
-        <action name="jobopening" class="example.Test">
-            <result name="success">/HRManager/JobOpening.jsp</result> 
+        <action name="userid" class="Stroke.IntervieweeAction" method="retriveData">
+            <result name="success">/Interviewer/interview.jsp</result> 
             <result name="error">/Home/error.jsp</result>
         </action>
         <action name="round" class="Stroke.RCMAction" method="retriveData" >
             <result name="success">/HRManager/Round.jsp</result>
             <result name="error">/Home/error.jsp</result>
         </action>
-        
+        <action name="jobopening" class="example.Test">
+            <result name="success">/HRManager/JobOpening.jsp</result>
+            <result name="error">/Home/error.jsp</result>
+        </action>
         
         <action name="rounds" class="Stroke.RCMAction" method="retriveData" >
             <result name="success">/RecruiterAssistant/Rounds.jsp</result> 
@@ -287,10 +290,7 @@
             <result name="error">/Home/error.jsp</result>
         </action>
         
-        <action name="jobopening" class="Stroke.JobOpeningAction" method="deleteMultiple">
-            <result name="success">/SuperAdmin/Jobopeningdetails.jsp</result>
-            <result name="error">/Home/error.jsp</result>
-        </action>
+        
         
         
         
@@ -311,7 +311,10 @@
             <result name="success">/SuperAdmin/super_admin_main.jsp</result>
             <result name="error">/Home/error.jsp</result>
         </action>
-        
+         <action name="playchart" class="example.Test">
+            <result name="success">/HRManager/BarChartRoundMarks.jsp</result>
+            <result name="error">/Home/error.jsp</result>
+        </action>
          <action name="generatereport" class="Stroke.ScheduleAction" method="generateReport">  
             <result name="success" type="jasper">  
                 <param name="location">/jasper/scedulereport.jasper</param>
@@ -320,7 +323,14 @@
                 <param name="format">PDF</param>
             </result>  
     </action>   
-        
+        <action name="displaychart" class="Stroke.ResultAction" method="BarChartResult">  
+            <result name="success" type="chart">  
+                <param name="value">chart</param>
+                <param name="type">jpeg</param>
+                <param name="width">600</param>
+                <param name="height">600</param>
+            </result>  
+    </action>   
         
         
         
