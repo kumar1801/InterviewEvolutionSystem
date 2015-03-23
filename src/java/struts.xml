@@ -315,11 +315,11 @@
             <result name="success">/HRManager/BarChartRoundMarks.jsp</result>
             <result name="error">/Home/error.jsp</result>
         </action>
-         <action name="generatereport" class="Stroke.ScheduleAction" method="generateReport">  
+         <action name="generater" class="Stroke.ScheduleAction" method="generateReport">  
             <result name="success" type="jasper">  
-                <param name="location">/jasper/scedulereport.jasper</param>
-                <param name="dataSource">disprnd</param>
+                <param name="location">/jasper/report1.jasper</param>
                 <param name="dataSource">arraylistschedule</param>
+                <param name="dataSource">disprnd</param>
                 <param name="format">PDF</param>
             </result>  
     </action>   
