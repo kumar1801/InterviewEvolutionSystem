@@ -17,7 +17,7 @@ public class Schedule implements java.io.Serializable {
 
      private ScheduleId id;
      private String type;
-     private Date date;
+     private String date;
      private String interviewAssesmentReport;
      private String street;
      private String city;
@@ -26,7 +26,7 @@ public class Schedule implements java.io.Serializable {
     public Schedule() {
     }
 
-    public Schedule(ScheduleId id, String type, Date date, String interviewAssesmentReport, String street, String city, String state) {
+    public Schedule(ScheduleId id, String type, String date, String interviewAssesmentReport, String street, String city, String state) {
        this.id = id;
        this.type = type;
        this.date = date;
@@ -50,13 +50,15 @@ public class Schedule implements java.io.Serializable {
     public void setType(String type) {
         this.type = type;
     }
-    public Date getDate() {
-        return this.date;
+
+    public String getDate() {
+        return date;
     }
-    
-    public void setDate(Date date) {
+
+    public void setDate(String date) {
         this.date = date;
     }
+   
     public String getInterviewAssesmentReport() {
         return this.interviewAssesmentReport;
     }

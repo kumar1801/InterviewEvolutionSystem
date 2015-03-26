@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d3de9832-e341-4829-bc5f-2d2574e1e454">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="hql">
+		<![CDATA[from Schedule]]>
+	</queryString>
+	<field name="city" class="java.lang.String"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="id" class="Prototypical.ScheduleId"/>
+	<field name="interviewAssesmentReport" class="java.lang.String"/>
+	<field name="state" class="java.lang.String"/>
+	<field name="street" class="java.lang.String"/>
+	<field name="type" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="1" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="447" splitType="Stretch">
+			<textField>
+				<reportElement x="171" y="253" width="176" height="20" uuid="b08e5c69-51a7-49bf-9fb6-4dded1d1f175"/>
+				<textFieldExpression><![CDATA[$F{interviewAssesmentReport}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="171" y="200" width="301" height="32" uuid="a1a64358-a629-4aa4-93d0-d320b9233367"/>
+				<textFieldExpression><![CDATA[$F{street}+","+$F{city}+","+"\n"+$F{state}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="171" y="232" width="100" height="20" uuid="a4b7ab2b-42d3-487a-a467-871054108452"/>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="233" width="130" height="20" uuid="894f80be-a5d6-4f11-997b-ddb1772c93ec"/>
+				<text><![CDATA[Job Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="212" width="130" height="20" uuid="eb6467bd-de7c-4fb9-b832-d659dd04da7f"/>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="253" width="130" height="20" uuid="211cf11d-c4ec-412b-a25e-b9805d39358c"/>
+				<text><![CDATA[interviewAssesmentReport]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="8" y="93" width="500" height="20" uuid="c14deeca-c462-4089-ad49-4e49fbb2857a"/>
+				<textFieldExpression><![CDATA[""+$F{id}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="8" y="20" width="88" height="59" uuid="9221f2fa-1fe7-4e3a-bdf8-acd5b9734645"/>
+				<imageExpression><![CDATA["C:\\Users\\Devank\\Documents\\InterviewEvolutionSystem\\InterviewEvolutionSystem\\web\\Home\\images\\logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="138" y="20" width="380" height="59" forecolor="#0099FF" uuid="ab6b8080-5de9-4705-ac62-3be05a79c9e4"/>
+				<textElement>
+					<font size="36" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Schedule For Interview]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="351" width="464" height="80" uuid="f57ffb4e-e798-4f83-af95-ba27396bfe46"/>
+				<text><![CDATA[Terms & Conditiion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="158" width="100" height="20" uuid="55546360-560a-4233-bdce-19cc14f8f71e"/>
+				<text><![CDATA[date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="171" y="158" width="100" height="20" uuid="e074b700-fa9a-4678-b5f6-c6ed395ec2c5"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -101,7 +101,7 @@ public class ScheduleTest {
         System.out.println("getDate");
         Schedule instance = new Schedule();
         Date expResult = null;
-        Date result = instance.getDate();
+        String result = instance.getDate();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         
@@ -113,7 +113,7 @@ public class ScheduleTest {
     @Test
     public void testSetDate() {
         System.out.println("setDate");
-        Date date = null;
+        String date = null;
         Schedule instance = new Schedule();
         instance.setDate(date);
         // TODO review the generated test code and remove the default call to fail.

@@ -8,15 +8,14 @@ package Stroke;
 import Procedure.ResultOperation;
 import Procedure.SchedualOperation;
 import Prototypical.*;
-import Procedure.SMSOperation;
 import static com.opensymphony.xwork2.Action.ERROR;
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.opensymphony.xwork2.Preparable;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
+
 
 /**
  *
@@ -86,21 +85,21 @@ public class ScheduleAction extends ActionSupport implements ModelDriven, Prepar
     }
 
     public String saveSchedule() {
-        schedule.setDate(new Date());
+        //schedule.setDate(new Date());
         scheduleId = new ScheduleId(scheduleNo, roundId);
         schedule.setId(scheduleId);
         SchedualOperation so = new SchedualOperation();
         boolean save = so.insSchedule(schedule);
         if (save) {
-            SMSAction smsa = new SMSAction();
-            smsa.SMSSend("919409430960", "Joile aavi gyo??");
+           // SMSAction smsa = new SMSAction();
+            //smsa.SMSSend("919409430960", "Joile aavi gyo??");
             goSchedule();
             return SUCCESS;
         } else {
             return ERROR;
         }
     }
-    
+   
     public String generateReport()
     {
         SchedualOperation so=new SchedualOperation();

@@ -171,7 +171,8 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
         jod.setRequiedqualifications(str);
         jod.setDesiredskillses(std);
         jod.setRequireddocuments(srq);
-        
+        if(userImageFileName!=null)
+        {
         try {
 
             String filePath = request.getSession().getServletContext().getRealPath("/uploadedImages/");
@@ -189,7 +190,7 @@ public class JobOpeningAction extends ActionSupport implements ModelDriven, Prep
         } catch (IOException e) {
             return INPUT;
         }
-        
+        }
         
         boolean save = new Procedure.JobOpeningOperation().insData(jod);
         if (save) {

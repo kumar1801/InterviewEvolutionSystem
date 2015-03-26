@@ -93,7 +93,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                          
-                                        <s:textarea key="global.terms&condition"  placeholder="Enter ..." rows="2" cssClass="form-control"></s:textarea>
+                                        <s:textarea key="global.terms&condition" name="termandcondition"  placeholder="Enter ..." rows="2" cssClass="form-control"></s:textarea>
                                         </div>
                                     </div>
                                 </div>

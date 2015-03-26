@@ -125,25 +125,31 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
+                             <!--   <div class="form-group">
                                     <label>
                                         <s:checkboxlist name="notification" list="{'SMS','E-MAIL'}" cssClass="flat-red"/>:
                                     </label>
-                                </div>
+                                </div>-->
                                 <div class="form-group">
-                                    <button class="btn btn-success">Generate</button> <button class="btn btn-danger">Cancel</button>  
+                                    <button class="btn btn-success">submit</button> <button class="btn btn-danger">Cancel</button>  
                                 </div>
-
+                                    
+                            </form> 
+                                     <div class="form-group">
+                                         <div class="row col-lg-3">
+                                         <form action="generater"><button class="btn btn-success" type="submit">Genrate Report</button>
+                                     </form>
+                                     </div></div>
                             </div>
+                                    
+                                   
                         </div>
                     </div>
                 </section>
             </div>
         </section>
-    </form>
-                                    <form action="generater">
-                                        <s:submit type="submit" label="generate report"/>
-                                    </form>
+    
+                                     
 </aside><!-- /.right-side -->
 </div><!-- ./wrapper -->
 

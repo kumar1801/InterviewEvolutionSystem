@@ -23,6 +23,7 @@ public class Jobopeningdetails  implements java.io.Serializable {
      private String pincode;
      private float ctc;
      private String jobType;
+     private String termandcondition;
      private String imagename;
      private byte[] image;
      private Set requiedqualifications = new HashSet(0);
@@ -171,6 +172,14 @@ public class Jobopeningdetails  implements java.io.Serializable {
     
     public void setRequireddocuments(Set requireddocuments) {
         this.requireddocuments = requireddocuments;
+    }
+
+    public String getTermandcondition() {
+        return termandcondition;
+    }
+
+    public void setTermandcondition(String termandcondition) {
+        this.termandcondition = termandcondition;
     }
 
 

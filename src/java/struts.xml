@@ -317,9 +317,8 @@
         </action>
          <action name="generater" class="Stroke.ScheduleAction" method="generateReport">  
             <result name="success" type="jasper">  
-                <param name="location">/jasper/report1.jasper</param>
+                <param name="location">JasperReport/report1.jasper</param>
                 <param name="dataSource">arraylistschedule</param>
-                <param name="dataSource">disprnd</param>
                 <param name="format">PDF</param>
             </result>  
     </action>   
